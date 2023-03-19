@@ -29,7 +29,7 @@ The more advanced user such as the city data analyst (or engineer in the plannin
 
 Main layer being the point layer of accidents and deaths. The symbology we need to decide on so it isn’t so grim and also respectful. Maybe semi transparent hollow x for an accident, and a white bike with a black outline representing a death. A white bike typically symbolizes the location or severe injury of a cyclist typically by motor vehicle. This will be acquired from the NHTSA (National Highway Traffic Safety Administration), using FARS tables which contain latitude and longitude coordinates.
 
-FARS Data Download [https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/]
+[FARS Data Download] (https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/)
 
 image link
 
@@ -65,8 +65,13 @@ image link
 5. Comment widget 
 * Add a way for users to comment – maybe just a point or polygon with a text box “This intersection needs a separated bike turn lane”
 
-## Wireframe
-link to images?
+## Lo-fi Wireframe
+Map Interface
+(img/lofiWireframe_page1.jpg)
+
+Dashboarde
+(img/lofiWireframe_page2.jpg)
+
 
 ## Potential info in little sections 
 * [http://www.pedbikesafe.org/PEDSAFE/guide_background.cfm] 
