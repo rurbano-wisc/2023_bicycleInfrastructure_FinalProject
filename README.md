@@ -29,9 +29,9 @@ The more advanced user such as the city data analyst (or engineer in the plannin
 
 Main layer being the point layer of accidents and deaths. The symbology we need to decide on so it isn’t so grim and also respectful. Maybe semi transparent hollow x for an accident, and a white bike with a black outline representing a death. A white bike typically symbolizes the location or severe injury of a cyclist typically by motor vehicle. This will be acquired from the NHTSA (National Highway Traffic Safety Administration), using FARS tables which contain latitude and longitude coordinates.
 
-[FARS Data Download] (https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/)
+FARS Data Download ![FARS Data Download](https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/)
 
-image link
+![FARS data download screenshot](imag/farsDataETablesScreenshot.jpg)
 
 ### Basemap tilesets: 
 1. OpenStreetMap basic—basic streets 
@@ -44,8 +44,8 @@ image link
 3. Speed Limit (if possible)—might be interesting to see if stroads are where a lot of occurrences that involve bicycles are taking place; this might be hard but I’d like to try to use actual speed limit markers but wow again not sure if we can get this—SL 
 4. 
 5. Bike lanes and infrastructure – separated multi-use paths, painted lanes, etc.; need to determine which of the following; BL
-* [https://www.cyclosm.org/#map=11/33.9277/-118.2843/cyclosm] 
-* [https://www.opencyclemap.org/]
+* CyclOSM - OpenStreetMap-based bicyle map ![CyclOSM - Open Street Map-based bicyle map](https://www.cyclosm.org/#map=11/33.9277/-118.2843/cyclosm)
+* OpenCycleMap - the OpenStreetMap Cycle Map ![OpenCycleMap - the OpenStreetMap Cycle Map](https://www.opencyclemap.org/)
 
 ## Interaction Section—widgets 
 1. Filter Widget—this will filter the layer of choice 
@@ -67,14 +67,16 @@ image link
 
 ## Lo-fi Wireframe
 Map Interface
-![Map interface](img/lofiWireframe_page1.jpg)
 
-Dashboarde
-(img/lofiWireframe_page2.jpg)
+![Map interface lofi wireframe](img/lofiWireframe_page1.jpg)
+
+Dashboard
+
+![Dashboard lofi wireframe](img/lofiWireframe_page2.jpg)
 
 
 ## Potential info in little sections 
-* [http://www.pedbikesafe.org/PEDSAFE/guide_background.cfm] 
+* PEDSAFE: Pedestrian Safety Guide and Countermeasure Selection System ![PEDSAFE: Pedestrian Safety Guide and Countermeasure Selection System](http://www.pedbikesafe.org/PEDSAFE/guide_background.cfm)
 * [https://cdc.gov/transportationsafety/bicycle/index.html] 
 * [https://sanantonioreport.org/avenue-b-and-alamo-street-bike-lanes-offer-glimpse-of-possibilities/] 
 * [https://www.wired.com/story/how-to-start-a-bike-bus/]
