@@ -67,7 +67,7 @@ image link
 
 ## Lo-fi Wireframe
 Map Interface
-(img/lofiWireframe_page1.jpg)
+![Map interface](img/lofiWireframe_page1.jpg)
 
 Dashboarde
 (img/lofiWireframe_page2.jpg)
