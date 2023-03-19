@@ -53,23 +53,24 @@ image link
 * Commuter Stats layer: look at certain commuter stats and identify where populations exist that are non-automobile based 
 * Polygon boundary layer: area of interests for users 
 
-Search Widget 
-➢ Search for addresses/intersections 
+2. Search Widget 
+*  Search for addresses/intersections 
 
-Time Slider Widget 
-➢ Time slider (is there data for different years? Can we show before/after stats where new bike infrastructure was added?) 
+3. Time Slider Widget 
+* Time slider (is there data for different years? Can we show before/after stats where new bike infrastructure was added?) 
 
-Download Widget 
-➢ Download data as a csv or tiff? 
+4. Download Widget 
+* Download data as a csv or tiff? 
 
-Comment widget 
-➢ Add a way for users to comment – maybe just a point or polygon with a text box “This intersection needs a separated bike turn lane”
+5. Comment widget 
+* Add a way for users to comment – maybe just a point or polygon with a text box “This intersection needs a separated bike turn lane”
 
-Wireframe
+## Wireframe
+link to images?
 
-Potential info in little sections 
-➢ http://www.pedbikesafe.org/PEDSAFE/guide_background.cfm 
-➢ cdc.gov/transportationsafety/bicycle/index.html#:~:text=Deaths%20and%20Injuries,the%20United%20States%20every%20year. 
-➢ https://sanantonioreport.org/avenue-b-and-alamo-street-bike-lanes-offer-glimpse-of-possibilities/ 
-➢ https://www.wired.com/story/how-to-start-a-bike-bus/ 
-➢ https://www.pedbikeinfo.org/
+## Potential info in little sections 
+* [http://www.pedbikesafe.org/PEDSAFE/guide_background.cfm] 
+* [cdc.gov/transportationsafety/bicycle/index.html#:~:text=Deaths%20and%20Injuries,the%20United%20States%20every%20year.] 
+* [https://sanantonioreport.org/avenue-b-and-alamo-street-bike-lanes-offer-glimpse-of-possibilities/] 
+* [https://www.wired.com/story/how-to-start-a-bike-bus/]
+* [https://www.pedbikeinfo.org/]
