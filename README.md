@@ -20,38 +20,41 @@ The final product will make proper use of a relevant filter, perhaps a widget wo
 
 ## Persona/Scenario
 Our target audience includes a wide breadth of user groups:
-1. General bike enthusiasts and car brain people (and those with a gripe against _all_ cyclists from behind the wheel of their suburban carrying one passenger).
-* a person just curious about where these deaths are occurring, can just toggle on the layers that are relevant and zoom around. To what level they seek to gain information would vary. Sometimes people just stumble upon things or it can be a source of inspiration.
+1. General bike enthusiasts, pedestrians, and motorits.
+* A general bike enthusiast or pedestrian is curious about where bicyclist/pedestrian deaths are occurring in their community. They may want to avoid streets or intersections with a high accident rates. They might want to travel on streets/paths with low accident rates, or streets with successful bike/pedestrian infrastructre. On the flip side, a motorist may want to avoid routes with high use by bicyclists and pedestrians, just to avoid causing an accident. Also, they may want to bring certain streets/intersections to the attention of the city council or city planners for improvements.
+* The general enthusiast toggle on the layers that are of interest and explore the maps. The user should be able to turn on and off layers such as accident sites, speed limits. They can search for intersections or addresses. To what level they seek to gain information would vary. Sometimes people just stumble upon things or it can be a source of inspiration.
 2. City planners
-* toggling around this map might help with considerations as cities around the country the seek to pedestrianize areas. There is a growing need to utilize space in denser areas of populations. Whether it be putting in pocket parks, or slowly converting streets into bike lanes, good city planning is seeking to incorporate non-automobile related infrastructure.
-* assessing intersections that have had a higher bicyle death ratio. 
+* Toggling around this map will help with considerations as cities around the country the seek to pedestrianize areas. There is a growing need to utilize space in denser areas of populations. Whether it be putting in pocket parks, or slowly converting streets into bike lanes, good city planning is seeking to incorporate non-automobile related infrastructure. The city planner will assess intersections that have had a higher bicyle/pedestrian death ratio. 
+* USE SCENARIO
 3. Data analysts and engineers
 * The more advanced user such as the city data analyst (or engineer in the planning department that looks over roads), may want to apply some spatial analysis tools such as proximity to a dedicated bike path or infrastructure, or look at a city as a whole and calculate the rate of change in the occurrences of bicyclist accidents or deaths. Engineers may want to assess the area to see if Bott’s dot’s can be used to block off a turning section for bikes.
+* USE SCENARIO
 
 ## Requirements
 
 Main layer being the point layer of accidents and deaths. The symbology we need to decide on so it isn’t so grim and also respectful. Maybe semi transparent hollow x for an accident, and a white bike with a black outline representing a death. A white bike typically symbolizes the location or severe injury of a cyclist typically by motor vehicle. This will be acquired from the NHTSA (National Highway Traffic Safety Administration), using FARS tables which contain latitude and longitude coordinates.
 
 ### Data Layers
-|Data Layer | Source | Symbology |
-|-----------|--------|-----------|
-|Base Map   |Mapbox, using Open Street Map attributes | Most data will be in gray monochrome to make figure layers stand out. Filtered unnecessary layers to reduce background noise. Separated cycle paths and bike paths (separated out from OSM attributes) will be highlighted in brighter colors |
-|Census tracts | US Census Bureau | Commuter stats—census based layer symbolized based on number of commuters that do not rely on a car as their main mode of transport; Choropleth of number of workers who commute by bike ÷ total number of workers (16 and over). |
-|Bicycle deaths 2001-2020 | Compiled from National Highway Traffic Safety Administration (NHTSA) [Fatality Analysis Reporting System (FARS)](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars) | At the city/metro area scale: bicycle icon, color coded by year; At the regional scale: heatmap raster (density) |
-|Pedestrian deaths 2001-2020 | Compiled from National Highway Traffic Safety Administration (NHTSA) [Fatality Analysis Reporting System (FARS)](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars) | At the city/metro area scale: pedestrian icon, color coded by year; At the regional scale: heatmap raster (density) |
-|Cities of Interest | US Census Bureau, Esri | Large circles with large labels |
-|Roads with speed limit |Open Street Map |Lines with colored ramp|
+| |Data Layer | Source | Symbology |
+|-|-----------|--------|-----------|
+|1|Base Map   |Mapbox, using Open Street Map attributes | Most data will be in gray monochrome to make figure layers stand out. Filtered unnecessary layers to reduce background noise. Separated cycle paths and bike paths (separated out from OSM attributes) will be highlighted in brighter colors |
+|2|Census tracts | US Census Bureau | Commuter stats—census based layer symbolized based on number of commuters that do not rely on a car as their main mode of transport; Choropleth of number of workers who commute by bike ÷ total number of workers (16 and over). |
+|3|Bicycle deaths 2001-2020 | Compiled from National Highway Traffic Safety Administration (NHTSA) [Fatality Analysis Reporting System (FARS)](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars) | At the city/metro area scale: bicycle icon, color coded by year; At the regional scale: heatmap raster (density) |
+|4|Pedestrian deaths 2001-2020 | Compiled from National Highway Traffic Safety Administration (NHTSA) [Fatality Analysis Reporting System (FARS)](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars) | At the city/metro area scale: pedestrian icon, color coded by year; At the regional scale: heatmap raster (density) |
+|5|Cities of Interest | US Census Bureau, Esri | Large circles with large labels |
+|6|Roads with speed limit |Open Street Map |Lines with colored ramp|
 
 ## Interaction Section—widgets 
-|Widget |Description|
-|-------|-----------|
-|Layer control |Change the currently visible layers|
-|Search | Allow the user to search for a city, landmark, or address |
-|Download | Download shapefiles or text files of the accident data __(for the entire US or the current window?)__ |
-|Bar chart| Bar chart of # of bicyclist deaths 2001-2020 in the currently displayed area or metro area |
-|Pie chart |Pie chart of pedestrian and bicyclist deaths 2001-2020 in the currently displayed area or metro area|
-|Story |Text describing how the highlighted city has made improvements to bike infrastructure to improve safety, from Federal Highway Admin's 2015 report and media artciles|
-|Filter |Filter roads by speed limit, tracts by % bike commuter|
+| |Widget |Description|
+|-|-------|-----------|
+|1|Layer control |Change the currently visible layers|
+|2|Search | Allow the user to search for a city, landmark, or address |
+|3|Download | Download shapefiles or text files of the accident data __(for the entire US or the current window?)__ |
+|4|Bar chart| Bar chart of # of bicyclist deaths 2001-2020 in the currently displayed area or metro area |
+|5|Pie chart |Pie chart of pedestrian and bicyclist deaths 2001-2020 in the currently displayed area or metro area|
+|6|Story |Text describing how the highlighted city has made improvements to bike infrastructure to improve safety, from Federal Highway Admin's 2015 report and media artciles|
+|7|Filter |Filter roads by speed limit, tracts by % bike commuter|
+|8|Popup |When the user clicks on a feature, a formatted popup with relevant information
 
 
 ## Lo-fi Wireframe
