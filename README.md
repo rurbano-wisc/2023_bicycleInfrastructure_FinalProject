@@ -33,19 +33,25 @@ Main layer being the point layer of accidents and deaths. The symbology we need 
 
 ![FARS data download screenshot](img/farsDataTablesScreenshot.jpg)
 
-### Basemap tilesets: 
-1. OpenStreetMap basic—basic streets 
-2. OpenStreetMap night mode—streets night 
-3. Imagery with labels—satellite view
+### Data Layers
+|Data Layer | Source | Symbology |
+|-----------|--------|-----------|
+|Base Map   |Mapbox, using Open Street Map attributes | Most data will be in gray monochrome to make figure layers stand out. Filtered unnecessary layers to reduce background noise. Separated cycle paths and bike paths (separated out from OSM attributes) will be highlighted in brighter colors |
+|Census tracts | US Census Bureau | Commuter stats—census based layer symbolized based on number of commuters that do not rely on a car as their main mode of transport; Choropleth of number of workers who commute by bike ÷ total number of workers (16 and over). |
+|Bicycle deaths 2001-2020 | Compiled from National Highway Traffic Safety Administration (NHTSA) [Fatality Analysis Reporting System (FARS)](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars) | At the city/metro area scale: Xs, color coded by year; At the regional scale: heatmap raster (density) |
+|Cities of Interest | US Census Bureau, Esri | Large circles with large labels |
+|Roads with speed limit |Open Street Map |Lines with colored ramp|
 
-### Additional Layers
-1. Commuter stats—census based layer symbolized based on number of commuters that do not rely on a car as their main mode of transport; polygon layer the color scale needs to be perfected as something that looks good against all three basemap layers; maybe having a bivariate symbology such as a pie chart (only visible at a certain extent) as a proportional symbol for the percent of commuters of a certain type in a given area—CS a. Are there larger populations of riders where there is infrastructure? b. Where are the riders at in general 
-2. Roads—considering street maps will not contain any vector data that would be applicable to any analysis if needed (TBD); probably color based and the more important main streets being thicker in size—Rd 
-3. Bike lanes and infrastructure – separated multi-use paths, painted lanes, etc.; need to determine which of the following; BL
-* [CyclOSM - Open Street Map-based bicyle map](https://www.cyclosm.org/#map=11/33.9277/-118.2843/cyclosm)
-* [OpenCycleMap - the OpenStreetMap Cycle Map](https://www.opencyclemap.org/)
+
+
+
 
 ## Interaction Section—widgets 
+|Widget |Coding |Description|
+|-------|-------|-----------|
+|Layer control | | Change the currently visible layers|
+(add more after dinner-GH)
+
 1. Filter Widget—this will filter the layer of choice 
 * Cyclist Incidents layer: accidents vs deaths 
 * Commuter Stats layer: look at certain commuter stats and identify where populations exist that are non-automobile based 
