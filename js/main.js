@@ -1,4 +1,5 @@
-
+// wrapper function
+(function () {
 
 // declare map var in global scope
 var map;
@@ -19,7 +20,8 @@ var blueBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc
 var controlLayers = L.control.layers();
 
 // global var for the metro area boundaries layer, assigned in getMetroAreaBoundaryData();
-var metroAreaBoundaryLayerGlobal = L.geoJSON();
+var cityMetrosNev = L.geoJSON();
+var cityMetrosCal = L.geoJSON();
 
 // function to initiate Leaflet map
 function createMap() {
@@ -47,10 +49,13 @@ function createMap() {
 
     map.on('zoomend', function () {
         if (map.getZoom() < 6) {
-            map.removeLayer(metroAreaBoundaryLayerGlobal);//1st geoJSON layer
+            map.removeLayer(cityMetrosNev);//1st geoJSON layer
+            map.removeLayer(cityMetrosCal);
         } else {
-            map.addLayer(metroAreaBoundaryLayerGlobal);
-            metroAreaBoundaryLayerGlobal.bringToBack();
+            map.addLayer(cityMetrosNev);
+            cityMetrosNev.bringToBack();
+            map.addLayer(cityMetrosCal);
+            cityMetrosCal.bringToBack();
         }
     });
 }; // end createMap()
@@ -61,24 +66,39 @@ function getMetroAreaBoundaryData() {
     // style for metro Area boundaries
     var metroAreaBoundaryStyle = {
         //fillColor: "#A65E44",
-        color: "#888", 
+        color: "#abe453", //random color - fix it later
         weight: 1,
         opacity: 1,
         fillOpacity: 0
     };
 
-    // load the Metro Area boundary data
-    fetch("data/MetroAreaBoundaries_Simp.geojson")
+    // load the Nevada Metro Area boundary data
+    fetch("data/CityMetros_Nev_geog.geojson")
         .then(function (response) {
             return response.json();
         })
         .then(function (json) {
-            metroAreaBoundaryLayerGlobal = L.geoJSON(json, metroAreaBoundaryStyle)//.addTo(map); took this out so that it wouldn't be added to the map when it first loads, then it will turn on when the zoom reaches level 6
+            cityMetrosNev = L.geoJSON(json, metroAreaBoundaryStyle)//.addTo(map); took this out so that it wouldn't be added to the map when it first loads, then it will turn on when the zoom reaches level 6
 
             // add the layer to the Layers control
-            controlLayers.addOverlay(metroAreaBoundaryLayerGlobal, 'Metro Area Boundaries');
+            controlLayers.addOverlay(cityMetrosNev, 'Metro Area Boundaries NV');
         });
+
+
+            // load the California Metro Area boundary data
+    fetch("data/CityMetros_Cal_geog.geojson")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (json) {
+        cityMetrosCal = L.geoJSON(json, metroAreaBoundaryStyle)//.addTo(map); took this out so that it wouldn't be added to the map when it first loads, then it will turn on when the zoom reaches level 6
+
+        // add the layer to the Layers control
+        controlLayers.addOverlay(cityMetrosCal, 'Metro Area Boundaries CA');
+    });
 }; // end getMetroAreaBoundaryData()
 
 document.addEventListener('DOMContentLoaded', createMap);
 
+
+})(); // end of wrapper function
