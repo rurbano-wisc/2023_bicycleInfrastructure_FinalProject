@@ -5,29 +5,41 @@
     var map;
 
 
-    // basemap - bike paths and cycleways
-    var bikeBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clg1fo230000101mu9rnp9qr6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
+    // basemap - light gray, with OSM bike paths
+    var lightBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clg1fo230000101mu9rnp9qr6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
-    // basemap - monochrome blue
-    var blueBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clevpwcbs000w01l49qtm5sk0/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
+    // basemap - dark gray, with OSM bike paths
+    var darkBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clgpya8w0004301rb87gi7z2e/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
-
+  
     // control layer for the legend control
     var controlLayers = L.control.layers();
 
-    // global var for the metro area boundaries layer, assigned in getMetroAreaBoundaryData();
-    var cityMetrosNev = L.geoJSON();
-    var cityMetrosCal = L.geoJSON();
-    var osm150ftCal = L.geoJSON();
-    var osm150ftNev = L.geoJSON();
-    var osmCal = L.geoJSON();
-    var osmNev = L.geoJSON();
-    var accidentsCal = L.geoJSON();
-    var accidentsNev = L.geoJSON();
+    // // global var for the individual layers, assigned in getMetroAreaBoundaryData(); but they aren't getting assigned
+    // var cityMetrosNev = L.geoJSON();
+    // var cityMetrosCal = L.geoJSON();
+    // var osm150ftCal = L.geoJSON();
+    // var osm150ftNev = L.geoJSON();
+    // var osmCal = L.geoJSON();
+    // var osmNev = L.geoJSON();
+    // var accidentsCal = L.geoJSON();
+    // var accidentsNev = L.geoJSON();
+
+    // put CA-NV layers into group layers (doesn't work? 'cuz the layers aren't being assigned to global variables)
+    // var cityMetros = L.layerGroup([cityMetrosNev, cityMetrosCal]);
+    // var osm150ft = L.layerGroup([osm150ftCal, osm150ftNev]);
+    // var osm = L.layerGroup([osmCal, osmNev]);
+
+    // var overlayLayers = {
+    //     "Metros Areas": cityMetrosNev,
+    //     "OSM 150ft": osm150ftNev,
+    //     "OSM": osmNev
+    // };
+
 
     // function to initiate Leaflet map
     function createMap() {
@@ -39,31 +51,43 @@
             maxZoom: 22 // limit the zoom levels to something appropriate for this dataset, where the basemap shows the city names
         });
 
-        // add bike Mapbox base tile layer
-        bikeBasemap.addTo(map);
+        // add light gray bike Mapbox base tile layer
+        lightBasemap.addTo(map);
 
         // call the function to process the metro area boundaries polygon layer
         getMetroAreaBoundaryData();
+
         controlLayers.addTo(map);
+        //console.log(cityMetrosNev);
+
+      
 
         // // call getData function to process the point layer
         getData();
 
         // add a base layer control to the map - has to be individually with the .addBaseLayer() method, not as a group object
-        controlLayers.addBaseLayer(bikeBasemap, "Bicycle base map");
-        controlLayers.addBaseLayer(blueBasemap, "Blue base map");
+        controlLayers.addBaseLayer(lightBasemap, "Light gray base map");
+        controlLayers.addBaseLayer(darkBasemap, "Dark gray base map");
+
+
 
         map.on('zoomend', function () {
-            if (map.getZoom() < 6) {
+            if (map.getZoom() < 8) {
                 map.removeLayer(cityMetrosNev);//1st geoJSON layer
                 map.removeLayer(cityMetrosCal);
+                //map.removeLayer(accidentsCal);
+                //map.removeLayer(accidentsNev);
             } else {
                 map.addLayer(cityMetrosNev);
                 cityMetrosNev.bringToBack();
                 map.addLayer(cityMetrosCal);
                 cityMetrosCal.bringToBack();
+                //map.addLayer(accidentsNev);
+                //map.addLayer(accidentsCal);
             }
         });
+
+
     }; // end createMap()
 
 
@@ -112,7 +136,8 @@
                 cityMetrosNev = L.geoJSON(json, metroAreaBoundaryStyle)//.addTo(map); took this out so that it wouldn't be added to the map when it first loads, then it will turn on when the zoom reaches level 6
 
                 // add the layer to the Layers control
-                controlLayers.addOverlay(cityMetrosNev, 'Metro Area Boundaries NV');
+                controlLayers.addOverlay(cityMetrosNev, 'Metro Area Boundaries NV'); // this only seems to work within the callback function
+                //console.log(cityMetrosNev);
             });
 
 
@@ -151,7 +176,7 @@
                 osm150ftCal = L.geoJSON(json, osm150ftStyle)//.addTo(map); took this out so that it wouldn't be added to the map when it first loads, then it will turn on when the zoom reaches level 6
 
                 // add the layer to the Layers control
-                controlLayers.addOverlay(osm150ftCal, 'OSM 150ft CA');
+               controlLayers.addOverlay(osm150ftCal, 'OSM 150ft CA');
             });
 
         // load the OSM Nevada data
@@ -200,7 +225,9 @@ function getData() {
 
             // calculate the yearly stats
  //           calcYearlyStats(json);
+            
             //call function to create proportional symbols
+            //var accidentsLayerName = 'accidentsNev';
             createPropSymbols(json, attributes)
             //controlLayers.addOverlay(json, 'Accidents NV');
             //call function to create the proportional symbols
@@ -253,7 +280,7 @@ function processData(data) {
     return attributes;
 }; // end processData
 
-function createPropSymbols(data, attributes) {
+function createPropSymbols(data, attributes,) {
     // create a Leaflet GeoJSON layer and add it to the map
     L.geoJson(data, {
         pointToLayer: function (feature, latlng) {
