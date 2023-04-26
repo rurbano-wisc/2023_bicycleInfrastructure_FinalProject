@@ -235,9 +235,6 @@ function getData() {
             // call function to create the legend with text for the 1st year, 2016
 //            createLegend(attributes[0]);
         });
-
-
-
             // load the California accidents data
     fetch("data/Accidents_California.geojson")
     .then(function (response) {
