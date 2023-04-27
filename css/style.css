@@ -1,13 +1,13 @@
 .inside {
     font-size: 16px;
     font-weight: bold;
-    //fill: white;
+    /* fill: white; */
 }
 
 .label {
     font-size: 16px;
     font-weight: bold;
-    //fill: white;
+    /* fill: white; */
 }
 
 .chart {
@@ -87,3 +87,9 @@ h4 {
     }
     .row.content {height:auto;} 
     } */
+
+
+    .chartTitle {
+        font-weight: bold;
+        
+    }

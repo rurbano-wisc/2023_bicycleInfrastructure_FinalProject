@@ -31,7 +31,8 @@
 
   // function to create a pie chart, starting with all CA-NV Pedestrian & Bicyclists
   function setChart(metroPedBike) {
-    
+
+
     // pie generator - moves from details to data array, no sorting
     var data = d3.pie()
       .sort(null)
@@ -109,6 +110,10 @@
       .attr("x", 25)
       .attr("y", 15);
 
+
+
+      
+
   } // end setChart()
 
   // function to create a dropdown menu for attribute selection
@@ -166,6 +171,11 @@
       .duration(500);
 
     updateChart(sections, metroSubsetSumArray)
+
+    // update chart title
+    var currentMetroTitle = document.currentMetro;
+    currentMetroTitle.innerHTML(metroName);
+
 
   } // end changeAttribute()
 
@@ -225,6 +235,8 @@
           .attr("y", center[1])
           .text(d.data.value)
       })
+
+
 
   }; // end updateChart()
 
