@@ -3,7 +3,7 @@
 (function () {
 
   // frame size
-  var width = 460, height = 500;
+  var width = 300, height = 350;
 
   // ordinal color generator
   var colors = d3.scaleOrdinal(d3.schemeDark2);
@@ -14,7 +14,13 @@
     .append("svg")
     .attr("width", width)
     .attr("height", height)
-    .style("background", "pink");
+    //.style("background", "pink");
+
+
+var pieTranslate = "translate(150, 180)";
+var pieInnerRadius = 0;
+var pieOuterRadius = 100;
+
 
   // hold the csv accident data
   var csvData;
@@ -36,14 +42,15 @@
 
     // arc generator - 
     var segments = d3.arc()
-      .innerRadius(0)
-      .outerRadius(200)
+      .innerRadius(pieInnerRadius)
+      .outerRadius(pieOuterRadius)
       .padAngle(0.05)
       .padRadius(50);
 
     // appends the segments to the frame using data
     var sections = svg.append("g")
-      .attr("transform", "translate(210, 250)")
+      .attr("transform", pieTranslate)
+      .attr("class", "piechart")
       .selectAll("path")
       .data(data);
 
@@ -58,6 +65,7 @@
     // labels (number) at centroid of each segment (pie slice)
     var content = d3.select("g")
       .selectAll("text")
+      //.attr("class", "pielabels")
       .data(data);
 
     content.enter()
@@ -87,8 +95,8 @@
 
     // legend patches
     legend.append("rect")
-      .attr("width", 20)
-      .attr("height", 20)
+      .attr("width", 15)
+      .attr("height", 15)
       .attr("fill", function (d) {
         return colors(d.data.value);
       });
@@ -102,8 +110,8 @@
       // .attr("fill", function(d) {
       //   return colors(d.data.number)
       // })
-      .attr("x", 30)
-      .attr("y", 18);
+      .attr("x", 25)
+      .attr("y", 15);
 
   } // end setChart()
 
@@ -125,7 +133,7 @@
     var titleOption = dropdown.append("option")
       .attr("class", "titleOption")
       .attr("disabled", "true")
-      .text("Select Attribute");
+      .text("Select Metro Area");
 
     // add attribute name options
     var attrOptions = dropdown.selectAll("attrOptions")
@@ -175,20 +183,23 @@
       .value(function (d) {
         return d.value;
       })(metroPedBike);
+      
+      // remove the existing pie segments
+      var oldSections = d3.selectAll(".piechart");
+      oldSections.remove();
 
-      var oldsections = d3.selectAll(".piesegment");
-      oldsections.remove();
-
+      // now add the new segments
     // arc generator - 
     var segments = d3.arc()
-      .innerRadius(0)
-      .outerRadius(200)
+      .innerRadius(pieInnerRadius)
+      .outerRadius(pieOuterRadius)
       .padAngle(0.05)
       .padRadius(50);
 
     // appends the segments to the frame using data
     var sections = svg.append("g")
-      .attr("transform", "translate(250, 250)")
+      .attr("transform", pieTranslate)
+      .attr("class", "piechart")
       .selectAll("path")
       .data(data);
 
@@ -199,6 +210,27 @@
       .attr("fill", function (d) {
         return colors(d.data.value);
       });
+
+      // remove old labels
+    var oldInside = d3.selectAll(".inside")
+    oldInside.remove();
+
+       // labels (number) at centroid of each segment (pie slice)
+    var content = d3.select(".piechart")
+      .selectAll("text")
+      .data(data);
+
+    content.enter()
+      .append("text")
+      .classed("inside", true)
+      .each(function (d) {
+        var center = segments.centroid(d);
+        d3.select(this)
+          .attr("x", center[0])
+          .attr("y", center[1])
+          .text(d.data.value)
+      })
+
   }; // end updateChart()
 
   // read the csv data of accidents
