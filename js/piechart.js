@@ -13,6 +13,7 @@
   // create an svg element in the chart div
   var svg = d3.select(".chart")
     .append("svg")
+    .attr("class", "piechartframe")
     .attr("width", width)
     .attr("height", height)
   
@@ -110,9 +111,7 @@
       .attr("x", 25)
       .attr("y", 15);
 
-
-
-      
+     
 
   } // end setChart()
 
@@ -170,17 +169,22 @@
       })
       .duration(500);
 
-    updateChart(sections, metroSubsetSumArray)
+    updateChart(sections, metroSubsetSumArray, metroName)
+
 
     // update chart title
-    var currentMetroTitle = document.currentMetro;
-    currentMetroTitle.innerHTML(metroName);
+    var currentMetroTitle = document.getElementById("currentMetro");
+    currentMetroTitle.remove()
+    var replaceTitle = document.querySelector(".chart");
+    replaceTitle.insertAdjacentHTML("afterbegin", '<h4 id="currentMetro">Fatalities in ' + metroName + "</h4>")
+    
+    //console.log("currentMEtro:", currentMetroTitle);
 
 
   } // end changeAttribute()
 
   // function to update the current pie chart with the selected Metro area
-  function updateChart(sections, metroPedBike) {
+  function updateChart(sections, metroPedBike, metroName) {
 
     // pie generator
     var data = d3.pie()
@@ -235,8 +239,6 @@
           .attr("y", center[1])
           .text(d.data.value)
       })
-
-
 
   }; // end updateChart()
 
