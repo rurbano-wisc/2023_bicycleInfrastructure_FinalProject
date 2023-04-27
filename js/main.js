@@ -45,8 +45,8 @@
     function createMap() {
         // create the map, centered on CA/NV
         map = L.map('map', {
-            center: [37.5, -119.5],
-            zoom: 4,
+            center: [37.49, -119.5],
+            zoom: 5.5,
             minZoom: 5,
             maxZoom: 22 // limit the zoom levels to something appropriate for this dataset, where the basemap shows the city names
         });
@@ -101,6 +101,32 @@
             opacity: 1,
             fillOpacity: 0
         };
+// attempt to add Mapbox tileset control layers
+// California OSM
+        // create a Mapbox tile layer
+        var CaliforniaTileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            maxZoom: 22,
+            tileSize: 512,
+            zoomOffset: -1,
+            id: 'mapbox/rurbano.18io0j34', // replace with your desired tileset ID
+            accessToken: 'pk.eyJ1IjoicnVyYmFubyIsImEiOiJjbGFoanRxYWkwY3c5M3dta2RhdzNlYXppIn0.HebbeRpuABArQDdvwTJhEQ' // replace with your Mapbox access token
+        });
+
+        // add the Mapbox tile layer to the controlLayers object as a base layer
+        controlLayers.addBaseLayer(CaliforniaTileLayer, 'California OSM');
+        
+// // Nevada OSM
+//         var mapboxTileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+//             maxZoom: 22,
+//             tileSize: 512,
+//             zoomOffset: -1,
+//             id: 'mapbox/satellite-streets-v11', // replace with your desired tileset ID
+//             accessToken: 'your-access-token' // replace with your Mapbox access token
+//         });
+
+//         // add the Mapbox tile layer to the controlLayers object as a base layer
+//         controlLayers.addBaseLayer(mapboxTileLayer, 'Mapbox Satellite');
+
 
         var osm150ftStyle = {
             //fillColor: "#A65E44",

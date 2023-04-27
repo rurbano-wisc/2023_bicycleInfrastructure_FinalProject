@@ -6,6 +6,10 @@
         <!-- web tab title -->
             <title>More than just cars</title>
 
+        <!-- mapbox links -->
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+
         <!-- using bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,64 +25,103 @@
     </head>
     <body>
         <!--put your initial page content here-->
-        <div class="container">
-          <h1>Where are pedestrian and cyclist deaths occuring?</h1>
-          <h3> A need for more pedestrian friendly spaces and protected cycleways</h3>
-        </div>
         <div class="container-fluid">
-          <div class="row">
-              <div class="col">
-                <p> When you begin to think about it, it should come to no surprise some of the most valuable locations within cities
-                are in areas that are highly walkable. Liveable desirable communities prioritize safe and convienent transportation whether it be
-                by walking or bicycling. Unfortunately though, each year roughly 19% of traffic fatalities involve pedestrians and cyclists,
-                averaging out to about 6,000 pedestrian deaths annually and 850+/- cyclist deaths. There are additional statistics capturing those
-                injured but is not the focus for this analysis. Furthermore this analysis uses data provided by the National Highway Traffic Safety 
-                Administration. 
-              </p>
-              </div>
-              <div class="col">
-              <p> Success news story 1
-              </p> 
-              <p> Success news story 2
-              </p> 
-                carousel of the deaths recently
-              </div>
-              <div class="col" style='border: 1px solid red'>
-                maybe place a chart here of public funding available and links to it being implemented
-              
-              </div>
-              <div class="col">
-                <p> We hope to shed light on this steadily increasing problem, as a lack of pedestrian and cyclist infrastructure is lacking as our population grows.
-                  It is necessary to consider the success of pedestrianized areas around the country and the world when expanding our city infrastructure.
-                  We need to shift the planning to include cycleways and discourage car dependency. Less people on the roads everyday is a win all around 
-                  when it comes to curbing pollution (even as cars seek to electrify), as there would be less tire pollution daily.  
-                </p>
-                  Fatal bicycle crash rates have risen dramatically over the past decade. In 2020, 932 bicyclists were killed on U.S. roads, up from a low of 621
-                   in 2010. One reason may be the dominance of pickups and SUVs in the U.S. vehicle fleet. Research consistently shows that such larger vehicles 
-                   are more dangerous to bicyclists than cars (IIHS). 
-              
-              </div>
-            </div>
+          <h1>Where are pedestrian and cyclist deaths occuring?</h1>
+          <h4> A need for more pedestrian friendly spaces and protected cycleways</h4>
+
             <div class="padding" id ="map-container">
               <div class="container">
                 <div class="row">
-                <div class="col-4"  style='border: 1px solid red'> <p>Lorem ipsum doloquo 
+                <div class="col-4"  style='border: 1px solid black'> <p> CHART GOES HERE
+                  <p>circle</p>
                 </p>
               </div>
 
-
               <div class="col-8"> 
-                <div id="map"> <!-- map frame goes here --> </div>
+                <!-- map frame goes here --> 
+                <div id="map"> </div>
               </div>
-            </div>
-                 
+              <div class="row">
+                <div class="col">
+                <p> When you begin to think about it, it should come to no surprise some of the most valuable locations and vibrant city centers are heavily pedestrianized.
+                  These locations within city limits are often usually accessible by cycle. Liveable desirable communities prioritize safe and convienent transportation 
+                  whether it be by walking or bicycling. Even though pedestrianized areas only account for 1% of the Land Cover in the US, these
+                  pedestrianized areas have been proven to account for 20% of the GDP.</p>
+
+                <p> Unfortunately though, each year roughly 19% of traffic fatalities involve pedestrians and cyclists,
+                averaging out to about 6,000 pedestrian deaths annually and 850+/- cyclist deaths. There are additional statistics capturing those that have been
+                injured but is not the focus for this analysis. Furthermore this analysis uses data provided by the National Highway Traffic Safety 
+                Administration. </p>
+                </div>
+                
+                <div class="col">
+                <p> Success news story 1
+                </p> 
+                <p> Success news story 2
+                </p> 
+                  carousel of the deaths recently
+                </div>
+      
+                <div class="col">
+                    We hope to shed light on this steadily increasing problem, as a lack of pedestrian and cyclist infrastructure is lacking as our population grows.
+                    It is necessary to consider the success of pedestrianized areas around the country and the world when expanding our city infrastructure.
+                    We need to shift the planning to include cycleways and discourage car dependency. Less people on the roads everyday is a win all around 
+                    when it comes to curbing pollution (even as cars seek to electrify), as there would be less tire pollution daily.  
+                  </p>
+                    Fatal bicycle crash rates have risen dramatically over the past decade. In 2020, 932 bicyclists were killed on U.S. roads, up from a low of 621
+                     in 2010. One reason may be the dominance of pickups and SUVs in the U.S. vehicle fleet. Research consistently shows that such larger vehicles 
+                     are more dangerous to bicyclists than cars (IIHS). 
+                
+                </div>
+              </div>
+              
+                </div> 
               </div>
             </div>
           </div>
         <!--you can also use this space for internal scripts;
         place these within <script> tags-->
           <footer class="container-fluid text-center">
-            <p>Sources to the data seen in this project include those listed below.</p>
+            <p>Websites of Interest, take a look at the data and sources of inspiration for this project.</p>
+            <div class="row">
+              <div class="col-sm-4"> 
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/" class="text-white">NHTSA fatality data</a>
+                  </li>
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="https://www.opencyclemap.org/" class="text-white"> OpenCycleMap</a>
+                    </li>
+              </div>
+              
+              <div class="col-sm-4">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="https://www.youtube.com/watch?v=tLYkg55RRMk&ab_channel=CommonGround" class="text-white">Difference between bike paths and bike lanes</a> 
+                  </li>
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href="https://www.belairassociation.org/blog/6n1fcubre3lyair6oqh4u7nfh43quk" class="text-white">NIMBY opposition to public transit and with it likely bike lanes</a> 
+                    </li>
+              </div>
+
+
+              <div class="col-sm-4">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href = "https://www.youtube.com/watch?v=U7VBfkNU41c&ab_channel=CityNerd" class="text-white">Built by design, what is a car centric city?</a> 
+                  </li>
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a href = "https://cityratings.peopleforbikes.org/" class="text-white">City Bike Rankings</a>
+                    </li>
+              </div>
+            </div>
+
+<p> </p>
+
+
           </footer>
         <!--put your external script links here-->
         <script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>

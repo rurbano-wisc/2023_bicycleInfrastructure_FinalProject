@@ -1,6 +1,6 @@
 #map {
-    height: 500px; 
-    width: 80%;
+    height: 550px; 
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -11,18 +11,28 @@
 
 h1 {
     text-align: center;
+  
 }
 
-h3 {text-align: center;}
+h4 {
+    text-align: center;
+}
+
+
 /* tbd if below is necessary */
 #map-container{
-
-    padding-top:25px;
-    padding-left:10px;
+    /* padding-bottom:25px; */
+    padding: 25px;
+    background-color: aquamarine;
 
 }
-
-
+.col{
+    padding-top: 25px;
+    padding: 25px;
+}
+.col-4{
+    padding: 25px;
+}
 
 /* Remove the navbar's default margin-bottom and rounded borders */ 
 .navbar {
@@ -31,7 +41,11 @@ h3 {text-align: center;}
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {
+        height: 450px;
+        padding-top: 25px;
+        padding: 25px;
+    }
     
     /* Set gray background color and 100% height */
     .sidenav {
