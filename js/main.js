@@ -3,23 +3,20 @@
 
     // declare map var in global scope
     var map;
-
-
+    var accidentsHeatmap;
     // basemap - light gray, with OSM bike paths
     var lightBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clg1fo230000101mu9rnp9qr6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
-
     // basemap - dark gray, with OSM bike paths
     var darkBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clgpya8w0004301rb87gi7z2e/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
-  
     // control layer for the legend control
     var controlLayers = L.control.layers();
 
-    // // global var for the individual layers, assigned in getMetroAreaBoundaryData(); but they aren't getting assigned
+    // global var for the individual layers, assigned in getMetroAreaBoundaryData(); but they aren't getting assigned
     // var cityMetrosNev = L.geoJSON();
     // var cityMetrosCal = L.geoJSON();
     // var osm150ftCal = L.geoJSON();
@@ -59,16 +56,34 @@
 
         controlLayers.addTo(map);
         //console.log(cityMetrosNev);
-
-      
-
         // // call getData function to process the point layer
         getData();
 
-        // add a base layer control to the map - has to be individually with the .addBaseLayer() method, not as a group object
-        controlLayers.addBaseLayer(lightBasemap, "Light gray base map");
-        controlLayers.addBaseLayer(darkBasemap, "Dark gray base map");
-
+        // function getAccidentsHeatmapData() {
+        //     // load the accidents data as a GeoJSON layer
+        //     fetch("data/Accidents_California.geojson")
+        //         .then(function (response) {
+        //             return response.json();
+        //         })
+        //         .then(function (json) {
+        //             // convert the GeoJSON layer to an array of latitudes and longitudes
+        //             var latlngs = json.features.map(function (feature) {
+        //                 return [feature.geometry.coordinates[1], feature.geometry.coordinates[0]];
+        //             });
+        //             // create a new heatmap layer using Leaflet.heat
+        //             var accidentsHeatmap = L.heatLayer(latlngs, {
+        //                 radius: 25,
+        //                 blur: 15,
+        //                 maxZoom: 22,
+        //             });
+        //             // add the heatmap layer to the Layers control
+        //             controlLayers.addOverlay(accidentsHeatmap, 'Accidents Heatmap');
+        //         });
+        // }
+        // getAccidentsHeatmapData();
+        // // add a base layer control to the map - has to be individually with the .addBaseLayer() method, not as a group object
+        // controlLayers.addBaseLayer(lightBasemap, "Light gray base map");
+        // controlLayers.addBaseLayer(darkBasemap, "Dark gray base map");
 
 
         map.on('zoomend', function () {
@@ -77,19 +92,21 @@
                 map.removeLayer(cityMetrosCal);
                 //map.removeLayer(accidentsCal);
                 //map.removeLayer(accidentsNev);
+                 // add the heatmap layer when zoomed out
+                // map.addLayer(accidentsHeatmap);
             } else {
                 map.addLayer(cityMetrosNev);
                 cityMetrosNev.bringToBack();
                 map.addLayer(cityMetrosCal);
                 cityMetrosCal.bringToBack();
+                // remove the heatmap layer when zoomed in
+                map.removeLayer(accidentsHeatmap)
                 //map.addLayer(accidentsNev);
                 //map.addLayer(accidentsCal);
             }
         });
-
-
     }; // end createMap()
-
+    
 
     //function to import the metro area boundary data and OSM geojson, style it, and add it to the layer control
     function getMetroAreaBoundaryData() {
@@ -101,32 +118,6 @@
             opacity: 1,
             fillOpacity: 0
         };
-// attempt to add Mapbox tileset control layers
-// California OSM
-        // create a Mapbox tile layer
-        var CaliforniaTileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-            maxZoom: 22,
-            tileSize: 512,
-            zoomOffset: -1,
-            id: 'mapbox/rurbano.18io0j34', // replace with your desired tileset ID
-            accessToken: 'pk.eyJ1IjoicnVyYmFubyIsImEiOiJjbGFoanRxYWkwY3c5M3dta2RhdzNlYXppIn0.HebbeRpuABArQDdvwTJhEQ' // replace with your Mapbox access token
-        });
-
-        // add the Mapbox tile layer to the controlLayers object as a base layer
-        controlLayers.addBaseLayer(CaliforniaTileLayer, 'California OSM');
-        
-// // Nevada OSM
-//         var mapboxTileLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-//             maxZoom: 22,
-//             tileSize: 512,
-//             zoomOffset: -1,
-//             id: 'mapbox/satellite-streets-v11', // replace with your desired tileset ID
-//             accessToken: 'your-access-token' // replace with your Mapbox access token
-//         });
-
-//         // add the Mapbox tile layer to the controlLayers object as a base layer
-//         controlLayers.addBaseLayer(mapboxTileLayer, 'Mapbox Satellite');
-
 
         var osm150ftStyle = {
             //fillColor: "#A65E44",
@@ -153,6 +144,7 @@
         //     fillOpacity: 0.8
         // };
 
+        // metro data
         // load the Nevada Metro Area boundary data
         fetch("data/CityMetros_Nev_geog.geojson")
             .then(function (response) {
@@ -165,7 +157,6 @@
                 controlLayers.addOverlay(cityMetrosNev, 'Metro Area Boundaries NV'); // this only seems to work within the callback function
                 //console.log(cityMetrosNev);
             });
-
 
         // load the California Metro Area boundary data
         fetch("data/CityMetros_Cal_geog.geojson")

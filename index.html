@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- web tab title -->
             <title>More than just cars</title>
-
         <!-- mapbox links -->
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
@@ -17,6 +16,14 @@
          <!--you can also place internal styles here;
              place these within <style> tags-->
               <link rel="stylesheet" href="lib/leaflet/leaflet.css"> <!--Load leflet.css before my style.css-->
+  
+        <!-- maybe for heatmap -->
+        <!-- <script src="js/leaflet-heat.js"></script> -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="js/leaflet-heat.js"></script>
+
+
               <link rel="stylesheet" href="css/style.css">
 
               <!-- to get rid of error about favicon.ico missing -->
@@ -39,13 +46,14 @@
                 <div class="row">
                 <div class="col-4"  style='border: 1px solid black'> 
                   <div class="chart"> 
-                    <h4>Fatalities in <span class="currentMetro">California and Nevada</span></h4><!-- <p>chart goes here</p> --> </div>
+                      <h4>Fatalities in <span class="currentMetro">California and Nevada</span></h4><!-- <p>chart goes here</p> --> </div>
                 </p>
               </div>
         <!-- map frame goes here --> 
               <div class="col-8"> 
                 <div id="map"> </div>
               </div>
+        <!-- bottom row -->
               <div class="row">
         <!-- bottom left column -->
                 <div class="col">
