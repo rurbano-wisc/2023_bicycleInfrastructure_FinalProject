@@ -6,10 +6,16 @@
   var width = 300, height = 350;
 
   // ordinal color generator
-  var colors = d3.scaleOrdinal(d3.schemeDark2);
+  //var colors = d3.scaleOrdinal(d3.schemeDark2);
   //var colors = ['#fef0d9','#fdcc8a','#fc8d59','#e34a33','#b30000'];
 
-  // create an svg element, make it pink
+  var colorScale = d3.scaleOrdinal().domain(["Pedestrian", "Bicyclist"])
+  .range(["#d9a78b", "#a65e44"]);
+
+  //pie.colors(function(d){ return colorScale(d.fruitType); });
+
+
+  // create an svg element
   var svg = d3.select(".chart")
     .append("svg")
     .attr("width", width)
@@ -38,7 +44,7 @@ var pieOuterRadius = 100;
       .value(function (d) {
         return d.value;
       })(metroPedBike);
-    //console.log(data);
+    console.log(metroPedBike);
 
     // arc generator - 
     var segments = d3.arc()
@@ -59,7 +65,7 @@ var pieOuterRadius = 100;
       .attr("d", segments)
       .attr("class", "piesegment")
       .attr("fill", function (d) {
-        return colors(d.data.value);
+        return colorScale(d.data.name); 
       });
 
     // labels (number) at centroid of each segment (pie slice)
@@ -74,7 +80,7 @@ var pieOuterRadius = 100;
       .each(function (d) {
         var center = segments.centroid(d);
         d3.select(this)
-          .attr("x", center[0])
+          .attr("x", center[0] - 10)
           .attr("y", center[1])
           .text(d.data.value)
       })
@@ -98,7 +104,7 @@ var pieOuterRadius = 100;
       .attr("width", 15)
       .attr("height", 15)
       .attr("fill", function (d) {
-        return colors(d.data.value);
+        return colorScale(d.data.name);
       });
 
     // legend labels
@@ -208,7 +214,7 @@ var pieOuterRadius = 100;
       .attr("d", segments)
       .attr("class", "piesegment")
       .attr("fill", function (d) {
-        return colors(d.data.value);
+        return colorScale(d.data.name);
       });
 
       // remove old labels
@@ -226,7 +232,7 @@ var pieOuterRadius = 100;
       .each(function (d) {
         var center = segments.centroid(d);
         d3.select(this)
-          .attr("x", center[0])
+          .attr("x", center[0] - 10)
           .attr("y", center[1])
           .text(d.data.value)
       })
@@ -248,12 +254,13 @@ var pieOuterRadius = 100;
       var metroAccidents = d3.group(csvData, d => d.metro);
       //console.log(metroAccidents);
 
+      //console.log(d3.flatRollup(csvData, v => d3.sum(v, d => d.PERSONS), d => d.metro, d => d.HARM_EV));
 
       var metroList = Array.from(metroAccidents, ([key]) => (key));
 
-      console.log("MetroList: ", metroList);
+      //console.log("MetroList: ", metroList);
 
-      var metroSubset = metroAccidents.get("Reno Metropolitan");
+      var metroSubset = metroAccidents.get(expressed);
       var metroSubsetSum = d3.rollup(metroSubset, v => d3.sum(v, d => d.PERSONS), d => d.HARM_EV)
 
       var metroSubsetSumArray = Array.from(metroSubsetSum, ([name, value]) => ({ name, value }));
