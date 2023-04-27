@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- web tab title -->
+  <!-- web tab title -->
             <title>More than just cars</title>
 
         <!-- mapbox links -->
@@ -23,25 +23,30 @@
               <link rel="icon" href="data:;base64,=">
 
     </head>
+  <!-- body -->
     <body>
-        <!--put your initial page content here-->
+        <!--initial page content here-->
+
+        <!-- title and second header -->
         <div class="container-fluid">
+
           <h1>Where are pedestrian and cyclist deaths occuring?</h1>
           <h4> A need for more pedestrian friendly spaces and protected cycleways</h4>
 
             <div class="padding" id ="map-container">
               <div class="container">
+        <!-- pie chart -->
                 <div class="row">
-                <div class="col-4"  style='border: 1px solid black'> <p> CHART GOES HERE
-                  <p>circle</p>
+                <div class="col-4"  style='border: 1px solid black'> 
+                  <div class="chart"> <!-- <p>chart goes here</p> --> </div>
                 </p>
               </div>
-
+        <!-- map frame goes here --> 
               <div class="col-8"> 
-                <!-- map frame goes here --> 
                 <div id="map"> </div>
               </div>
               <div class="row">
+        <!-- bottom left column -->
                 <div class="col">
                 <p> When you begin to think about it, it should come to no surprise some of the most valuable locations and vibrant city centers are heavily pedestrianized.
                   These locations within city limits are often usually accessible by cycle. Liveable desirable communities prioritize safe and convienent transportation 
@@ -53,7 +58,7 @@
                 injured but is not the focus for this analysis. Furthermore this analysis uses data provided by the National Highway Traffic Safety 
                 Administration. </p>
                 </div>
-                
+        <!-- bottom middle carousel -->
                 <div class="col">
                 <p> Success news story 1
                 </p> 
@@ -61,7 +66,7 @@
                 </p> 
                   carousel of the deaths recently
                 </div>
-      
+        <!-- bottom right column -->
                 <div class="col">
                     We hope to shed light on this steadily increasing problem, as a lack of pedestrian and cyclist infrastructure is lacking as our population grows.
                     It is necessary to consider the success of pedestrianized areas around the country and the world when expanding our city infrastructure.
@@ -71,7 +76,6 @@
                     Fatal bicycle crash rates have risen dramatically over the past decade. In 2020, 932 bicyclists were killed on U.S. roads, up from a low of 621
                      in 2010. One reason may be the dominance of pickups and SUVs in the U.S. vehicle fleet. Research consistently shows that such larger vehicles 
                      are more dangerous to bicyclists than cars (IIHS). 
-                
                 </div>
               </div>
               
@@ -79,8 +83,8 @@
               </div>
             </div>
           </div>
-        <!--you can also use this space for internal scripts;
-        place these within <script> tags-->
+
+    <!-- footer -->
           <footer class="container-fluid text-center">
             <p>Websites of Interest, take a look at the data and sources of inspiration for this project.</p>
             <div class="row">
@@ -123,7 +127,12 @@
 
 
           </footer>
+
         <!--put your external script links here-->
+        <script type="text/javascript" src="lib/d3.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/d3-dsv@3"></script>  -->
+        <!-- for d3.autoType-->
+        <script type="text/javascript" src="js/piechart.js"></script>
         <script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="lib/jquery-3.5.1.js"></script>

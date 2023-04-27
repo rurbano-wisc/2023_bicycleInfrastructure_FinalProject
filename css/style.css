@@ -1,3 +1,21 @@
+.inside {
+    font-size: 24px;
+    font-weight: bold;
+    fill: white;
+}
+
+.label {
+    font-size: 24px;
+    font-weight: bold;
+    fill: white;
+}
+
+.chart {
+    width: 800;
+    height: 550;
+
+}
+
 #map {
     height: 550px; 
     width: 100%;
@@ -5,8 +23,13 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    border: 1px solid black;
-    
+    border: 1px solid black;    
+}
+#map-container{
+    /* padding-bottom:25px; */
+    padding: 25px;
+    background-color: aquamarine;
+
 }
 
 h1 {
@@ -19,21 +42,15 @@ h4 {
 }
 
 
-/* tbd if below is necessary */
-#map-container{
-    /* padding-bottom:25px; */
-    padding: 25px;
-    background-color: aquamarine;
-
-}
 .col{
     padding-top: 25px;
     padding: 25px;
 }
 .col-4{
-    padding: 25px;
+    /* padding: 25px; */
 }
 
+/* tbd if below is necessary */
 /* Remove the navbar's default margin-bottom and rounded borders */ 
 .navbar {
     margin-bottom: 0;
@@ -63,10 +80,10 @@ h4 {
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
+    /* @media screen and (max-width: 767px) {
     .sidenav {
         height: auto;
         padding: 15px;
     }
     .row.content {height:auto;} 
-    }
+    } */
