@@ -171,9 +171,9 @@
   // function to change the metro area displayed in the chart
   function changeAttribute(metroName, metroAccidents) {
 
-    // get the accidents from the selected metro area, then summarize on PERSONS, HARM_EV
+    // get the accidents from the selected metro area, then summarize on FATALS, HARM_EV
     var metroSubset = metroAccidents.get(metroName);
-    var metroSubsetSum = d3.rollup(metroSubset, v => d3.sum(v, d => d.PERSONS), d => d.HARM_EV)
+    var metroSubsetSum = d3.rollup(metroSubset, v => d3.sum(v, d => d.FATALS), d => d.HARM_EV)
     var metroSubsetSumArray = Array.from(metroSubsetSum, ([name, value]) => ({ name, value }));
     //console.log("metroSubsetSumArray", metroSubsetSumArray);
     //console.log(metroName, metroSubset.length);
@@ -280,10 +280,10 @@
       // groups all the accident records by their metro area
       var metroAccidents = d3.group(csvData, d => d.metro);
       //console.log(metroAccidents);
-      //console.log(d3.flatRollup(csvData, v => d3.sum(v, d => d.PERSONS), d => d.metro, d => d.HARM_EV));
+      //console.log(d3.flatRollup(csvData, v => d3.sum(v, d => d.FATALS), d => d.metro, d => d.HARM_EV));
 
       //for the pie chart
-      var allMetroAccidentsSum = d3.rollup(csvData, v => d3.sum(v, d => d.PERSONS), d => d.HARM_EV);
+      var allMetroAccidentsSum = d3.rollup(csvData, v => d3.sum(v, d => d.FATALS), d => d.HARM_EV);
       //console.log("allMetroAccidentsSum: ", allMetroAccidentsSum);
       var allMetroAccidentsSumArray = Array.from(allMetroAccidentsSum, ([name, value]) => ({ name, value }));
       //console.log("allMetroAccidentsArray: ", allMetroAccidentsSumArray);
@@ -292,7 +292,7 @@
       //console.log("MetroList: ", metroList);
 
       //var metroSubset = metroAccidents.get(expressed);
-      //var metroSubsetSum = d3.rollup(metroSubset, v => d3.sum(v, d => d.PERSONS), d => d.HARM_EV)
+      //var metroSubsetSum = d3.rollup(metroSubset, v => d3.sum(v, d => d.FATALS), d => d.HARM_EV)
       //var metroSubsetSumArray = Array.from(metroSubsetSum, ([name, value]) => ({ name, value }));
       //console.log("metroSubsetSumArray: ", metroSubsetSumArray);
 
