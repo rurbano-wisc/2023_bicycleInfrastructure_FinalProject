@@ -179,16 +179,12 @@
     //console.log(metroName, metroSubset.length);
 
     //console.log("csvMetroYearSumData: ", csvMetroYearSumData);
+
+    // filter the metro yearly sum dataset by the current metro
     var metroYearSumDataSubset = csvMetroYearSumData.filter(function (metro) {
       return metro.metro == metroName;
     });
-    
-    
-    
-    console.log("metroMetroYearSumDataSubset: ", metroYearSumDataSubset)
-
-
-
+    //console.log("metroMetroYearSumDataSubset: ", metroYearSumDataSubset)
 
     // transition on pie chart - does this do anything?
     var sections = d3.selectAll(".piesegment")
@@ -199,16 +195,14 @@
       .duration(500);
 
     updateChart(sections, metroSubsetSumArray, metroName);
-      updateBarChart(metroYearSumDataSubset, metroName);
+    updateBarChart(metroYearSumDataSubset, metroName);
 
     // update chart title
     var currentMetroTitle = document.getElementById("currentMetro");
     currentMetroTitle.remove()
     var replaceTitle = document.querySelector(".chart");
     replaceTitle.insertAdjacentHTML("afterbegin", '<h4 id="currentMetro">Fatalities in ' + metroName + "</h4>")
-    
     //console.log("currentMEtro:", currentMetroTitle);
-
 
   } // end changeAttribute()
 
@@ -328,12 +322,14 @@
   }; // end setMap()
 
 // function to create a stacked bar chart, based on https://observablehq.com/@stuartathompson/a-step-by-step-guide-to-the-d3-v4-stacked-bar-chart
+// creates the initial stacked bar chart with all CA-NV data
   function setBarChart(csvYearSumData) {
+    // categories for the bar chart
     keys = ["Pedestrian", "Bicyclist"];
 
+    // stack the 2 categories
     stack = d3.stack().keys(keys)(csvYearSumData);
-
-    console.log("stack: ", stack);
+    //console.log("stack: ", stack);
 
     stack.map((d, i) => {
       d.map(d => {
@@ -343,6 +339,7 @@
       return d;
     });
 
+    // get the maximum value for the y axis
     yMax = d3.max(csvYearSumData, d => {
       var val = 0
       for (var k of keys) {
@@ -351,17 +348,16 @@
       }
       return val;
     });
-
     //console.log("yMax: ", yMax);
 
-    y = d3.scaleLinear().domain([0, yMax]).range([barChartHeight, 0]);
-
+    //get x and y scales
+    var y = d3.scaleLinear().domain([0, yMax]).range([barChartHeight, 0]);
     var x = d3.scaleLinear().domain([2001, 2020]).range([0, barChartWidth])
 
+    // y axis generator
     var yAxis = d3.axisLeft(y);
-    
 
-    // append some rectangles
+    // append rectangles from the stack
     barChartSvg.selectAll("g")
       .data(stack).enter()
       .append("g")
@@ -377,7 +373,7 @@
       .attr("x", function (d, i) {
         var fraction = barChartWidth / 20;
         return 30 + (i * fraction) + ((fraction - 1) / 2);
-    })
+      })
       .attr("width", barChartWidth / 20)
       .attr("height", d => {
         return y(d[0]) - y(d[1]);
@@ -390,35 +386,33 @@
       .attr("stroke", "white")
       .attr("stroke-width", 1)
 
+    // add the y axis
     var yAxisSvg = barChartSvg.append("g")
       .call(yAxis)
       .attr("class", "barChartYaxis")
       .attr("transform", "translate(35,0)")
-      //.attr("rotate", -90);
-      //.attr("fill", "black");
 
-
-
-      yAxisSvg.selectAll(".tick text")
+    // format the Y axis
+    yAxisSvg.selectAll(".tick text")
       .attr("fill", "black");
-
-      yAxisSvg.selectAll(".tick line")
+    yAxisSvg.selectAll(".tick line")
       .attr("stroke", "black");
 
+    // add the X axis
     makeXaxis();
 
+    // not sure what this does
     return barChartSvg.node();
-
-    
 
   }; // end setBarChart()
 
   function updateBarChart(metroYearSumDataSubset, metroName) {
+    // categories for the bar chart
     keys = ["Pedestrian", "Bicyclist"];
 
+    // stack the 2 categories
     stack = d3.stack().keys(keys)(metroYearSumDataSubset);
-
-    console.log("stack: ", stack);
+    //console.log("stack: ", stack);
 
     stack.map((d, i) => {
       d.map(d => {
@@ -428,6 +422,7 @@
       return d;
     });
 
+    // get the maximum value for the y axis
     yMax = d3.max(metroYearSumDataSubset, d => {
       var val = 0
       for (var k of keys) {
@@ -435,46 +430,42 @@
       }
       return val;
     });
+    //console.log("yMax: ", yMax);
 
-    console.log("yMax: ", yMax);
-
-    y = d3.scaleLinear().domain([0, yMax]).range([barChartHeight, 0]);
-
+    //get x and y scales
+    var y = d3.scaleLinear().domain([0, yMax]).range([barChartHeight, 0]);
     var x = d3.scaleLinear().domain([2001, 2020]).range([0, barChartWidth]);
 
+    // y axis generator
     var yAxis = d3.axisLeft(y);
-    
-    // // remove the previous bar chart elements
-    // var removeElement = document.querySelector(".PedestrianBarGroup");
-    // while (removeElement.hasChildNodes()) {
-    //   removeElement.removeChild(removeElement.firstChild)
-    // };
-    
+
+    // remove the existing g elements so they can be replaced with the new metro bars    
     var removeElement = document.querySelector(".PedestrianBarGroup");
     removeElement.remove();
-    
     var removeElement = document.querySelector(".BicyclistBarGroup");
     removeElement.remove();
     var removeElement = document.querySelector(".barChartYaxis");
     removeElement.remove();
+    var removeElement = document.querySelector(".barChartXaxis");
+    removeElement.remove();
 
-    // append some rectangles
+    // append rectangles from the stack
     barChartSvg.selectAll("g")
       .data(stack).enter()
       .append("g")
-      // .attr("class", function (d) {
-      //   return d.key + "BarGroup"
-      // })
+      .attr("class", function (d) {
+        return d.key + "BarGroup"
+      })
       .selectAll("rect")
       .data(d => d).enter()
       .append("rect")
-      // .attr("class", function (d) {
-      //   return d.key + "Bar"
-      // })
+      .attr("class", function (d) {
+        return d.key + "Bar"
+      })
       .attr("x", function (d, i) {
         var fraction = barChartWidth / 20;
         return 30 + (i * fraction) + ((fraction - 1) / 2);
-    })
+      })
       .attr("width", barChartWidth / 20)
       .attr("height", d => {
         return y(d[0]) - y(d[1]);
@@ -487,26 +478,25 @@
       .attr("stroke", "white")
       .attr("stroke-width", 1)
 
+    // add the y axis
     var yAxisSvg = barChartSvg.append("g")
       .call(yAxis)
       .attr("class", "barChartYaxis")
       .attr("transform", "translate(35,0)")
-      //.attr("rotate", -90);
-      //.attr("fill", "black");
+    //.attr("rotate", -90);
+    //.attr("fill", "black");
 
-
-
-      yAxisSvg.selectAll(".tick text")
+    // format the Y axis
+    yAxisSvg.selectAll(".tick text")
       .attr("fill", "black");
-
-      yAxisSvg.selectAll(".tick line")
+    yAxisSvg.selectAll(".tick line")
       .attr("stroke", "black");
 
-    //makeXaxis();
+    // add the X axis
+    makeXaxis();
 
+    // not sure what this does
     return barChartSvg.node();
-
-    
 
   }; // end updateBarChart()
 
