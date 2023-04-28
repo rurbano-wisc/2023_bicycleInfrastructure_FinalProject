@@ -133,7 +133,7 @@
   } // end setChart()
 
   // function to create a dropdown menu for attribute selection
-  function createDropdown(metroAccidents, metroList) {
+  function createDropdown(metroAccidents, metroList, csvMetroYearSumData) {
     // add select element
 
     //console.log(metroList);
@@ -142,7 +142,7 @@
       .append("select")
       .attr("class", "dropdown")
       .on("change", function () {
-        changeAttribute(this.value, metroAccidents)
+        changeAttribute(this.value, metroAccidents, csvMetroYearSumData)
 
       });
 
@@ -169,7 +169,7 @@
   }; // end createDropdown()
 
   // function to change the metro area displayed in the chart
-  function changeAttribute(metroName, metroAccidents) {
+  function changeAttribute(metroName, metroAccidents, csvMetroYearSumData) {
 
     // get the accidents from the selected metro area, then summarize on FATALS, HARM_EV
     var metroSubset = metroAccidents.get(metroName);
@@ -177,6 +177,18 @@
     var metroSubsetSumArray = Array.from(metroSubsetSum, ([name, value]) => ({ name, value }));
     //console.log("metroSubsetSumArray", metroSubsetSumArray);
     //console.log(metroName, metroSubset.length);
+
+    //console.log("csvMetroYearSumData: ", csvMetroYearSumData);
+    var metroYearSumDataSubset = csvMetroYearSumData.filter(function (metro) {
+      return metro.metro == metroName;
+    });
+    
+    
+    
+    console.log("metroMetroYearSumDataSubset: ", metroYearSumDataSubset)
+
+
+
 
     // transition on pie chart - does this do anything?
     var sections = d3.selectAll(".piesegment")
@@ -186,8 +198,8 @@
       })
       .duration(500);
 
-    updateChart(sections, metroSubsetSumArray, metroName)
-
+    updateChart(sections, metroSubsetSumArray, metroName);
+      updateBarChart(metroYearSumDataSubset, metroName);
 
     // update chart title
     var currentMetroTitle = document.getElementById("currentMetro");
@@ -304,7 +316,7 @@
 
 
       // call dropdown function
-      createDropdown(metroAccidents, metroList)
+      createDropdown(metroAccidents, metroList, csvMetroYearSumData);
 
       // create the 1st chart
       setChart(allMetroAccidentsSumArray);
@@ -353,6 +365,9 @@
     barChartSvg.selectAll("g")
       .data(stack).enter()
       .append("g")
+      .attr("class", function (d) {
+        return d.key + " bars"
+      })
       .selectAll("rect")
       .data(d => d).enter()
       .append("rect")
@@ -396,10 +411,10 @@
 
   }; // end setBarChart()
 
-  function updateBarChart(csvYearSumData) {
+  function updateBarChart(metroYearSumDataSubset, metroName) {
     keys = ["Pedestrian", "Bicyclist"];
 
-    stack = d3.stack().keys(keys)(csvYearSumData);
+    stack = d3.stack().keys(keys)(metroYearSumDataSubset);
 
     console.log("stack: ", stack);
 
@@ -411,7 +426,7 @@
       return d;
     });
 
-    yMax = d3.max(csvYearSumData, d => {
+    yMax = d3.max(metroYearSumDataSubset, d => {
       var val = 0
       for (var k of keys) {
         val += d[k];
@@ -428,6 +443,7 @@
 
     var yAxis = d3.axisLeft(y);
     
+    d3.select()
 
     // append some rectangles
     barChartSvg.selectAll("g")
