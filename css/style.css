@@ -94,9 +94,11 @@ h4 {
 
     }
 
-    .tick {
-        
+    barChartXaxisLabel.tick text {
         writing-mode: vertical-lr;
-        /* color:blue; */
+    }
 
+   
+    .dropdown {
+        margin-top: 10px;
     }

@@ -33,7 +33,7 @@
   // append the bar chart svg
   const barChartSvg = d3.select(".chart")
   .append("svg")
-  .attr("transform", `translate(${barChartMargin},${barChartMargin})`)
+  .attr("transform", `translate(${10},${barChartMargin})`)
   .attr("class", "barchartframe")
   .attr("width", barChartWidth + barChartMargin * 2 )
   .attr("height", barChartHeight + barChartMargin * 2);
@@ -347,6 +347,7 @@
     var x = d3.scaleLinear().domain([2001, 2020]).range([0, barChartWidth])
 
     var yAxis = d3.axisLeft(y);
+    
 
     // append some rectangles
     barChartSvg.selectAll("g")
@@ -358,7 +359,7 @@
       .attr("class", "bars")
       .attr("x", function (d, i) {
         var fraction = barChartWidth / 20;
-        return (i * fraction) + ((fraction - 1) / 2);
+        return 30 + (i * fraction) + ((fraction - 1) / 2);
     })
       .attr("width", barChartWidth / 20)
       .attr("height", d => {
@@ -372,8 +373,20 @@
       .attr("stroke", "white")
       .attr("stroke-width", 1)
 
-    barChartSvg.append("g")
-      .call(yAxis);
+    var yAxisSvg = barChartSvg.append("g")
+      .call(yAxis)
+      .attr("class", "barChartYaxis")
+      .attr("transform", "translate(35,0)")
+      //.attr("rotate", -90);
+      //.attr("fill", "black");
+
+
+
+      yAxisSvg.selectAll(".tick text")
+      .attr("fill", "black");
+
+      yAxisSvg.selectAll(".tick line")
+      .attr("stroke", "black");
 
     makeXaxis();
 
@@ -393,16 +406,17 @@
        
 var xScale = d3.scaleBand()
     .domain(["2001", "2002", "2003","2004", "2005", "2006","2007", "2008", "2009", "2010", "2011", "2012", "2013","2014", "2015", "2016","2017", "2018", "2019", "2020"])
-    .range([0, barChartWidth + 15 ]) // getting them centered on the bars
+    .range([0, barChartWidth + 16 ]) // getting them centered on the bars
     .padding([0.8]);
 
     xAxisSvg.append("g")
-    .attr("transform", "translate(0,200)")
+    .attr("transform", "translate(30,200)")
     .attr("class", "barChartXaxisLabel")
     .call(d3.axisBottom(xScale));
 
     xAxisSvg.selectAll(".tick text")
-    .attr("fill", "black");
+    .attr("fill", "black")
+    .attr("writing-mode", "vertical-lr");
 
     xAxisSvg.selectAll(".tick line")
     .attr("stroke", "black");
