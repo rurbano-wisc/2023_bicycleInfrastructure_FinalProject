@@ -38,6 +38,13 @@
   .attr("width", barChartWidth + barChartMargin * 2 )
   .attr("height", barChartHeight + barChartMargin * 2);
 
+  const scatterChartSvg = d3.select(".scatterChart")
+  .append("svg")
+  .attr("class", "scatterChartFrame")
+  .attr("transform", `translate(${barChartMargin},${barChartMargin})`)
+  .attr("width", barChartWidth + barChartMargin * 2 )
+  .attr("height", barChartHeight + (barChartMargin * 2) + 30); //with room for a title
+  //.attr("background-color", "purple");
 
   // hold the csv accident data
   var csvData;
@@ -273,6 +280,7 @@
     promises.push(d3.csv("data/Accidents_Merge_metro2.csv", d3.autoType)); // d3.autoType reads in the input from d3.csv and tries to figure out the data type, converting numeric strings to numbers 
     promises.push(d3.csv("data/Accidents_metro_year.csv", d3.autoType));
     promises.push(d3.csv("data/Accidents_year_sum.csv", d3.autoType));
+    promises.push(d3.csv("data/Metro_commuters_accidents.csv", d3.autoType));
     Promise.all(promises).then(callback);
 
     // callback function
@@ -282,6 +290,8 @@
       //console.log("csvMetroYearSumData: ", csvMetroYearSumData);
       csvYearSumData = data[2];
       //console.log("csvYearSumData: ", csvYearSumData);
+      csvMetroCommutersAccidents = data[3];
+      //console.log("csvMetroCommutersAccidents ", csvMetroCommutersAccidents);
 
       // groups all the accident records by their metro area
       var metroAccidents = d3.group(csvData, d => d.metro);
@@ -316,6 +326,8 @@
       setChart(allMetroAccidentsSumArray);
 
       setBarChart(csvYearSumData);
+
+      setScatterChart(csvMetroCommutersAccidents);
 
     }; // end callback()
 
@@ -428,7 +440,14 @@
       for (var k of keys) {
         val += d[k];
       }
-      return val;
+      
+      // if ymax is less than 11, make the y axis scale 10 so that it doesn't make a scale with fractions. 
+      if (val <= 10) {
+        return 10;
+      } else {      
+        return val;
+      };
+
     });
     //console.log("yMax: ", yMax);
 
@@ -549,5 +568,114 @@ var xScale = d3.scaleBand()
         // });
 
 } // end makeXaxis
+
+function setScatterChart(csvMetroCommutersAccidents) {
+ 
+console.log("barChartWidth", barChartWidth);
+
+  const xScale = d3.scaleLinear()
+    .domain([0, 13])
+    .range([20, barChartWidth]);
+
+  const yScale = d3.scaleLinear()
+    .domain([0, 50])
+    .range([barChartHeight, 0])
+
+   var colorScale4Scatter = makeColorScale(csvMetroCommutersAccidents)
+
+
+  const metroGroup = scatterChartSvg.selectAll(".metroGroup")
+  .data(csvMetroCommutersAccidents)
+  .enter()
+  .append("g")
+  .attr("class", "metroGroup")
+  .attr("transform", function (d) {
+    return "translate(" + xScale(d.PctCycWalkWorkers) + "," + yScale(d.DeathsPer100k) + ")"
+  })
+
+
+  metroGroup.append('circle')
+  .attr("class", "metroCircle")
+  .attr("r", 10) 
+  .attr("transform", "translate(" + (barChartMargin)  + "," + barChartMargin + ")")
+  .style("fill", function (d) {
+    return colorScale4Scatter(d.deaths2workers);
+   })
+  metroGroup.append("text")
+  .attr("class", "scatterLabels")
+  .text(function (d) {return d.metro} )
+  .attr("transform", "translate(" + (barChartMargin) + "," + barChartMargin + ")")
+  .attr("dx", 10)
+  .attr("dy", -10);
+
+const xAxis = d3.axisBottom(xScale);
+const yAxis = d3.axisLeft(yScale);
+
+const xAxisGroup = scatterChartSvg.append("g")
+  .attr("class", "scatterChartXaxis")
+  .attr("transform", "translate(" + (barChartMargin) + "," + (barChartMargin + 200) + ")")
+  .call(xAxis);
+
+  const yAxisGroup = scatterChartSvg.append("g")
+  .attr("class", "scatterChartYaxis")
+  .attr("transform", "translate(" + (barChartMargin + 20) + "," + barChartMargin + ")")
+  .call(yAxis);
+
+d3.select(".scatterChartFrame")
+.append("text")
+  .text("Percent of workers who commute by walking or biking")
+  .attr("class", "scatterChartXaxisLabel")
+  .attr("x", 60)
+  .attr("y", 270)
+
+  d3.select(".scatterChartFrame")
+  .append("text")
+    .text("Deaths per 100,000 people")
+    .attr("class", "scatterChartYaxisLabel")
+    .attr("x", 12)
+    .attr("y", 80)
+    
+
+
+}; // end setScatterChart()
+
+    // function to create color scale generator for the scatter chart
+    function makeColorScale(data) {
+      var colorClasses = ['#fef0d9','#fdcc8a','#fc8d59','#e34a33','#b30000']; // ColorBrewer.org yellow-red
+
+      // create color scale generator
+      var colorScale = d3.scaleThreshold()
+          .range(colorClasses);
+
+      //build an arrray of all values of the expressed attribute
+      var domainArray = [];
+      for (var i = 0; i < data.length; i++) {
+          var val = (data[i].deaths2workers);
+          //console.log("val " + val);
+          domainArray.push(val);
+      };
+
+      //console.log(domainArray);
+
+      // cluster data using ckmeans clustering algorithm to create natural breaks
+      var clusters = ss.ckmeans(domainArray, 5);
+      // reset domain array to cluster minimums
+      domainArray = clusters.map(function (d) {
+          return d3.min(d);
+      });
+
+      //console.log(clusters);
+
+      // remove first value from domain array to create class breakpoints
+      domainArray.shift();
+
+      // assign array of last 4 cluster minimums as domain
+      colorScale.domain(domainArray);
+
+      //console.log(domainArray)
+
+      return colorScale;
+  }; // end makeColorScale()
+
 
 })(); // end of wrapper function
