@@ -321,7 +321,7 @@
 
     stack = d3.stack().keys(keys)(csvYearSumData);
 
-    //console.log("stack: ", stack);
+    console.log("stack: ", stack);
 
     stack.map((d, i) => {
       d.map(d => {
@@ -355,6 +355,7 @@
       .selectAll("rect")
       .data(d => d).enter()
       .append("rect")
+      .attr("class", "bars")
       .attr("x", function (d, i) {
         var fraction = barChartWidth / 20;
         return (i * fraction) + ((fraction - 1) / 2);
@@ -365,7 +366,7 @@
       })
       .attr("y", d => y(d[1]))
       .attr("fill", function (d) {
-        return colorScale(d.data.keys);
+        return colorScale(d.key);
       })
       .attr("opacity", 1)
       .attr("stroke", "white")
@@ -374,10 +375,60 @@
     barChartSvg.append("g")
       .call(yAxis);
 
+    makeXaxis();
+
     return barChartSvg.node();
+
+    
 
   }; // end setBarChart()
 
+  function makeXaxis() {
+    //create a second svg element to hold the bar chart
+    var xAxisSvg = d3.select(".barchartframe")
+    .append("svg")
+    .attr("width", barChartWidth + barChartMargin * 2 )
+    .attr("height", barChartHeight + barChartMargin * 2)
+    .attr("class", "barChartXaxis");
+       
+var xScale = d3.scaleBand()
+    .domain(["2001", "2002", "2003","2004", "2005", "2006","2007", "2008", "2009", "2010", "2011", "2012", "2013","2014", "2015", "2016","2017", "2018", "2019", "2020"])
+    .range([0, barChartWidth + 15 ]) // getting them centered on the bars
+    .padding([0.8]);
 
+    xAxisSvg.append("g")
+    .attr("transform", "translate(0,200)")
+    .attr("class", "barChartXaxisLabel")
+    .call(d3.axisBottom(xScale));
+
+    xAxisSvg.selectAll(".tick text")
+    .attr("fill", "black");
+
+    xAxisSvg.selectAll(".tick line")
+    .attr("stroke", "black");
+
+
+
+
+
+        // var yearXLabels = xAxis.selectAll(".yearXLabel")
+        // //.data(csvYearSumData)
+        // //.enter()
+        // .append("text")
+        // //.sort(function (a, b) {
+        // //    return b["Pop2022"] - a["Pop2022"]
+        // //})
+        // .attr("class", "yearXLabel")
+        // .attr("x", function (d, i) {
+        //     var fraction = barChartWidth / 20;
+        //     return (i * fraction) + ((fraction - 1) / 2);
+        // })
+        // .attr("y", 500)
+        // .text(function (i) {
+        //   for (let i = 2001; i < 2022; i++)
+        //     return i;
+        // });
+
+} // end makeXaxis
 
 })(); // end of wrapper function
