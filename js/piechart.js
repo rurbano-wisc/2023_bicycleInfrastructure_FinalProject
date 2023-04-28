@@ -581,8 +581,12 @@ console.log("barChartWidth", barChartWidth);
     .domain([0, 50])
     .range([barChartHeight, 0])
 
-   var colorScale4Scatter = makeColorScale(csvMetroCommutersAccidents)
+   //var colorScale4Scatter = makeColorScale(csvMetroCommutersAccidents)
+   // color wasn't meaningful in this context
 
+   var radiusScale = d3.scaleLinear()
+    .domain([8000, 8600000])
+    .range([3, 36])
 
   const metroGroup = scatterChartSvg.selectAll(".metroGroup")
   .data(csvMetroCommutersAccidents)
@@ -596,17 +600,19 @@ console.log("barChartWidth", barChartWidth);
 
   metroGroup.append('circle')
   .attr("class", "metroCircle")
-  .attr("r", 10) 
+  .attr("r", function (d) { return radiusScale(d.population)}) 
   .attr("transform", "translate(" + (barChartMargin)  + "," + barChartMargin + ")")
-  .style("fill", function (d) {
-    return colorScale4Scatter(d.deaths2workers);
-   })
-  metroGroup.append("text")
-  .attr("class", "scatterLabels")
-  .text(function (d) {return d.metro} )
-  .attr("transform", "translate(" + (barChartMargin) + "," + barChartMargin + ")")
-  .attr("dx", 10)
-  .attr("dy", -10);
+  .style("fill", "#a65e44")
+  // .style("fill", function (d) {
+  //   return colorScale4Scatter(d.deaths2workers);
+  //  })
+  .style("opacity", 0.5)
+  // metroGroup.append("text")
+  // .attr("class", "scatterLabels")
+  // .text(function (d) {return d.metro} )
+  // .attr("transform", "translate(" + (barChartMargin) + "," + barChartMargin + ")")
+  // .attr("dx", 10)
+  // .attr("dy", -10);
 
 const xAxis = d3.axisBottom(xScale);
 const yAxis = d3.axisLeft(yScale);
@@ -633,9 +639,14 @@ d3.select(".scatterChartFrame")
     .text("Deaths per 100,000 people")
     .attr("class", "scatterChartYaxisLabel")
     .attr("x", 12)
-    .attr("y", 80)
+    .attr("y", 60)
     
-
+    d3.select(".scatterChartFrame")
+    .append("text")
+      .text("Circle size represents population")
+      .attr("class", "scatterChartNote")
+      .attr("x", 150)
+      .attr("y", 220)
 
 }; // end setScatterChart()
 
