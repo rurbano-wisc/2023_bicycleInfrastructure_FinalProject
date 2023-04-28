@@ -230,7 +230,7 @@
 function getData() {
 
     // load the Nevada accidents data
-    fetch("data/Accidents_Nevada.geojson")
+    fetch("data/Accidents_Nevada_EVN.geojson")
         .then(function (response) {
             return response.json();
         })
@@ -253,7 +253,7 @@ function getData() {
 //            createLegend(attributes[0]);
         });
             // load the California accidents data
-    fetch("data/Accidents_California.geojson")
+    fetch("data/Accidents_California_EVN.geojson")
     .then(function (response) {
         return response.json();
     })
@@ -311,11 +311,16 @@ function pointToLayer(feature, latlng, attributes) {
     // mapping average unemployment rate for each year
 
     var attribute = attributes[0];
+    var harmEv = feature.properties.HARM_EVN;
+    var isPedestrian = harmEv === "Pedestrian";
+    var isCyclist = harmEv === "Cyclist";
 
     // style for brown circle
     var geoJsonMarkerOptions = {
         radius: 6,
-        fillColor: "#A65E44",
+        fillColor: isPedestrian ? "#FF4136" : // red for pedestrian
+        isCyclist ? "#0074D9" : // blue for cyclist
+        "#A65E44", // default brown color
         color: "#fff",
         weight: 1,
         opacity: 1,
