@@ -4,10 +4,11 @@
 (function () {
 
   // frame size
-  var width = 300, height = 350;
+  var width = 410, height = 300;
 
   // color generator, 2 colors for ped/bike
-  var colorScale = d3.scaleOrdinal().domain(["Pedestrian", "Bicyclist"])
+  var colorScale = d3.scaleOrdinal()
+    .domain(["Pedestrian", "Bicyclist"])
     .range(["#d9a78b", "#a65e44"]);
 
   // create an svg element in the chart div
@@ -15,12 +16,28 @@
     .append("svg")
     .attr("class", "piechartframe")
     .attr("width", width)
-    .attr("height", height)
+    .attr("height", height);
   
   // variables for the pie chart dimensions  
   var pieTranslate = "translate(150, 180)";
   var pieInnerRadius = 0;
   var pieOuterRadius = 100;
+
+  // variables for the bar chart
+  const barChartMargin = 25;
+  // adjust the height and width to remove the margin
+  const barChartWidth = 400 - barChartMargin * 2;
+  const barChartHeight = 200;
+  // add the margin back into the SVG and create the SVG wrapper
+  
+  // append the bar chart svg
+  const barChartSvg = d3.select(".chart")
+  .append("svg")
+  .attr("transform", `translate(${barChartMargin},${barChartMargin})`)
+  .attr("class", "barchartframe")
+  .attr("width", barChartWidth + barChartMargin * 2 )
+  .attr("height", barChartHeight + barChartMargin * 2);
+
 
   // hold the csv accident data
   var csvData;
@@ -256,9 +273,9 @@
     function callback(data) {
       csvData = data[0];
       csvMetroYearSumData = data[1];
-      console.log("csvMetroYearSumData: ", csvMetroYearSumData);
+      //console.log("csvMetroYearSumData: ", csvMetroYearSumData);
       csvYearSumData = data[2];
-      console.log("csvYearSumData: ", csvYearSumData);
+      //console.log("csvYearSumData: ", csvYearSumData);
 
       // groups all the accident records by their metro area
       var metroAccidents = d3.group(csvData, d => d.metro);
@@ -299,70 +316,67 @@
   }; // end setMap()
 
 // function to create a stacked bar chart, based on https://observablehq.com/@stuartathompson/a-step-by-step-guide-to-the-d3-v4-stacked-bar-chart
-function setBarChart(csvYearSumData) {
-  // set the margin (spacing around the viz)
-const barChartMargin = 50;
-// adjust the height and width to remove the margin
-const barChartWidth = 500 - barChartMargin * 2;
-const barChartHeight = 300;
-// add the margin back into the SVG and create the SVG wrapper
-const svgW = d3.select(document.svg(barChartWidth + barChartMargin * 2, barChartHeight + barChartMargin *2));
+  function setBarChart(csvYearSumData) {
+    keys = ["Pedestrian", "Bicyclist"];
 
-// append a group which represents the main targetable svg
-const svg = svgW.append("g").attr("transform", "translate(${barChartMargin},${barChartMargin})");
-  
-  
-  keys = ["Pedestrian", "Bicyclist"];
+    stack = d3.stack().keys(keys)(csvYearSumData);
 
-  stack = d3.stack().keys(keys)(csvYearSumData);
+    //console.log("stack: ", stack);
 
-  console.log("stack: ", stack);
-
-  stack.map((d, i) => {
-    d.map(d => {
-      d.key = keys[i];
+    stack.map((d, i) => {
+      d.map(d => {
+        d.key = keys[i];
+        return d;
+      })
       return d;
+    });
+
+    yMax = d3.max(csvYearSumData, d => {
+      var val = 0
+      for (var k of keys) {
+        val += d[k];
+
+      }
+      return val;
+    });
+
+    //console.log("yMax: ", yMax);
+
+    y = d3.scaleLinear().domain([0, yMax]).range([barChartHeight, 0]);
+
+    var x = d3.scaleLinear().domain([2001, 2020]).range([0, barChartWidth])
+
+    var yAxis = d3.axisLeft(y);
+
+    // append some rectangles
+    barChartSvg.selectAll("g")
+      .data(stack).enter()
+      .append("g")
+      .selectAll("rect")
+      .data(d => d).enter()
+      .append("rect")
+      .attr("x", function (d, i) {
+        var fraction = barChartWidth / 20;
+        return (i * fraction) + ((fraction - 1) / 2);
     })
-    return d;
-  });
+      .attr("width", barChartWidth / 20)
+      .attr("height", d => {
+        return y(d[0]) - y(d[1]);
+      })
+      .attr("y", d => y(d[1]))
+      .attr("fill", function (d) {
+        return colorScale(d.data.keys);
+      })
+      .attr("opacity", 1)
+      .attr("stroke", "white")
+      .attr("stroke-width", 1)
 
-  console.log("stack: ", stack);
+    barChartSvg.append("g")
+      .call(yAxis);
 
-  yMax = d3.max(csvYearSumData, d => {
-    var val = 0
-    for (var k of keys) {
-      val += d[k];
+    return barChartSvg.node();
 
-    }
-    return val;
-  });
-
-  console.log("yMax: ", yMax);
-
-y = d3.scaleLinear().domain([0, yMax]).range([barChartHeight, 0]);
-
-
-var x = d3.scaleLinear().domain([0, csvYearSumData.length]).range([2001, 2020])
-
-var yAxis = d3.axisLeft(y);
-
-// append some rectangles
-svg.selectAll("g")
-.csvYearSumData(stack).enter()
-.append("g")
-.selectAll("rect")
-.attr("x", (d, i) => x(i))
-.attr("width", barChartWidth/csvYearSumData.length)
-.attr("height", d => {
-  return y(d[0]) - y(d[1]);
-  })
-  .attr("y", d => y(d[1]))
-  .attr("fill", d => d.key == "Pedestrian" ? 'lightBlue' : 'orange')
-  .attr("opacity", 0.5)
-  .attr("stroke", "red")
-  .attr("stroke-width", 1)
-
-}; // end setBarChart()
+  }; // end setBarChart()
 
 
 
