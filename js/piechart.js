@@ -396,6 +396,87 @@
 
   }; // end setBarChart()
 
+  function updateBarChart(csvYearSumData) {
+    keys = ["Pedestrian", "Bicyclist"];
+
+    stack = d3.stack().keys(keys)(csvYearSumData);
+
+    console.log("stack: ", stack);
+
+    stack.map((d, i) => {
+      d.map(d => {
+        d.key = keys[i];
+        return d;
+      })
+      return d;
+    });
+
+    yMax = d3.max(csvYearSumData, d => {
+      var val = 0
+      for (var k of keys) {
+        val += d[k];
+
+      }
+      return val;
+    });
+
+    //console.log("yMax: ", yMax);
+
+    y = d3.scaleLinear().domain([0, yMax]).range([barChartHeight, 0]);
+
+    var x = d3.scaleLinear().domain([2001, 2020]).range([0, barChartWidth])
+
+    var yAxis = d3.axisLeft(y);
+    
+
+    // append some rectangles
+    barChartSvg.selectAll("g")
+      .data(stack).enter()
+      .append("g")
+      .selectAll("rect")
+      .data(d => d).enter()
+      .append("rect")
+      .attr("class", "bars")
+      .attr("x", function (d, i) {
+        var fraction = barChartWidth / 20;
+        return 30 + (i * fraction) + ((fraction - 1) / 2);
+    })
+      .attr("width", barChartWidth / 20)
+      .attr("height", d => {
+        return y(d[0]) - y(d[1]);
+      })
+      .attr("y", d => y(d[1]))
+      .attr("fill", function (d) {
+        return colorScale(d.key);
+      })
+      .attr("opacity", 1)
+      .attr("stroke", "white")
+      .attr("stroke-width", 1)
+
+    var yAxisSvg = barChartSvg.append("g")
+      .call(yAxis)
+      .attr("class", "barChartYaxis")
+      .attr("transform", "translate(35,0)")
+      //.attr("rotate", -90);
+      //.attr("fill", "black");
+
+
+
+      yAxisSvg.selectAll(".tick text")
+      .attr("fill", "black");
+
+      yAxisSvg.selectAll(".tick line")
+      .attr("stroke", "black");
+
+    makeXaxis();
+
+    return barChartSvg.node();
+
+    
+
+  }; // end updateBarChart()
+
+
   function makeXaxis() {
     //create a second svg element to hold the bar chart
     var xAxisSvg = d3.select(".barchartframe")
