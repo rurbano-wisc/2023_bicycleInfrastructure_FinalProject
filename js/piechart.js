@@ -33,8 +33,8 @@
   // append the bar chart svg
   const barChartSvg = d3.select(".chart")
   .append("svg")
-  .attr("transform", `translate(${10},${barChartMargin})`)
   .attr("class", "barchartframe")
+  .attr("transform", `translate(${10},${barChartMargin})`)
   .attr("width", barChartWidth + barChartMargin * 2 )
   .attr("height", barChartHeight + barChartMargin * 2);
 
@@ -366,12 +366,14 @@
       .data(stack).enter()
       .append("g")
       .attr("class", function (d) {
-        return d.key + " bars"
+        return d.key + "BarGroup"
       })
       .selectAll("rect")
       .data(d => d).enter()
       .append("rect")
-      .attr("class", "bars")
+      .attr("class", function (d) {
+        return d.key + "Bar"
+      })
       .attr("x", function (d, i) {
         var fraction = barChartWidth / 20;
         return 30 + (i * fraction) + ((fraction - 1) / 2);
@@ -430,29 +432,45 @@
       var val = 0
       for (var k of keys) {
         val += d[k];
-
       }
       return val;
     });
 
-    //console.log("yMax: ", yMax);
+    console.log("yMax: ", yMax);
 
     y = d3.scaleLinear().domain([0, yMax]).range([barChartHeight, 0]);
 
-    var x = d3.scaleLinear().domain([2001, 2020]).range([0, barChartWidth])
+    var x = d3.scaleLinear().domain([2001, 2020]).range([0, barChartWidth]);
 
     var yAxis = d3.axisLeft(y);
     
-    d3.select()
+    // // remove the previous bar chart elements
+    // var removeElement = document.querySelector(".PedestrianBarGroup");
+    // while (removeElement.hasChildNodes()) {
+    //   removeElement.removeChild(removeElement.firstChild)
+    // };
+    
+    var removeElement = document.querySelector(".PedestrianBarGroup");
+    removeElement.remove();
+    
+    var removeElement = document.querySelector(".BicyclistBarGroup");
+    removeElement.remove();
+    var removeElement = document.querySelector(".barChartYaxis");
+    removeElement.remove();
 
     // append some rectangles
     barChartSvg.selectAll("g")
       .data(stack).enter()
       .append("g")
+      // .attr("class", function (d) {
+      //   return d.key + "BarGroup"
+      // })
       .selectAll("rect")
       .data(d => d).enter()
       .append("rect")
-      .attr("class", "bars")
+      // .attr("class", function (d) {
+      //   return d.key + "Bar"
+      // })
       .attr("x", function (d, i) {
         var fraction = barChartWidth / 20;
         return 30 + (i * fraction) + ((fraction - 1) / 2);
@@ -484,7 +502,7 @@
       yAxisSvg.selectAll(".tick line")
       .attr("stroke", "black");
 
-    makeXaxis();
+    //makeXaxis();
 
     return barChartSvg.node();
 
