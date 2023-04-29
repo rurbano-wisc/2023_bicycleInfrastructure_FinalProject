@@ -607,12 +607,17 @@ console.log("barChartWidth", barChartWidth);
   //   return colorScale4Scatter(d.deaths2workers);
   //  })
   .style("opacity", 0.5)
-  // metroGroup.append("text")
-  // .attr("class", "scatterLabels")
-  // .text(function (d) {return d.metro} )
-  // .attr("transform", "translate(" + (barChartMargin) + "," + barChartMargin + ")")
-  // .attr("dx", 10)
-  // .attr("dy", -10);
+  metroGroup.append("text")
+  .attr("class", "scatterLabels")
+  .text(function (d) {return d.metro} )
+  .attr("transform", "translate(" + (barChartMargin) + "," + barChartMargin + ")")
+  .attr("dx", 10)
+  .attr("dy", -10)
+  .style("opacity", 0);
+  
+  
+
+
 
 const xAxis = d3.axisBottom(xScale);
 const yAxis = d3.axisLeft(yScale);
