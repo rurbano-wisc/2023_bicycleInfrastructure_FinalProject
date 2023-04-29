@@ -3,21 +3,21 @@
 
     // declare map var in global scope
     var map;
-    // var accidentsHeatmap;
-    // basemap - light gray, with OSM bike paths
-    var lightBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clg1fo230000101mu9rnp9qr6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
+
+    // basemaps
+    var darkOutdoors = L.tileLayer('https://api.mapbox.com/styles/v1/rurbano/clat71or5000314qyg1hvzhpd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicnVyYmFubyIsImEiOiJjbGFoanRxYWkwY3c5M3dta2RhdzNlYXppIn0.HebbeRpuABArQDdvwTJhEQ', {
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
-    // basemap - dark gray, with OSM bike paths
+
+    var lightOutdoors = L.tileLayer('https://api.mapbox.com/styles/v1/rurbano/clgzoea5q006001q16z8387p5/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicnVyYmFubyIsImEiOiJjbGFoanRxYWkwY3c5M3dta2RhdzNlYXppIn0.HebbeRpuABArQDdvwTJhEQ', {
+        attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+
     var darkBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clgpya8w0004301rb87gi7z2e/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
  
-    var lightOutdoors = L.tileLayer('https://api.mapbox.com/styles/rurbano/clgzoea5q006001q16z8387p5/wmts?access_token=pk.eyJ1IjoicnVyYmFubyIsImEiOiJjbGFoanRxYWkwY3c5M3dta2RhdzNlYXppIn0.HebbeRpuABArQDdvwTJhEQ', {
-        attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    });
-
-    var darkOutdoors = L.tileLayer('https://api.mapbox.com/styles/rurbano/clat71or5000314qyg1hvzhpd/wmts?access_token=pk.pk.eyJ1IjoicnVyYmFubyIsImEiOiJjbGFoanRxYWkwY3c5M3dta2RhdzNlYXppIn0.HebbeRpuABArQDdvwTJhEQ', {
+    var lightBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clg1fo230000101mu9rnp9qr6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
@@ -29,15 +29,13 @@
     // var cityMetrosCal = L.geoJSON();
     // var osm150ftCal = L.geoJSON();
     // var osm150ftNev = L.geoJSON();
-    // var osmCal = L.geoJSON();
-    // var osmNev = L.geoJSON();
+
     // var accidentsCal = L.geoJSON();
     // var accidentsNev = L.geoJSON();
 
     // put CA-NV layers into group layers (doesn't work? 'cuz the layers aren't being assigned to global variables)
     // var cityMetros = L.layerGroup([cityMetrosNev, cityMetrosCal]);
     // var osm150ft = L.layerGroup([osm150ftCal, osm150ftNev]);
-    // var osm = L.layerGroup([osmCal, osmNev]);
 
     // var overlayLayers = {
     //     "Metros Areas": cityMetrosNev,
@@ -68,34 +66,11 @@
         //console.log(cityMetrosNev);
         // // call getData function to process the point layer
         getData();
-
-        // function getAccidentsHeatmapData() {
-        //     // load the accidents data as a GeoJSON layer
-        //     fetch("data/Accidents_California.geojson")
-        //         .then(function (response) {
-        //             return response.json();
-        //         })
-        //         .then(function (json) {
-        //             // convert the GeoJSON layer to an array of latitudes and longitudes
-        //             var latlngs = json.features.map(function (feature) {
-        //                 return [feature.geometry.coordinates[1], feature.geometry.coordinates[0]];
-        //             });
-        //             // create a new heatmap layer using Leaflet.heat
-        //             var accidentsHeatmap = L.heatLayer(latlngs, {
-        //                 radius: 25,
-        //                 blur: 15,
-        //                 maxZoom: 22,
-        //             });
-        //             // add the heatmap layer to the Layers control
-        //             controlLayers.addOverlay(accidentsHeatmap, 'Accidents Heatmap');
-        //         });
-        // }
-        // getAccidentsHeatmapData();
-        // // add a base layer control to the map - has to be individually with the .addBaseLayer() method, not as a group object
-        controlLayers.addBaseLayer(lightBasemap, "Light gray base map");
-        controlLayers.addBaseLayer(darkBasemap, "Dark gray base map");
-        controlLayers.addBaseLayer(lightOutdoors, "Light Outdoors base map");
+        // add a base layer control to the map - has to be individually with the .addBaseLayer() method, not as a group object
         controlLayers.addBaseLayer(darkOutdoors, "Dark Outdoors base map");
+        controlLayers.addBaseLayer(lightOutdoors, "Light Outdoors base map");
+        controlLayers.addBaseLayer(darkBasemap, "Dark gray base map");
+        controlLayers.addBaseLayer(lightBasemap, "Light gray base map");
 
         map.on('zoomend', function () {
             if (map.getZoom() < 8) {
@@ -103,31 +78,28 @@
                 map.removeLayer(cityMetrosCal);
                 //map.removeLayer(accidentsCal);
                 //map.removeLayer(accidentsNev);
-                 // add the heatmap layer when zoomed out
-                // map.addLayer(accidentsHeatmap);
             } else {
                 map.addLayer(cityMetrosNev);
                 cityMetrosNev.bringToBack();
                 map.addLayer(cityMetrosCal);
                 cityMetrosCal.bringToBack();
-                // remove the heatmap layer when zoomed in
-                map.removeLayer(accidentsHeatmap)
                 //map.addLayer(accidentsNev);
                 //map.addLayer(accidentsCal);
             }
         });
     }; // end createMap()
-    
 
     //function to import the metro area boundary data and OSM geojson, style it, and add it to the layer control
     function getMetroAreaBoundaryData() {
         // style for metro Area boundaries
         var metroAreaBoundaryStyle = {
             //fillColor: "#A65E44",
-            color: "#abe453", //random color - fix it later
+            color: "#1e90ff", //dodger blue :)
             weight: 1,
             opacity: 1,
-            fillOpacity: 0
+            fillOpacity: 0,
+            dashArray: "2 2"
+            
         };
         //need to edit to apply scale for values; make field to color value
         var osm150ftStyle = {
@@ -138,14 +110,7 @@
             fillOpacity: 0
         };
 
-        // var osmStyle = {
-        //     //fillColor: "#A65E44",
-        //     color: "orange", //random color - fix it later
-        //     weight: 1,
-        //     opacity: 1,
-        //     fillOpacity: 0
-        // };
-
+        //commented out because I can't figure out how to comment out the accidents and the map still load
         // var accidentStyle = {
         //     radius: 8,
         //     fillColor: "#ff7800",
@@ -231,7 +196,6 @@
         //         // add the layer to the Layers control
         //         controlLayers.addOverlay(osmCal, 'OSM CA');
         //     });
-
 
     }; // end getMetroAreaBoundaryData()
 
@@ -394,48 +358,48 @@ function createPropSymbols(data, attributes,) {
 }; // end createPropSymbols
 
 //function to convert markers to circle markers
-function pointToLayer(feature, latlng, attributes) {
-    // mapping average unemployment rate for each year
+// function pointToLayer(feature, latlng, attributes) {
+//     // mapping average unemployment rate for each year
 
-    var attribute = attributes[0];
-    //create variable from feature attribute
-    var harmEv = feature.properties.HARM_EVN;
-    //create variables for the values
-    var isPedestrian = harmEv === "Pedestrian";
-    var isCyclist = harmEv === "Cyclist";
+//     var attribute = attributes[0];
+//     //create variable from feature attribute
+//     var harmEv = feature.properties.HARM_EVN;
+//     //create variables for the values
+//     var isPedestrian = harmEv === "Pedestrian";
+//     var isCyclist = harmEv === "Cyclist";
 
-    // style for brown circle
-    var geoJsonMarkerOptions = {
-        radius: 6,
-        fillColor: isPedestrian ? "#FF4136" : // red for pedestrian
-        isCyclist ? "#0074D9" : // blue for cyclist
-        "#A65E44", // default brown color
-        color: "#fff",
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.8
-    };
+//     // style for brown circle
+//     var geoJsonMarkerOptions = {
+//         radius: 6,
+//         fillColor: isPedestrian ? "#FF4136" : // red for pedestrian
+//         isCyclist ? "#0074D9" : // blue for cyclist
+//         "#A65E44", // default brown color
+//         color: "#fff",
+//         weight: 1,
+//         opacity: 1,
+//         fillOpacity: 0.8
+//     };
 
-    //step 5, for each feature, determine its value for the selected attribute
-    //var attValue = Number(feature.properties[attribute]);
+//     //step 5, for each feature, determine its value for the selected attribute
+//     //var attValue = Number(feature.properties[attribute]);
 
-    // step 6, give each feature's circle marker a radius based on its attribute value
-    //geoJsonMarkerOptions.radius = calcPropRadius(attValue);
+//     // step 6, give each feature's circle marker a radius based on its attribute value
+//     //geoJsonMarkerOptions.radius = calcPropRadius(attValue);
 
-    //create circle marker layer
-    var layer = L.circleMarker(latlng, geoJsonMarkerOptions);
+//     //create circle marker layer
+//     var layer = L.circleMarker(latlng, geoJsonMarkerOptions);
 
-    //build popup content string
-    var popupContent = new PopupContent(feature.properties, attribute);
+//     //build popup content string
+//     var popupContent = new PopupContent(feature.properties, attribute);
 
-    //bind the popup to the circle marker
-    layer.bindPopup(popupContent.formatted, {
-        offset: new L.Point(0, -geoJsonMarkerOptions.radius)
-    });
+//     //bind the popup to the circle marker
+//     layer.bindPopup(popupContent.formatted, {
+//         offset: new L.Point(0, -geoJsonMarkerOptions.radius)
+//     });
 
-    //return the circle marker to the L.geoJson pointToLayer option
-    return layer;
-}; // end pointToLayer
+//     //return the circle marker to the L.geoJson pointToLayer option
+//     return layer;
+// }; // end pointToLayer
 
 
 
