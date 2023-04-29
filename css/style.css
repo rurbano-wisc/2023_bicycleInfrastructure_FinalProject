@@ -102,3 +102,30 @@ h4 {
     .dropdown {
         margin-top: 10px;
     }
+
+    .scatterChartFrame {
+        width: 800;
+        height: 1200;
+        background-color: lightgray;
+        
+    
+    }
+
+    .scatterLabels {
+        fill: white;
+        font-size: 0.6em;
+    }
+
+.scatterChartXaxisLabel {
+    font-size: 0.8em;
+}
+
+.scatterChartYaxisLabel {
+    font-size: 0.8em;
+    writing-mode: vertical-lr;
+}
+
+.scatterChartNote {
+    font-size: 0.8em;
+    font-style: italic;
+}
