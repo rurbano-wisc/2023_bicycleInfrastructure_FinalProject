@@ -571,7 +571,10 @@ var xScale = d3.scaleBand()
 
 function setScatterChart(csvMetroCommutersAccidents) {
  
-console.log("barChartWidth", barChartWidth);
+  //console.log("barChartWidth", barChartWidth);
+  //console.log(csvMetroCommutersAccidents);
+  //console.log("metroNameNoSpace: " + metroNameNoSpace(csvMetroCommutersAccidents[0].metro) )
+
 
   const xScale = d3.scaleLinear()
     .domain([0, 13])
@@ -581,77 +584,82 @@ console.log("barChartWidth", barChartWidth);
     .domain([0, 50])
     .range([barChartHeight, 0])
 
-   //var colorScale4Scatter = makeColorScale(csvMetroCommutersAccidents)
-   // color wasn't meaningful in this context
+  //var colorScale4Scatter = makeColorScale(csvMetroCommutersAccidents)
+  // color wasn't meaningful in this context
 
-   var radiusScale = d3.scaleLinear()
+  var radiusScale = d3.scaleLinear()
     .domain([8000, 8600000])
     .range([3, 36])
 
-  const metroGroup = scatterChartSvg.selectAll(".metroGroup")
-  .data(csvMetroCommutersAccidents)
-  .enter()
-  .append("g")
-  .attr("class", "metroGroup")
-  .attr("transform", function (d) {
-    return "translate(" + xScale(d.PctCycWalkWorkers) + "," + yScale(d.DeathsPer100k) + ")"
-  })
+
+  const metroGroup = scatterChartSvg.selectAll(".metroCircle")
+    .data(csvMetroCommutersAccidents)
+    .enter()
+    .append("g")
+    .attr("class", function (d) {
+      return "circleMetro " + metroNameNoSpace(d.metro);
+       })
+    .attr("transform", function (d) {
+      return "translate(" + xScale(d.PctCycWalkWorkers) + "," + yScale(d.DeathsPer100k) + ")"
+    })
+    .append('circle')
+    //.attr("class", "metroCircle")
+    .attr("r", function (d) { return radiusScale(d.population) })
+    .attr("transform", "translate(" + (barChartMargin) + "," + barChartMargin + ")")
+    .style("fill", "#a65e44")
+    // .style("fill", function (d) {
+    //   return colorScale4Scatter(d.deaths2workers);
+    //  })
+    .style("opacity", 0.5)
+
+    .on("mouseover", function (event, d) {
+      //console.log("d.metro", d.metro);
+      //console.log("d.properties ", d.properties);
+      highlight(d);
+      
+    })
+    .on("mouseout", function (event, d) {
+        dehighlight(d);
+    })
+    .on("mousemove", moveLabel);
 
 
-  metroGroup.append('circle')
-  .attr("class", "metroCircle")
-  .attr("r", function (d) { return radiusScale(d.population)}) 
-  .attr("transform", "translate(" + (barChartMargin)  + "," + barChartMargin + ")")
-  .style("fill", "#a65e44")
-  // .style("fill", function (d) {
-  //   return colorScale4Scatter(d.deaths2workers);
-  //  })
-  .style("opacity", 0.5)
-  metroGroup.append("text")
-  .attr("class", "scatterLabels")
-  .text(function (d) {return d.metro} )
-  .attr("transform", "translate(" + (barChartMargin) + "," + barChartMargin + ")")
-  .attr("dx", 10)
-  .attr("dy", -10)
-  .style("opacity", 0);
-  
-  
+   var desc = metroGroup.append("desc")
+   .text('{"stroke": "#000", "stroke-width": "0px"}');
 
+  const xAxis = d3.axisBottom(xScale);
+  const yAxis = d3.axisLeft(yScale);
 
-
-const xAxis = d3.axisBottom(xScale);
-const yAxis = d3.axisLeft(yScale);
-
-const xAxisGroup = scatterChartSvg.append("g")
-  .attr("class", "scatterChartXaxis")
-  .attr("transform", "translate(" + (barChartMargin) + "," + (barChartMargin + 200) + ")")
-  .call(xAxis);
+  const xAxisGroup = scatterChartSvg.append("g")
+    .attr("class", "scatterChartXaxis")
+    .attr("transform", "translate(" + (barChartMargin) + "," + (barChartMargin + 200) + ")")
+    .call(xAxis);
 
   const yAxisGroup = scatterChartSvg.append("g")
-  .attr("class", "scatterChartYaxis")
-  .attr("transform", "translate(" + (barChartMargin + 20) + "," + barChartMargin + ")")
-  .call(yAxis);
-
-d3.select(".scatterChartFrame")
-.append("text")
-  .text("Percent of workers who commute by walking or biking")
-  .attr("class", "scatterChartXaxisLabel")
-  .attr("x", 60)
-  .attr("y", 270)
+    .attr("class", "scatterChartYaxis")
+    .attr("transform", "translate(" + (barChartMargin + 20) + "," + barChartMargin + ")")
+    .call(yAxis);
 
   d3.select(".scatterChartFrame")
-  .append("text")
+    .append("text")
+    .text("Percent of workers who commute by walking or biking")
+    .attr("class", "scatterChartXaxisLabel")
+    .attr("x", 60)
+    .attr("y", 270)
+
+  d3.select(".scatterChartFrame")
+    .append("text")
     .text("Deaths per 100,000 people")
     .attr("class", "scatterChartYaxisLabel")
     .attr("x", 12)
     .attr("y", 60)
-    
-    d3.select(".scatterChartFrame")
+
+  d3.select(".scatterChartFrame")
     .append("text")
-      .text("Circle size represents population")
-      .attr("class", "scatterChartNote")
-      .attr("x", 150)
-      .attr("y", 220)
+    .text("Circle size represents population")
+    .attr("class", "scatterChartNote")
+    .attr("x", 150)
+    .attr("y", 220)
 
 }; // end setScatterChart()
 
@@ -693,5 +701,109 @@ d3.select(".scatterChartFrame")
       return colorScale;
   }; // end makeColorScale()
 
+// function to highlight enumeration units and bars
+function highlight(props) {
+  // change stroke
+
+  var metroName = metroNameNoSpace(props.metro);
+  //console.log(metroName);
+
+  var selected = d3.selectAll("." + metroName)
+      .style("stroke", "yellow")
+      .style("stroke-width", "2");
+      
+  setLabel(props);
+
+}; // end highlight()
+
+function dehighlight(props) {
+
+  var metroName = metroNameNoSpace(props.metro);
+
+  var selected = d3.selectAll("." + metroName)
+      .style("stroke", function () {
+          return getStyle(this, "stroke");
+      })
+      .style("stroke-width", function () {
+          return getStyle(this, "stroke-width");
+      });
+
+      // var selected = d3.selectAll(".counties" + countyName)
+      // .style("stroke", function () {
+      //     return getStyle(this, "stroke");
+      // })
+      // .style("stroke-width", function () {
+      //     return getStyle(this, "stroke-width");
+      // });
+
+      d3.select(".infolabel") // remove the floating label
+      .remove();
+
+} // end dehighlight()
+
+function getStyle(element, styleName) {
+  var styleText = d3.select(element)
+      .select("desc")
+      .text();
+
+  var styleObject = JSON.parse(styleText);
+  //console.log(styleObject);
+
+  return styleObject[styleName];
+}; // end getStyle()
+
+function setLabel(props) {
+  // label content
+  var labelAttribute = props.metro;
+   //Math.round(props[expressed] * 10) / 10 + "%<b>  " + props.County + "</b>";
+
+  var metroNameWithoutSpace = metroNameNoSpace(props.metro);
+
+  //create info label div
+  var infolabel = d3.select("#scatterChartDiv")
+      .append("div")
+      .attr("class", "infolabel")
+      .attr("id", metroNameWithoutSpace + "_label")
+      .html(labelAttribute)
+      .style("opacity", 1);
+
+  var metroName = infolabel.append("div")
+      .attr("class", "labelname")
+      .html(props.metro);
+}; // end setLabel();
+
+function moveLabel() {
+  // use coordinates of mousemove event to set label coordinates
+
+  // get width of label
+  var labelWidth = d3.select(".infolabel")
+      .node()
+      .getBoundingClientRect()
+      .width;
+
+  // use coordinates of mousemove event to set label coordinates
+
+  var x1 = event.clientX + 10,
+      y1 = event.clientY - 75,
+      x2 = event.clientX - labelWidth - 10,
+      y2 = event.clientY + 25;
+
+  // horizontal label coordinate, testing for overflow
+  var x = event.clientX > window.innerWidth - labelWidth - 20 ? x2 : x1;
+
+  // vertical label coordinate, testing for overflow
+  var y = event.clientY < 75 ? y2 : y1;
+
+  d3.select(".infolabel")
+      .style("left", x + "px")
+      .style("top", y + "px");
+}; // end moveLabel()
+
+
+    // function to strip spaces from metro names    
+    function metroNameNoSpace(metroNameWithSpace) {
+      var metroName = metroNameWithSpace.replace(/\s+/g, '');
+      return metroName;
+  } // end metroNameNoSpace()
 
 })(); // end of wrapper function
