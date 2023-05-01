@@ -150,8 +150,20 @@
       .attr("class", "dropdown")
       .on("change", function () {
         changeAttribute(this.value, metroAccidents, csvMetroYearSumData)
+        
+    // Get the selected location's coordinates from the metroAccidents dataset
+    var selectedMetroIndex = metroList.findIndex(item => item === this.value);
+    var selectedMetro = metroAccidents[selectedMetroIndex];
+    var center = [selectedMetro.Longitude, selectedMetro.Latitude];
+    var zoom = 10; // Change this to adjust the zoom level
 
-      });
+    // Zoom to the selected location on the map
+    map.flyTo({
+      center: center,
+      zoom: zoom,
+      essential: true // This option ensures that the zoom animation is always shown
+    });
+  });
 
     // add initial option
     var titleOption = dropdown.append("option")
@@ -274,7 +286,6 @@
 
   // read the csv data of accidents
   function setMap() {
-
     // load the csv data
     var promises = [];
     promises.push(d3.csv("data/Accidents_Merge_metro2.csv", d3.autoType)); // d3.autoType reads in the input from d3.csv and tries to figure out the data type, converting numeric strings to numbers 

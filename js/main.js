@@ -3,7 +3,6 @@
 
     // declare map var in global scope
     var map;
-
     // basemaps
     var darkOutdoors = L.tileLayer('https://api.mapbox.com/styles/v1/rurbano/clat71or5000314qyg1hvzhpd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicnVyYmFubyIsImEiOiJjbGFoanRxYWkwY3c5M3dta2RhdzNlYXppIn0.HebbeRpuABArQDdvwTJhEQ', {
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -13,36 +12,13 @@
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
-    var darkBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clgpya8w0004301rb87gi7z2e/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
-        attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    });
- 
-    var lightBasemap = L.tileLayer('https://api.mapbox.com/styles/v1/geraldhestonwisc/clg1fo230000101mu9rnp9qr6/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2VyYWxkaGVzdG9ud2lzYyIsImEiOiJja3ludzB3d3kwN2EyMndyMDN3cGh4dXkwIn0.INriYzJUUk60r1ffeQBr9g', {
-        attribution: '&copy; <a href="https://www.mapbox.com/contribute/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    // additional tile layer
+    var cyclistTracts = L.tileLayer('https://api.mapbox.com/v4/rurbano.de80xrgq/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoicnVyYmFubyIsImEiOiJjaXc4ZWkycDkwMDF4Mm5wN3lwbmllMndnIn0.8W8epv1aXygbmFbjmG0yPw', {
+        attribution: 'Cyclist Tracts &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
     });
 
     // control layer for the legend control
     var controlLayers = L.control.layers();
-
-    // global var for the individual layers, assigned in getMetroAreaBoundaryData(); but they aren't getting assigned
-    // var cityMetrosNev = L.geoJSON();
-    // var cityMetrosCal = L.geoJSON();
-    // var osm150ftCal = L.geoJSON();
-    // var osm150ftNev = L.geoJSON();
-
-    // var accidentsCal = L.geoJSON();
-    // var accidentsNev = L.geoJSON();
-
-    // put CA-NV layers into group layers (doesn't work? 'cuz the layers aren't being assigned to global variables)
-    // var cityMetros = L.layerGroup([cityMetrosNev, cityMetrosCal]);
-    // var osm150ft = L.layerGroup([osm150ftCal, osm150ftNev]);
-
-    // var overlayLayers = {
-    //     "Metros Areas": cityMetrosNev,
-    //     "OSM 150ft": osm150ftNev,
-    //     "OSM": osmNev
-    // };
-
 
     // function to initiate Leaflet map
     function createMap() {
@@ -53,38 +29,51 @@
             minZoom: 5,
             maxZoom: 22 // limit the zoom levels to something appropriate for this dataset, where the basemap shows the city names
         });
-
-        // add light gray bike Mapbox base tile layer
-        lightBasemap.addTo(map);
-
+        //add darkOutdoors Mapbox base tile layer as default
+        darkOutdoors.addTo(map);
         // call the function to process the metro area boundaries polygon layer
         getMetroAreaBoundaryData();
-        // getCycleTractsData();
-        // getWalkTractsData();
-
         controlLayers.addTo(map);
         //console.log(cityMetrosNev);
-        // // call getData function to process the point layer
-        getData();
         // add a base layer control to the map - has to be individually with the .addBaseLayer() method, not as a group object
         controlLayers.addBaseLayer(darkOutdoors, "Dark Outdoors base map");
         controlLayers.addBaseLayer(lightOutdoors, "Light Outdoors base map");
-        controlLayers.addBaseLayer(darkBasemap, "Dark gray base map");
-        controlLayers.addBaseLayer(lightBasemap, "Light gray base map");
+
+        
+    mapboxgl.accessToken = 'pk.eyJ1IjoicnVyYmFubyIsImEiOiJjbGFoanRxYWkwY3c5M3dta2RhdzNlYXppIn0.HebbeRpuABArQDdvwTJhEQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        center: [-74.5, 40], // longitude, latitude
+        zoom: 9,
+        style: 'mapbox://styles/mapbox/streets-v11'
+    });
+
+
+    map.on('load', function() {
+        map.addLayer({
+            id: 'rurbano.de80xrgq',
+            type: 'fill',
+            source: {
+                type: 'vector',
+                url: 'mapbox://rurbano.de80xrgq'
+            },
+            'source-layer': 'TractsMerge-09s8y2',
+            paint: {
+                'fill-color': '#f2f2f2'
+            }
+        });
+    });
+        
 
         map.on('zoomend', function () {
             if (map.getZoom() < 8) {
                 map.removeLayer(cityMetrosNev);//1st geoJSON layer
                 map.removeLayer(cityMetrosCal);
-                //map.removeLayer(accidentsCal);
-                //map.removeLayer(accidentsNev);
             } else {
                 map.addLayer(cityMetrosNev);
                 cityMetrosNev.bringToBack();
                 map.addLayer(cityMetrosCal);
                 cityMetrosCal.bringToBack();
-                //map.addLayer(accidentsNev);
-                //map.addLayer(accidentsCal);
             }
         });
     }; // end createMap()
@@ -99,27 +88,7 @@
             opacity: 1,
             fillOpacity: 0,
             dashArray: "2 2"
-            
         };
-        //need to edit to apply scale for values; make field to color value
-        var osm150ftStyle = {
-            //fillColor: "#A65E44",
-            color: "red", //random color - fix it later
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 0
-        };
-
-        //commented out because I can't figure out how to comment out the accidents and the map still load
-        // var accidentStyle = {
-        //     radius: 8,
-        //     fillColor: "#ff7800",
-        //     color: "#000",
-        //     weight: 1,
-        //     opacity: 1,
-        //     fillOpacity: 0.8
-        // };
-
         // metro data
         // load the Nevada Metro Area boundary data
         fetch("data/CityMetros_Nev_geog.geojson")
@@ -145,186 +114,9 @@
                 // add the layer to the Layers control
                 controlLayers.addOverlay(cityMetrosCal, 'Metro Area Boundaries CA');
             });
-
-
-        // // load the Tracts Nevada data
-        // fetch("data/Tracts_Nevada.geojson")
-        //     .then(function (response) {
-        //         return response.json();
-        //     })
-        //     .then(function (json) {
-        //         osm150ftNev = L.geoJSON(json, osm150ftStyle)//.addTo(map); took this out so that it wouldn't be added to the map when it first loads, then it will turn on when the zoom reaches level 6
-
-        //         // add the layer to the Layers control
-        //         controlLayers.addOverlay(osm150ftNev, 'Tracts Nevada');
-        //     });
-
-
-        // // load the Tracts California data
-        // fetch("data/Tracts_California.geojson")
-        //     .then(function (response) {
-        //         return response.json();
-        //     })
-        //     .then(function (json) {
-        //         osm150ftCal = L.geoJSON(json, osm150ftStyle)//.addTo(map); took this out so that it wouldn't be added to the map when it first loads, then it will turn on when the zoom reaches level 6
-
-        //         // add the layer to the Layers control
-        //        controlLayers.addOverlay(osm150ftCal, 'Tracts_California');
-        //     });
-
-        // // load the OSM Nevada data
-        // fetch("data/OSM_Nevada.geojson")
-        //     .then(function (response) {
-        //         return response.json();
-        //     })
-        //     .then(function (json) {
-        //         osmNev = L.geoJSON(json, osmStyle)//.addTo(map); took this out so that it wouldn't be added to the map when it first loads, then it will turn on when the zoom reaches level 6
-
-        //         // add the layer to the Layers control
-        //         controlLayers.addOverlay(osmNev, 'OSM NV');
-        //     });
-
-
-        // // load the OSM California data
-        // fetch("data/OSM_California.geojson")
-        //     .then(function (response) {
-        //         return response.json();
-        //     })
-        //     .then(function (json) {
-        //         osmCal = L.geoJSON(json, osmStyle)//.addTo(map); took this out so that it wouldn't be added to the map when it first loads, then it will turn on when the zoom reaches level 6
-
-        //         // add the layer to the Layers control
-        //         controlLayers.addOverlay(osmCal, 'OSM CA');
-        //     });
-
     }; // end getMetroAreaBoundaryData()
-
-    // function getWalkTractsData() {
-    //     // create a style object for the tracts layer
-    //     var walkTractsStyle = {
-    //       color: "#abe453",
-    //       weight: 1,
-    //       opacity: 1,
-    //       fillOpacity: 0.6
-    //     };
-      
-    //     // create a function to determine the fill color of the tracts based on the WalkStat attribute
-    //     function getWalkTractsFillColor(feature) {
-    //       var walkStat = feature.properties.WalkStat;
-    //       if (walkStat === "No walking commuters") {
-    //         return "transparent";
-    //       } else if (walkStat === "Less than 2%") {
-    //         return "#FED98E";
-    //       } else if (walkStat === "Greater than 2% less than 10%") {
-    //         return "#FE9929";
-    //       } else if (walkStat === "Greater than 10%") {
-    //         return "#CC4C02";
-    //       }
-    //     }
-      
-    //     // load the walk tracts data
-    //     fetch("data/walkTracts.geojson")
-    //       .then(function(response) {
-    //         return response.json();
-    //       })
-    //       .then(function(json) {
-    //         walkTracts = L.geoJSON(json, {
-    //           style: walkTractsStyle,
-    //           fillColor: getWalkTractsFillColor
-    //         }).addTo(map);
-    //         // add the walk tracts layer to the Layers control
-    //         controlLayers.addOverlay(walkTracts, 'Walk Tracts');
-    //       });
-    //   }
-      
-    //   function getCycleTractsData() {
-    //     // create a style object for the tracts layer
-    //     var cycleTractsStyle = {
-    //       color: "#abe453",
-    //       weight: 1,
-    //       opacity: 1,
-    //       fillOpacity: 0.6
-    //     };
-      
-    //     // create a function to determine the fill color of the tracts based on the CyclistStat attribute
-    //     function getCycleTractsFillColor(feature) {
-    //       var cyclistStat = feature.properties.CyclistStat;
-    //       if (cyclistStat === "No cyclist commuters") {
-    //         return "transparent";
-    //       } else if (cyclistStat === "Less than 1%") {
-    //         return "#BDC9E1";
-    //       } else if (cyclistStat === "Greater than 1% less than 5%") {
-    //         return "#67A9CF";
-    //       } else if (cyclistStat === "Greater than 5%") {
-    //         return "#02818A";
-    //       }
-    //     }
-      
-    //     // load the cycle tracts data
-    //     fetch("data/cycleTracts.geojson")
-    //       .then(function(response) {
-    //         return response.json();
-    //       })
-    //       .then(function(json) {
-    //         cycleTracts = L.geoJSON(json, {
-    //           style: cycleTractsStyle,
-    //           fillColor: getCycleTractsFillColor
-    //         }).addTo(map);
-    //         // add the cycle tracts layer to the Layers control
-    //         controlLayers.addOverlay(cycleTracts, 'Cycle Tracts');
-    //       });
-    //   }
-
+    
     document.addEventListener('DOMContentLoaded', createMap);
-
-// function to retrieve the data and place it on the map
-function getData() {
-
-    // load the Nevada accidents data
-    fetch("data/Accidents_Nevada_EVN.geojson")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (json) {
-            //create an attribute array - names of attributes
-            var attributes = processData(json);
-            // calculate the minimum value
- //           calcStats(json);
-
-            // calculate the yearly stats
- //           calcYearlyStats(json);
-            
-            //call function to create proportional symbols
-            //var accidentsLayerName = 'accidentsNev';
-            createPropSymbols(json, attributes)
-            //controlLayers.addOverlay(json, 'Accidents NV');
-            //call function to create the proportional symbols
-//            createSequenceControls(attributes);
-            // call function to create the legend with text for the 1st year, 2016
-//            createLegend(attributes[0]);
-        });
-            // load the California accidents data
-    fetch("data/Accidents_California_EVN.geojson")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (json) {
-        //create an attribute array - names of attributes
-        var attributes = processData(json);
-        // calculate the minimum value
-//           calcStats(json);
-
-        // calculate the yearly stats
-//           calcYearlyStats(json);
-        //call function to create proportional symbols
-        createPropSymbols(json, attributes)
-        //controlLayers.addOverlay(json, 'Accidents NV');
-        //call function to create the proportional symbols
-//            createSequenceControls(attributes);
-        // call function to create the legend with text for the 1st year, 2016
-//            createLegend(attributes[0]);
-    });
-}; // end getData();
 
 //build an attributes array from the data
 function processData(data) {
@@ -345,12 +137,12 @@ function processData(data) {
     return attributes;
 }; // end processData
 
+//if needed for something else
 function createPropSymbols(data, attributes,) {
     // create a Leaflet GeoJSON layer and add it to the map
     L.geoJson(data, {
         pointToLayer: function (feature, latlng) {
-            return pointToLayer(feature, latlng, attributes);
-            
+            return pointToLayer(feature, latlng, attributes);     
         }
     }).addTo(map);
     //controlLayers.addOverlay(data, 'Accidents NV');
@@ -359,7 +151,6 @@ function createPropSymbols(data, attributes,) {
 
 //function to convert markers to circle markers
 // function pointToLayer(feature, latlng, attributes) {
-//     // mapping average unemployment rate for each year
 
 //     var attribute = attributes[0];
 //     //create variable from feature attribute
@@ -408,8 +199,7 @@ function createPropSymbols(data, attributes,) {
 function PopupContent(properties, attribute) {
     this.properties = properties;
     this.attribute = attribute;
-    //this.year = attribute.split("_")[1];
-    //this.unemploymentRate = this.properties[attribute];
+
     this.formatted = "<p><b>Year: " + this.properties.YEAR + "</b></p><p>Persons " + this.properties.PERSONS + "</b><h4>Fatalities " + this.properties.FATALS + "</h4></p>";
 }; // end PopupContent
 

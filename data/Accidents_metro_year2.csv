@@ -1,0 +1,841 @@
+﻿metro,YEAR,Pedestrian,Bicyclist,latitude,longitude
+(blank),2001,88,15,,
+(blank),2002,147,36,,
+(blank),2003,160,23,,
+(blank),2004,163,25,,
+(blank),2005,168,22,,
+(blank),2006,157,35,,
+(blank),2007,140,31,,
+(blank),2008,144,32,,
+(blank),2009,140,30,,
+(blank),2010,124,27,,
+(blank),2011,141,36,,
+(blank),2012,143,30,,
+(blank),2013,157,48,,
+(blank),2014,157,34,,
+(blank),2015,179,42,,
+(blank),2016,185,46,,
+(blank),2017,208,39,,
+(blank),2018,208,41,,
+(blank),2019,233,44,,
+(blank),2020,222,38,,
+Anaheim-Santa Ana-Irvine MD,2001,30,8,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2002,34,7,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2003,46,8,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2004,42,6,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2005,40,8,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2006,37,18,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2007,38,14,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2008,28,8,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2009,34,11,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2010,26,3,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2011,32,12,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2012,40,12,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2013,52,7,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2014,39,15,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2015,46,13,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2016,60,8,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2017,48,12,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2018,56,12,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2019,46,11,33.71578619,-117.8270836
+Anaheim-Santa Ana-Irvine MD,2020,61,13,33.71578619,-117.8270836
+Bakersfield Metropolitan,2001,6,1,35.27740457,-118.7546398
+Bakersfield Metropolitan,2002,9,5,35.27740457,-118.7546398
+Bakersfield Metropolitan,2003,10,5,35.27740457,-118.7546398
+Bakersfield Metropolitan,2004,11,0,35.27740457,-118.7546398
+Bakersfield Metropolitan,2005,12,3,35.27740457,-118.7546398
+Bakersfield Metropolitan,2006,19,5,35.27740457,-118.7546398
+Bakersfield Metropolitan,2007,8,2,35.27740457,-118.7546398
+Bakersfield Metropolitan,2008,13,3,35.27740457,-118.7546398
+Bakersfield Metropolitan,2009,10,2,35.27740457,-118.7546398
+Bakersfield Metropolitan,2010,12,0,35.27740457,-118.7546398
+Bakersfield Metropolitan,2011,12,1,35.27740457,-118.7546398
+Bakersfield Metropolitan,2012,16,2,35.27740457,-118.7546398
+Bakersfield Metropolitan,2013,18,0,35.27740457,-118.7546398
+Bakersfield Metropolitan,2014,14,3,35.27740457,-118.7546398
+Bakersfield Metropolitan,2015,19,1,35.27740457,-118.7546398
+Bakersfield Metropolitan,2016,21,3,35.27740457,-118.7546398
+Bakersfield Metropolitan,2017,27,4,35.27740457,-118.7546398
+Bakersfield Metropolitan,2018,9,2,35.27740457,-118.7546398
+Bakersfield Metropolitan,2019,19,4,35.27740457,-118.7546398
+Bakersfield Metropolitan,2020,20,2,35.27740457,-118.7546398
+Carson City Metropolitan,2001,0,0,39.15120523,-119.7461904
+Carson City Metropolitan,2002,1,0,39.15120523,-119.7461904
+Carson City Metropolitan,2003,2,0,39.15120523,-119.7461904
+Carson City Metropolitan,2004,0,0,39.15120523,-119.7461904
+Carson City Metropolitan,2005,1,0,39.15120523,-119.7461904
+Carson City Metropolitan,2006,2,0,39.15120523,-119.7461904
+Carson City Metropolitan,2007,0,0,39.15120523,-119.7461904
+Carson City Metropolitan,2008,0,0,39.15120523,-119.7461904
+Carson City Metropolitan,2009,2,0,39.15120523,-119.7461904
+Carson City Metropolitan,2010,0,0,39.15120523,-119.7461904
+Carson City Metropolitan,2011,0,0,39.15120523,-119.7461904
+Carson City Metropolitan,2012,0,0,39.15120523,-119.7461904
+Carson City Metropolitan,2013,2,0,39.15120523,-119.7461904
+Carson City Metropolitan,2014,1,0,39.15120523,-119.7461904
+Carson City Metropolitan,2015,1,0,39.15120523,-119.7461904
+Carson City Metropolitan,2016,4,0,39.15120523,-119.7461904
+Carson City Metropolitan,2017,1,0,39.15120523,-119.7461904
+Carson City Metropolitan,2018,1,0,39.15120523,-119.7461904
+Carson City Metropolitan,2019,0,0,39.15120523,-119.7461904
+Carson City Metropolitan,2020,1,1,39.15120523,-119.7461904
+CenCal,2001,2,2,40.01011411,-122.6615611
+CenCal,2002,3,0,40.01011411,-122.6615611
+CenCal,2003,7,0,40.01011411,-122.6615611
+CenCal,2004,4,0,40.01011411,-122.6615611
+CenCal,2005,3,0,40.01011411,-122.6615611
+CenCal,2006,6,1,40.01011411,-122.6615611
+CenCal,2007,6,0,40.01011411,-122.6615611
+CenCal,2008,2,0,40.01011411,-122.6615611
+CenCal,2009,4,1,40.01011411,-122.6615611
+CenCal,2010,4,1,40.01011411,-122.6615611
+CenCal,2011,8,3,40.01011411,-122.6615611
+CenCal,2012,3,2,40.01011411,-122.6615611
+CenCal,2013,5,1,40.01011411,-122.6615611
+CenCal,2014,3,1,40.01011411,-122.6615611
+CenCal,2015,5,0,40.01011411,-122.6615611
+CenCal,2016,11,2,40.01011411,-122.6615611
+CenCal,2017,11,0,40.01011411,-122.6615611
+CenCal,2018,9,2,40.01011411,-122.6615611
+CenCal,2019,5,0,40.01011411,-122.6615611
+CenCal,2020,13,3,40.01011411,-122.6615611
+Chico Metropolitan,2001,0,0,39.59149019,-121.675157
+Chico Metropolitan,2002,2,3,39.59149019,-121.675157
+Chico Metropolitan,2003,2,1,39.59149019,-121.675157
+Chico Metropolitan,2004,2,0,39.59149019,-121.675157
+Chico Metropolitan,2005,3,1,39.59149019,-121.675157
+Chico Metropolitan,2006,3,0,39.59149019,-121.675157
+Chico Metropolitan,2007,4,1,39.59149019,-121.675157
+Chico Metropolitan,2008,1,0,39.59149019,-121.675157
+Chico Metropolitan,2009,1,0,39.59149019,-121.675157
+Chico Metropolitan,2010,6,0,39.59149019,-121.675157
+Chico Metropolitan,2011,2,0,39.59149019,-121.675157
+Chico Metropolitan,2012,2,3,39.59149019,-121.675157
+Chico Metropolitan,2013,3,3,39.59149019,-121.675157
+Chico Metropolitan,2014,0,1,39.59149019,-121.675157
+Chico Metropolitan,2015,8,0,39.59149019,-121.675157
+Chico Metropolitan,2016,9,1,39.59149019,-121.675157
+Chico Metropolitan,2017,4,2,39.59149019,-121.675157
+Chico Metropolitan,2018,4,1,39.59149019,-121.675157
+Chico Metropolitan,2019,5,0,39.59149019,-121.675157
+Chico Metropolitan,2020,7,0,39.59149019,-121.675157
+Eastern Sierras,2001,1,0,37.96288513,-120.1996707
+Eastern Sierras,2002,0,0,37.96288513,-120.1996707
+Eastern Sierras,2003,0,0,37.96288513,-120.1996707
+Eastern Sierras,2004,2,0,37.96288513,-120.1996707
+Eastern Sierras,2005,0,0,37.96288513,-120.1996707
+Eastern Sierras,2006,0,0,37.96288513,-120.1996707
+Eastern Sierras,2007,0,0,37.96288513,-120.1996707
+Eastern Sierras,2008,0,0,37.96288513,-120.1996707
+Eastern Sierras,2009,2,0,37.96288513,-120.1996707
+Eastern Sierras,2010,0,0,37.96288513,-120.1996707
+Eastern Sierras,2011,0,0,37.96288513,-120.1996707
+Eastern Sierras,2012,1,0,37.96288513,-120.1996707
+Eastern Sierras,2013,1,0,37.96288513,-120.1996707
+Eastern Sierras,2014,0,0,37.96288513,-120.1996707
+Eastern Sierras,2015,2,0,37.96288513,-120.1996707
+Eastern Sierras,2016,1,0,37.96288513,-120.1996707
+Eastern Sierras,2017,1,0,37.96288513,-120.1996707
+Eastern Sierras,2018,1,0,37.96288513,-120.1996707
+Eastern Sierras,2019,3,0,37.96288513,-120.1996707
+Eastern Sierras,2020,0,0,37.96288513,-120.1996707
+El Centro Metropolitan,2001,0,0,33.00245904,-115.6809105
+El Centro Metropolitan,2002,2,0,33.00245904,-115.6809105
+El Centro Metropolitan,2003,1,0,33.00245904,-115.6809105
+El Centro Metropolitan,2004,2,0,33.00245904,-115.6809105
+El Centro Metropolitan,2005,3,0,33.00245904,-115.6809105
+El Centro Metropolitan,2006,3,0,33.00245904,-115.6809105
+El Centro Metropolitan,2007,1,0,33.00245904,-115.6809105
+El Centro Metropolitan,2008,2,1,33.00245904,-115.6809105
+El Centro Metropolitan,2009,2,1,33.00245904,-115.6809105
+El Centro Metropolitan,2010,0,0,33.00245904,-115.6809105
+El Centro Metropolitan,2011,0,0,33.00245904,-115.6809105
+El Centro Metropolitan,2012,2,1,33.00245904,-115.6809105
+El Centro Metropolitan,2013,1,0,33.00245904,-115.6809105
+El Centro Metropolitan,2014,2,0,33.00245904,-115.6809105
+El Centro Metropolitan,2015,3,0,33.00245904,-115.6809105
+El Centro Metropolitan,2016,2,1,33.00245904,-115.6809105
+El Centro Metropolitan,2017,5,0,33.00245904,-115.6809105
+El Centro Metropolitan,2018,1,1,33.00245904,-115.6809105
+El Centro Metropolitan,2019,3,1,33.00245904,-115.6809105
+El Centro Metropolitan,2020,1,0,33.00245904,-115.6809105
+Elko Micropolitan,2001,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2002,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2003,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2004,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2005,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2006,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2007,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2008,1,0,40.76008364,-115.4986219
+Elko Micropolitan,2009,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2010,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2011,1,0,40.76008364,-115.4986219
+Elko Micropolitan,2012,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2013,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2014,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2015,1,0,40.76008364,-115.4986219
+Elko Micropolitan,2016,1,0,40.76008364,-115.4986219
+Elko Micropolitan,2017,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2018,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2019,0,0,40.76008364,-115.4986219
+Elko Micropolitan,2020,0,0,40.76008364,-115.4986219
+Fallon Micropolitan,2001,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2002,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2003,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2004,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2005,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2006,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2007,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2008,0,1,39.47383066,-118.7781098
+Fallon Micropolitan,2009,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2010,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2011,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2012,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2013,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2014,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2015,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2016,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2017,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2018,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2019,0,0,39.47383066,-118.7781098
+Fallon Micropolitan,2020,1,0,39.47383066,-118.7781098
+Fernley Micropolitan,2001,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2002,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2003,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2004,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2005,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2006,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2007,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2008,1,0,39.44682594,-119.246834
+Fernley Micropolitan,2009,1,0,39.44682594,-119.246834
+Fernley Micropolitan,2010,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2011,1,0,39.44682594,-119.246834
+Fernley Micropolitan,2012,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2013,0,1,39.44682594,-119.246834
+Fernley Micropolitan,2014,2,1,39.44682594,-119.246834
+Fernley Micropolitan,2015,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2016,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2017,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2018,1,0,39.44682594,-119.246834
+Fernley Micropolitan,2019,0,0,39.44682594,-119.246834
+Fernley Micropolitan,2020,0,0,39.44682594,-119.246834
+Fresno Metropolitan,2001,5,1,36.76332927,-119.7672386
+Fresno Metropolitan,2002,20,3,36.76332927,-119.7672386
+Fresno Metropolitan,2003,22,3,36.76332927,-119.7672386
+Fresno Metropolitan,2004,6,3,36.76332927,-119.7672386
+Fresno Metropolitan,2005,13,3,36.76332927,-119.7672386
+Fresno Metropolitan,2006,11,4,36.76332927,-119.7672386
+Fresno Metropolitan,2007,11,2,36.76332927,-119.7672386
+Fresno Metropolitan,2008,13,3,36.76332927,-119.7672386
+Fresno Metropolitan,2009,6,6,36.76332927,-119.7672386
+Fresno Metropolitan,2010,13,2,36.76332927,-119.7672386
+Fresno Metropolitan,2011,17,1,36.76332927,-119.7672386
+Fresno Metropolitan,2012,19,3,36.76332927,-119.7672386
+Fresno Metropolitan,2013,14,5,36.76332927,-119.7672386
+Fresno Metropolitan,2014,12,2,36.76332927,-119.7672386
+Fresno Metropolitan,2015,9,1,36.76332927,-119.7672386
+Fresno Metropolitan,2016,21,2,36.76332927,-119.7672386
+Fresno Metropolitan,2017,25,4,36.76332927,-119.7672386
+Fresno Metropolitan,2018,16,1,36.76332927,-119.7672386
+Fresno Metropolitan,2019,19,2,36.76332927,-119.7672386
+Fresno Metropolitan,2020,31,6,36.76332927,-119.7672386
+Gardnerville Ranchos Micropolitan,2001,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2002,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2003,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2004,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2005,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2006,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2007,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2008,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2009,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2010,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2011,0,1,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2012,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2013,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2014,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2015,1,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2016,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2017,2,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2018,1,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2019,0,0,38.99576442,-119.7446942
+Gardnerville Ranchos Micropolitan,2020,0,0,38.99576442,-119.7446942
+Hanford-Corcoran Metropolitan,2001,1,1,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2002,0,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2003,0,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2004,1,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2005,2,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2006,0,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2007,2,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2008,1,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2009,1,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2010,2,1,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2011,0,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2012,0,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2013,4,2,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2014,1,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2015,0,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2016,0,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2017,2,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2018,0,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2019,2,0,36.16207007,-119.8360634
+Hanford-Corcoran Metropolitan,2020,2,0,36.16207007,-119.8360634
+Las Vegas-Henderson-Paradise Metropolitan,2001,30,3,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2002,35,4,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2003,29,7,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2004,29,8,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2005,47,10,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2006,31,7,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2007,39,6,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2008,39,6,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2009,24,4,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2010,26,2,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2011,28,1,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2012,31,2,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2013,40,4,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2014,43,3,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2015,45,8,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2016,51,4,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2017,61,7,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2018,53,7,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2019,38,6,36.12856774,-115.0351848
+Las Vegas-Henderson-Paradise Metropolitan,2020,42,4,36.12856774,-115.0351848
+Los Angeles-Long Beach-Glendale MD,2001,101,10,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2002,139,15,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2003,149,19,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2004,142,17,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2005,146,19,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2006,144,19,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2007,151,12,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2008,135,17,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2009,118,12,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2010,141,17,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2011,119,19,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2012,151,18,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2013,160,25,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2014,152,19,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2015,152,24,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2016,205,28,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2017,194,30,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2018,191,38,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2019,215,31,34.17407981,-118.2552889
+Los Angeles-Long Beach-Glendale MD,2020,187,19,34.17407981,-118.2552889
+Madera Metropolitan,2001,3,0,37.1052772,-119.9421123
+Madera Metropolitan,2002,0,0,37.1052772,-119.9421123
+Madera Metropolitan,2003,3,0,37.1052772,-119.9421123
+Madera Metropolitan,2004,5,0,37.1052772,-119.9421123
+Madera Metropolitan,2005,2,0,37.1052772,-119.9421123
+Madera Metropolitan,2006,5,0,37.1052772,-119.9421123
+Madera Metropolitan,2007,2,0,37.1052772,-119.9421123
+Madera Metropolitan,2008,2,1,37.1052772,-119.9421123
+Madera Metropolitan,2009,2,0,37.1052772,-119.9421123
+Madera Metropolitan,2010,3,1,37.1052772,-119.9421123
+Madera Metropolitan,2011,0,1,37.1052772,-119.9421123
+Madera Metropolitan,2012,1,0,37.1052772,-119.9421123
+Madera Metropolitan,2013,1,0,37.1052772,-119.9421123
+Madera Metropolitan,2014,2,0,37.1052772,-119.9421123
+Madera Metropolitan,2015,3,1,37.1052772,-119.9421123
+Madera Metropolitan,2016,1,0,37.1052772,-119.9421123
+Madera Metropolitan,2017,0,0,37.1052772,-119.9421123
+Madera Metropolitan,2018,2,0,37.1052772,-119.9421123
+Madera Metropolitan,2019,2,0,37.1052772,-119.9421123
+Madera Metropolitan,2020,1,0,37.1052772,-119.9421123
+Merced Metropolitan,2001,0,1,37.28707164,-120.6302648
+Merced Metropolitan,2002,2,1,37.28707164,-120.6302648
+Merced Metropolitan,2003,4,0,37.28707164,-120.6302648
+Merced Metropolitan,2004,4,3,37.28707164,-120.6302648
+Merced Metropolitan,2005,4,2,37.28707164,-120.6302648
+Merced Metropolitan,2006,3,1,37.28707164,-120.6302648
+Merced Metropolitan,2007,3,1,37.28707164,-120.6302648
+Merced Metropolitan,2008,3,1,37.28707164,-120.6302648
+Merced Metropolitan,2009,4,2,37.28707164,-120.6302648
+Merced Metropolitan,2010,2,1,37.28707164,-120.6302648
+Merced Metropolitan,2011,5,0,37.28707164,-120.6302648
+Merced Metropolitan,2012,2,0,37.28707164,-120.6302648
+Merced Metropolitan,2013,4,0,37.28707164,-120.6302648
+Merced Metropolitan,2014,2,1,37.28707164,-120.6302648
+Merced Metropolitan,2015,6,1,37.28707164,-120.6302648
+Merced Metropolitan,2016,9,0,37.28707164,-120.6302648
+Merced Metropolitan,2017,3,0,37.28707164,-120.6302648
+Merced Metropolitan,2018,9,1,37.28707164,-120.6302648
+Merced Metropolitan,2019,2,1,37.28707164,-120.6302648
+Merced Metropolitan,2020,1,0,37.28707164,-120.6302648
+Modesto Metropolitan,2001,2,1,37.6064819,-120.969824
+Modesto Metropolitan,2002,5,1,37.6064819,-120.969824
+Modesto Metropolitan,2003,6,1,37.6064819,-120.969824
+Modesto Metropolitan,2004,8,3,37.6064819,-120.969824
+Modesto Metropolitan,2005,11,1,37.6064819,-120.969824
+Modesto Metropolitan,2006,4,2,37.6064819,-120.969824
+Modesto Metropolitan,2007,5,4,37.6064819,-120.969824
+Modesto Metropolitan,2008,2,0,37.6064819,-120.969824
+Modesto Metropolitan,2009,5,0,37.6064819,-120.969824
+Modesto Metropolitan,2010,5,4,37.6064819,-120.969824
+Modesto Metropolitan,2011,10,0,37.6064819,-120.969824
+Modesto Metropolitan,2012,5,2,37.6064819,-120.969824
+Modesto Metropolitan,2013,5,2,37.6064819,-120.969824
+Modesto Metropolitan,2014,7,1,37.6064819,-120.969824
+Modesto Metropolitan,2015,14,1,37.6064819,-120.969824
+Modesto Metropolitan,2016,11,4,37.6064819,-120.969824
+Modesto Metropolitan,2017,8,2,37.6064819,-120.969824
+Modesto Metropolitan,2018,11,2,37.6064819,-120.969824
+Modesto Metropolitan,2019,11,2,37.6064819,-120.969824
+Modesto Metropolitan,2020,14,2,37.6064819,-120.969824
+Napa Metropolitan,2001,0,0,38.36464431,-122.3572939
+Napa Metropolitan,2002,0,0,38.36464431,-122.3572939
+Napa Metropolitan,2003,1,0,38.36464431,-122.3572939
+Napa Metropolitan,2004,1,0,38.36464431,-122.3572939
+Napa Metropolitan,2005,1,1,38.36464431,-122.3572939
+Napa Metropolitan,2006,0,0,38.36464431,-122.3572939
+Napa Metropolitan,2007,1,0,38.36464431,-122.3572939
+Napa Metropolitan,2008,1,0,38.36464431,-122.3572939
+Napa Metropolitan,2009,1,0,38.36464431,-122.3572939
+Napa Metropolitan,2010,0,0,38.36464431,-122.3572939
+Napa Metropolitan,2011,1,0,38.36464431,-122.3572939
+Napa Metropolitan,2012,0,0,38.36464431,-122.3572939
+Napa Metropolitan,2013,0,0,38.36464431,-122.3572939
+Napa Metropolitan,2014,0,0,38.36464431,-122.3572939
+Napa Metropolitan,2015,0,1,38.36464431,-122.3572939
+Napa Metropolitan,2016,0,0,38.36464431,-122.3572939
+Napa Metropolitan,2017,2,0,38.36464431,-122.3572939
+Napa Metropolitan,2018,2,0,38.36464431,-122.3572939
+Napa Metropolitan,2019,3,0,38.36464431,-122.3572939
+Napa Metropolitan,2020,3,0,38.36464431,-122.3572939
+Oakland-Hayward-Berkeley MD,2001,16,1,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2002,28,5,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2003,21,4,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2004,19,5,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2005,22,1,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2006,20,7,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2007,19,2,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2008,30,4,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2009,10,3,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2010,20,3,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2011,22,3,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2012,23,10,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2013,26,8,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2014,22,5,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2015,32,5,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2016,31,4,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2017,29,3,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2018,22,5,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2019,39,2,37.75956161,-122.0068654
+Oakland-Hayward-Berkeley MD,2020,36,6,37.75956161,-122.0068654
+Oxnard-Thousand Oaks-Ventura Metropolitan,2001,3,3,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2002,11,2,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2003,4,2,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2004,7,0,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2005,9,4,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2006,8,10,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2007,7,3,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2008,4,2,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2009,10,2,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2010,4,1,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2011,5,2,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2012,8,3,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2013,9,5,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2014,7,2,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2015,9,0,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2016,5,1,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2017,4,0,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2018,11,0,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2019,10,3,34.24593733,-118.9782938
+Oxnard-Thousand Oaks-Ventura Metropolitan,2020,10,2,34.24593733,-118.9782938
+Pahrump Micropolitan,2001,1,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2002,0,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2003,1,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2004,2,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2005,0,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2006,2,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2007,1,1,36.24111576,-116.0176368
+Pahrump Micropolitan,2008,2,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2009,0,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2010,2,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2011,0,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2012,2,1,36.24111576,-116.0176368
+Pahrump Micropolitan,2013,1,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2014,2,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2015,0,1,36.24111576,-116.0176368
+Pahrump Micropolitan,2016,0,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2017,1,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2018,0,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2019,0,0,36.24111576,-116.0176368
+Pahrump Micropolitan,2020,0,1,36.24111576,-116.0176368
+Redding Metropolitan,2001,1,1,40.5925098,-122.3144813
+Redding Metropolitan,2002,3,0,40.5925098,-122.3144813
+Redding Metropolitan,2003,2,0,40.5925098,-122.3144813
+Redding Metropolitan,2004,5,0,40.5925098,-122.3144813
+Redding Metropolitan,2005,2,0,40.5925098,-122.3144813
+Redding Metropolitan,2006,2,0,40.5925098,-122.3144813
+Redding Metropolitan,2007,1,1,40.5925098,-122.3144813
+Redding Metropolitan,2008,4,0,40.5925098,-122.3144813
+Redding Metropolitan,2009,2,0,40.5925098,-122.3144813
+Redding Metropolitan,2010,2,1,40.5925098,-122.3144813
+Redding Metropolitan,2011,3,0,40.5925098,-122.3144813
+Redding Metropolitan,2012,3,0,40.5925098,-122.3144813
+Redding Metropolitan,2013,1,0,40.5925098,-122.3144813
+Redding Metropolitan,2014,2,0,40.5925098,-122.3144813
+Redding Metropolitan,2015,4,3,40.5925098,-122.3144813
+Redding Metropolitan,2016,4,1,40.5925098,-122.3144813
+Redding Metropolitan,2017,3,1,40.5925098,-122.3144813
+Redding Metropolitan,2018,3,0,40.5925098,-122.3144813
+Redding Metropolitan,2019,2,0,40.5925098,-122.3144813
+Redding Metropolitan,2020,5,0,40.5925098,-122.3144813
+Reno Metropolitan,2001,6,0,39.58528154,-119.7757555
+Reno Metropolitan,2002,6,0,39.58528154,-119.7757555
+Reno Metropolitan,2003,9,2,39.58528154,-119.7757555
+Reno Metropolitan,2004,6,2,39.58528154,-119.7757555
+Reno Metropolitan,2005,5,0,39.58528154,-119.7757555
+Reno Metropolitan,2006,8,2,39.58528154,-119.7757555
+Reno Metropolitan,2007,8,2,39.58528154,-119.7757555
+Reno Metropolitan,2008,5,0,39.58528154,-119.7757555
+Reno Metropolitan,2009,3,1,39.58528154,-119.7757555
+Reno Metropolitan,2010,4,2,39.58528154,-119.7757555
+Reno Metropolitan,2011,9,1,39.58528154,-119.7757555
+Reno Metropolitan,2012,8,0,39.58528154,-119.7757555
+Reno Metropolitan,2013,6,0,39.58528154,-119.7757555
+Reno Metropolitan,2014,11,2,39.58528154,-119.7757555
+Reno Metropolitan,2015,6,1,39.58528154,-119.7757555
+Reno Metropolitan,2016,13,1,39.58528154,-119.7757555
+Reno Metropolitan,2017,10,2,39.58528154,-119.7757555
+Reno Metropolitan,2018,10,1,39.58528154,-119.7757555
+Reno Metropolitan,2019,13,1,39.58528154,-119.7757555
+Reno Metropolitan,2020,11,0,39.58528154,-119.7757555
+Riverside-San Bernardino-Ontario Metropolitan,2001,24,3,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2002,72,10,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2003,55,16,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2004,66,18,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2005,65,21,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2006,70,16,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2007,60,9,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2008,52,12,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2009,45,7,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2010,38,7,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2011,54,9,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2012,58,12,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2013,63,13,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2014,70,16,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2015,73,6,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2016,80,11,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2017,99,11,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2018,101,12,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2019,97,8,34.03638255,-116.9387202
+Riverside-San Bernardino-Ontario Metropolitan,2020,103,13,34.03638255,-116.9387202
+Rural Nevada,2001,0,0,39.40475377,-115.7363345
+Rural Nevada,2002,0,0,39.40475377,-115.7363345
+Rural Nevada,2003,0,0,39.40475377,-115.7363345
+Rural Nevada,2004,0,0,39.40475377,-115.7363345
+Rural Nevada,2005,0,0,39.40475377,-115.7363345
+Rural Nevada,2006,0,0,39.40475377,-115.7363345
+Rural Nevada,2007,0,0,39.40475377,-115.7363345
+Rural Nevada,2008,0,0,39.40475377,-115.7363345
+Rural Nevada,2009,0,0,39.40475377,-115.7363345
+Rural Nevada,2010,0,0,39.40475377,-115.7363345
+Rural Nevada,2011,1,0,39.40475377,-115.7363345
+Rural Nevada,2012,1,0,39.40475377,-115.7363345
+Rural Nevada,2013,0,0,39.40475377,-115.7363345
+Rural Nevada,2014,1,0,39.40475377,-115.7363345
+Rural Nevada,2015,0,0,39.40475377,-115.7363345
+Rural Nevada,2016,1,0,39.40475377,-115.7363345
+Rural Nevada,2017,0,0,39.40475377,-115.7363345
+Rural Nevada,2018,0,0,39.40475377,-115.7363345
+Rural Nevada,2019,0,0,39.40475377,-115.7363345
+Rural Nevada,2020,0,0,39.40475377,-115.7363345
+Sacramento-Roseville-Arden-Arcade Metropolitan,2001,15,2,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2002,21,7,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2003,24,8,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2004,20,6,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2005,31,7,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2006,20,3,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2007,22,5,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2008,18,5,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2009,16,4,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2010,24,10,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2011,27,5,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2012,16,7,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2013,32,6,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2014,21,5,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2015,24,6,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2016,35,12,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2017,27,13,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2018,44,12,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2019,44,5,38.65161808,-121.2421203
+Sacramento-Roseville-Arden-Arcade Metropolitan,2020,39,2,38.65161808,-121.2421203
+Salinas Metropolitan,2001,1,0,36.66595515,-121.6186919
+Salinas Metropolitan,2002,3,0,36.66595515,-121.6186919
+Salinas Metropolitan,2003,7,1,36.66595515,-121.6186919
+Salinas Metropolitan,2004,5,0,36.66595515,-121.6186919
+Salinas Metropolitan,2005,4,1,36.66595515,-121.6186919
+Salinas Metropolitan,2006,7,1,36.66595515,-121.6186919
+Salinas Metropolitan,2007,4,0,36.66595515,-121.6186919
+Salinas Metropolitan,2008,3,0,36.66595515,-121.6186919
+Salinas Metropolitan,2009,3,0,36.66595515,-121.6186919
+Salinas Metropolitan,2010,3,0,36.66595515,-121.6186919
+Salinas Metropolitan,2011,3,2,36.66595515,-121.6186919
+Salinas Metropolitan,2012,1,0,36.66595515,-121.6186919
+Salinas Metropolitan,2013,6,1,36.66595515,-121.6186919
+Salinas Metropolitan,2014,6,1,36.66595515,-121.6186919
+Salinas Metropolitan,2015,6,2,36.66595515,-121.6186919
+Salinas Metropolitan,2016,7,0,36.66595515,-121.6186919
+Salinas Metropolitan,2017,11,0,36.66595515,-121.6186919
+Salinas Metropolitan,2018,6,0,36.66595515,-121.6186919
+Salinas Metropolitan,2019,4,0,36.66595515,-121.6186919
+Salinas Metropolitan,2020,7,0,36.66595515,-121.6186919
+San Diego-Carlsbad Metropolitan,2001,36,4,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2002,61,10,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2003,50,4,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2004,48,8,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2005,50,7,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2006,49,5,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2007,42,6,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2008,47,4,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2009,43,8,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2010,44,6,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2011,37,9,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2012,48,7,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2013,48,5,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2014,62,10,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2015,69,5,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2016,60,4,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2017,64,2,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2018,75,7,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2019,65,7,32.94014428,-117.0598131
+San Diego-Carlsbad Metropolitan,2020,67,5,32.94014428,-117.0598131
+San Francisco-Redwood City-South San Francisco MD,2001,6,1,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2002,19,2,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2003,24,2,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2004,20,1,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2005,20,2,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2006,19,1,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2007,24,1,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2008,14,2,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2009,24,3,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2010,14,3,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2011,21,2,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2012,15,2,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2013,23,4,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2014,17,3,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2015,27,3,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2016,19,5,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2017,21,3,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2018,19,3,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2019,22,1,37.56308168,-122.3251014
+San Francisco-Redwood City-South San Francisco MD,2020,16,1,37.56308168,-122.3251014
+San Jose Metropolitan,2001,13,6,37.32361329,-121.9293248
+San Jose Metropolitan,2002,31,4,37.32361329,-121.9293248
+San Jose Metropolitan,2003,16,1,37.32361329,-121.9293248
+San Jose Metropolitan,2004,19,4,37.32361329,-121.9293248
+San Jose Metropolitan,2005,29,4,37.32361329,-121.9293248
+San Jose Metropolitan,2006,22,1,37.32361329,-121.9293248
+San Jose Metropolitan,2007,18,3,37.32361329,-121.9293248
+San Jose Metropolitan,2008,19,5,37.32361329,-121.9293248
+San Jose Metropolitan,2009,18,3,37.32361329,-121.9293248
+San Jose Metropolitan,2010,16,3,37.32361329,-121.9293248
+San Jose Metropolitan,2011,26,3,37.32361329,-121.9293248
+San Jose Metropolitan,2012,18,3,37.32361329,-121.9293248
+San Jose Metropolitan,2013,25,5,37.32361329,-121.9293248
+San Jose Metropolitan,2014,27,4,37.32361329,-121.9293248
+San Jose Metropolitan,2015,31,11,37.32361329,-121.9293248
+San Jose Metropolitan,2016,24,5,37.32361329,-121.9293248
+San Jose Metropolitan,2017,25,5,37.32361329,-121.9293248
+San Jose Metropolitan,2018,29,7,37.32361329,-121.9293248
+San Jose Metropolitan,2019,40,6,37.32361329,-121.9293248
+San Jose Metropolitan,2020,28,6,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2001,1,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2002,1,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2003,0,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2004,4,1,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2005,1,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2006,3,1,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2007,1,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2008,0,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2009,2,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2010,3,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2011,1,1,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2012,1,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2013,0,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2014,1,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2015,1,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2016,1,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2017,0,1,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2018,4,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2019,6,0,35.4248893,-120.6623636
+San Luis Obispo-Paso Robles-Arroyo Grande Metropolitan,2020,3,1,35.4248893,-120.6623636
+San Rafael MD,2001,1,0,38.02948763,-122.5474463
+San Rafael MD,2002,2,0,38.02948763,-122.5474463
+San Rafael MD,2003,0,1,38.02948763,-122.5474463
+San Rafael MD,2004,0,0,38.02948763,-122.5474463
+San Rafael MD,2005,3,0,38.02948763,-122.5474463
+San Rafael MD,2006,1,0,38.02948763,-122.5474463
+San Rafael MD,2007,2,0,38.02948763,-122.5474463
+San Rafael MD,2008,1,0,38.02948763,-122.5474463
+San Rafael MD,2009,1,0,38.02948763,-122.5474463
+San Rafael MD,2010,0,0,38.02948763,-122.5474463
+San Rafael MD,2011,1,0,38.02948763,-122.5474463
+San Rafael MD,2012,2,1,38.02948763,-122.5474463
+San Rafael MD,2013,3,0,38.02948763,-122.5474463
+San Rafael MD,2014,1,0,38.02948763,-122.5474463
+San Rafael MD,2015,0,0,38.02948763,-122.5474463
+San Rafael MD,2016,3,1,38.02948763,-122.5474463
+San Rafael MD,2017,1,0,38.02948763,-122.5474463
+San Rafael MD,2018,4,0,38.02948763,-122.5474463
+San Rafael MD,2019,2,1,38.02948763,-122.5474463
+San Rafael MD,2020,1,0,38.02948763,-122.5474463
+Santa Cruz-Watsonville Metropolitan,2001,3,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2002,4,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2003,6,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2004,3,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2005,2,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2006,5,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2007,2,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2008,3,1,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2009,4,2,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2010,4,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2011,1,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2012,1,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2013,1,1,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2014,2,1,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2015,4,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2016,8,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2017,3,1,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2018,9,0,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2019,3,1,36.99894138,-121.8426034
+Santa Cruz-Watsonville Metropolitan,2020,8,0,36.99894138,-121.8426034
+Santa Maria-Santa Barbara Metropolitan,2001,2,2,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2002,2,0,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2003,5,0,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2004,3,0,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2005,12,2,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2006,1,3,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2007,7,2,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2008,2,1,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2009,2,0,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2010,6,0,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2011,6,0,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2012,5,3,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2013,7,1,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2014,1,0,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2015,5,0,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2016,1,2,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2017,1,1,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2018,7,1,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2019,5,0,34.66342627,-120.2015004
+Santa Maria-Santa Barbara Metropolitan,2020,2,2,34.66342627,-120.2015004
+Santa Rosa Metropolitan,2001,3,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2002,3,2,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2003,3,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2004,2,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2005,4,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2006,5,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2007,2,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2008,3,2,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2009,5,0,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2010,5,0,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2011,8,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2012,4,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2013,5,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2014,4,0,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2015,5,0,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2016,7,0,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2017,4,0,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2018,4,1,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2019,4,0,38.43670778,-122.7310077
+Santa Rosa Metropolitan,2020,3,0,38.43670778,-122.7310077
+Stockton-Lodi Metropolitan,2001,4,0,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2002,8,2,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2003,6,1,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2004,9,3,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2005,14,1,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2006,8,0,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2007,7,2,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2008,12,1,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2009,3,1,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2010,12,4,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2011,7,2,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2012,3,2,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2013,10,3,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2014,6,0,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2015,13,2,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2016,10,4,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2017,18,5,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2018,18,9,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2019,22,7,37.90903912,-121.3186337
+Stockton-Lodi Metropolitan,2020,12,6,37.90903912,-121.3186337
+Vallejo-Fairfield Metropolitan,2001,3,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2002,3,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2003,3,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2004,3,1,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2005,3,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2006,3,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2007,4,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2008,4,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2009,6,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2010,5,1,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2011,1,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2012,5,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2013,4,1,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2014,6,1,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2015,11,3,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2016,7,1,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2017,3,1,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2018,14,0,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2019,8,2,38.26120101,-122.0241608
+Vallejo-Fairfield Metropolitan,2020,8,1,38.26120101,-122.0241608
+Visalia-Porterville Metropolitan,2001,3,0,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2002,6,0,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2003,5,1,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2004,6,1,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2005,4,1,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2006,7,1,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2007,6,3,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2008,6,0,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2009,5,2,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2010,5,1,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2011,4,1,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2012,9,0,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2013,6,0,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2014,7,2,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2015,9,2,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2016,6,6,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2017,16,3,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2018,5,2,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2019,10,2,36.30313296,-119.140647
+Visalia-Porterville Metropolitan,2020,6,2,36.30313296,-119.140647
+Winnemucca Micropolitan,2001,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2002,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2003,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2004,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2005,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2006,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2007,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2008,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2009,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2010,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2011,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2012,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2013,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2014,1,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2015,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2016,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2017,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2018,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2019,0,0,40.96453099,-117.7247075
+Winnemucca Micropolitan,2020,0,0,40.96453099,-117.7247075
+Yuba City Metropolitan,2001,0,1,39.1925958,-121.5342717
+Yuba City Metropolitan,2002,1,0,39.1925958,-121.5342717
+Yuba City Metropolitan,2003,2,1,39.1925958,-121.5342717
+Yuba City Metropolitan,2004,0,0,39.1925958,-121.5342717
+Yuba City Metropolitan,2005,1,1,39.1925958,-121.5342717
+Yuba City Metropolitan,2006,0,3,39.1925958,-121.5342717
+Yuba City Metropolitan,2007,2,0,39.1925958,-121.5342717
+Yuba City Metropolitan,2008,1,0,39.1925958,-121.5342717
+Yuba City Metropolitan,2009,1,1,39.1925958,-121.5342717
+Yuba City Metropolitan,2010,2,1,39.1925958,-121.5342717
+Yuba City Metropolitan,2011,2,0,39.1925958,-121.5342717
+Yuba City Metropolitan,2012,4,2,39.1925958,-121.5342717
+Yuba City Metropolitan,2013,3,1,39.1925958,-121.5342717
+Yuba City Metropolitan,2014,3,0,39.1925958,-121.5342717
+Yuba City Metropolitan,2015,1,0,39.1925958,-121.5342717
+Yuba City Metropolitan,2016,1,0,39.1925958,-121.5342717
+Yuba City Metropolitan,2017,4,1,39.1925958,-121.5342717
+Yuba City Metropolitan,2018,3,2,39.1925958,-121.5342717
+Yuba City Metropolitan,2019,2,0,39.1925958,-121.5342717
+Yuba City Metropolitan,2020,3,0,,
