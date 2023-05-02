@@ -9,7 +9,7 @@
   // color generator, 2 colors for ped/bike
   var colorScale = d3.scaleOrdinal()
     .domain(["Pedestrian", "Bicyclist"])
-    .range(["#d9a78b", "#a65e44"]);
+    .range(["#ed8b73", "#4aeb19"]);
 
   // create an svg element in the chart div
   var svg = d3.select(".chart")
@@ -580,6 +580,15 @@ var xScale = d3.scaleBand()
 
 } // end makeXaxis
 
+//function to move info label with mouse
+function moveLabel2(){
+
+  d3.select(".infolabel") // you will also need to ensure your css file is pointing to .infolabel and not Map.infolabel
+      .style("left", (event.pageX + 30) + "px")
+      .style("top", (event.pageY) + "px");
+      
+};
+
 function setScatterChart(csvMetroCommutersAccidents) {
  
   //console.log("barChartWidth", barChartWidth);
@@ -632,7 +641,7 @@ function setScatterChart(csvMetroCommutersAccidents) {
     .on("mouseout", function (event, d) {
         dehighlight(d);
     })
-    .on("mousemove", moveLabel);
+    .on("mousemove", moveLabel2);
 
 
    var desc = metroGroup.append("desc")
