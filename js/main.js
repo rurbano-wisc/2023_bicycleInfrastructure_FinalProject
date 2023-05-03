@@ -23,21 +23,11 @@
 
     // function to initiate Leaflet map
     function createMap() {
-        // Define the bounds of the map
-    // var bounds = {
-    //     north: 42.0,  // latitude of the north boundary
-    //     south: 32.0,  // latitude of the south boundary
-    //     east: -115.0,  // longitude of the east boundary
-    //     west: -125.0   // longitude of the west boundary
-    // };
 
-    // // Check if a given point is within the bounds
-    // function isInBounds(point) {
-    //     return (point.latitude >= bounds.south &&
-    //             point.latitude <= bounds.north &&
-    //             point.longitude >= bounds.west &&
-    //             point.longitude <= bounds.east);
-    // }
+    // define the boundaries of the map--limits map extent
+        var southWest = L.latLng(32.528832, -124.409619); // lower left corner
+        var northEast = L.latLng(42.009518, -113.464985); // upper right corner
+        var bounds = L.latLngBounds(southWest, northEast);
 
         // create the map, centered on CA/NV
         map = L.map('map', {
@@ -45,7 +35,7 @@
             zoom: 6,
             minZoom: 6,
             maxZoom: 14.5 // limit the zoom levels to something appropriate for this dataset, where the basemap shows the city names
-        });
+        }).setMaxBounds(bounds);
         //add darkOutdoors Mapbox base tile layer as default
         darkOutdoors.addTo(map);
         // call the function to process the metro area boundaries polygon layer
@@ -56,21 +46,9 @@
         // add a base layer control to the map - has to be individually with the .addBaseLayer() method, not as a group object
         controlLayers.addBaseLayer(darkOutdoors, "Dark Outdoors base map");
         controlLayers.addBaseLayer(lightOutdoors, "Light Outdoors base map");
-
-            map.on('zoomend', function () {
-            if (map.getZoom() < 8) {
-                map.removeLayer(cityMetrosNev);//1st geoJSON layer
-                map.removeLayer(cityMetrosCal);
-            } else {
-                map.addLayer(cityMetrosNev);
-                cityMetrosNev.bringToBack();
-                map.addLayer(cityMetrosCal);
-                cityMetrosCal.bringToBack();
-            }
-
             map.on('load', function () {
                             
-            map.addSource('tracts', {
+            map.addSource('cyclist tracts', {
                 type: 'vector',
                 url: 'mapbox://rurbano.cs62vfrj'
             });
@@ -79,7 +57,7 @@
                 'id': 'cyclist tracts',
                 'type': 'fill',
                 'source': 'cyclist tracts',
-                // 'source-layer': 'TractsCyclists-9f5p74',
+                'source-layer': 'TractsCyclists-9f5p74',
                 'layout': {
                     'visibility': 'none'
                 },
@@ -119,6 +97,70 @@
                 var layers = document.getElementById('menu');
                 layers.appendChild(link);
             }            
+        
+
+            map.on('zoomend', function () {
+            if (map.getZoom() < 8) {
+                map.removeLayer(cityMetrosNev);//1st geoJSON layer
+                map.removeLayer(cityMetrosCal);
+            } else {
+                map.addLayer(cityMetrosNev);
+                cityMetrosNev.bringToBack();
+                map.addLayer(cityMetrosCal);
+                cityMetrosCal.bringToBack();
+            }
+
+            // map.on('load', function () {
+                            
+            // map.addSource('cyclist tracts', {
+            //     type: 'vector',
+            //     url: 'mapbox://rurbano.cs62vfrj'
+            // });
+        
+            // map.addLayer({
+            //     'id': 'cyclist tracts',
+            //     'type': 'fill',
+            //     'source': 'cyclist tracts',
+            //     'source-layer': 'TractsCyclists-9f5p74',
+            //     'layout': {
+            //         'visibility': 'none'
+            //     },
+            //     'paint': {
+            //         'fill-color': 'orange',
+            //         'fill-opacity': 0.5
+            //         }
+            //     });
+            // });
+            
+            // var toggleableLayerIds = [ 'tracts' ];
+            
+            // for (var i = 0; i < toggleableLayerIds.length; i++) {
+            //     var id = toggleableLayerIds[i];
+            
+            //     var link = document.createElement('a');
+            //     link.href = '#';
+            //     link.className = 'active';
+            //     link.textContent = id;
+            
+            //     link.onclick = function (e) {
+            //         var clickedLayer = this.textContent;
+            //         e.preventDefault();
+            //         e.stopPropagation();
+            
+            //         var visibility = map.getLayer(clickedLayer.visibility);
+            
+            //         if (visibility === 'visible') {
+            //             map.setLayoutProperty(clickedLayer, 'visibility', visibility === 'visible' ? 'none' : 'visible');
+            //             this.className = '';
+            //         } else {
+            //             this.className = 'active';
+            //             map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+            //         }
+            //     };
+            
+            //     var layers = document.getElementById('menu');
+            //     layers.appendChild(link);
+            // }            
         });
     }; // end createMap()
 

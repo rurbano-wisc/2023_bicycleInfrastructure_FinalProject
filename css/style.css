@@ -16,30 +16,36 @@
 
 }
 
+body {
+    color: #454545; /* change the hex code to your desired font color */
+  }
+
+  
 #map {
     height: 650px; 
-    width: 1000px;
+    width: 850px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    right: -50px;
     border: 1px solid black;    
 }
 #map-container{
     /* padding-bottom:25px; */
     /* padding: 25px; */
-    /* background-color: aquamarine; */
+    background-color: #F0E8F8;
 
 }
 
-h1 {
+h1, h4 {
     text-align: center;
+    background-color: #F0E8F8;
+    margin-top: 0 !important;
+	/* margin-bottom: 1rem !important; */
   
 }
 
-h4 {
-    text-align: center;
-}
 
 
 .col{
@@ -48,6 +54,7 @@ h4 {
 }
 .col-4{
     /* padding: 25px; */
+    width: 390px;
 }
 
 /* tbd if below is necessary */
@@ -149,6 +156,10 @@ h4 {
 
 }
 
+
+.carousel-inner img {
+    height: 400px;
+  }
 /* formatting mapbox layer menu */
 #menu {
     background: #fff;
@@ -191,4 +202,9 @@ h4 {
      
     #menu a.active:hover {
     background: #3074a4;
+    }
+/* position barchart */
+    .barchartframe {
+        position: relative;
+        left: -25px; /* adjust the value to move the element left or right */
     }

@@ -9,7 +9,7 @@
   // color generator, 2 colors for ped/bike
   var colorScale = d3.scaleOrdinal()
     .domain(["Pedestrian", "Bicyclist"])
-    .range(["#ed8b73", "#4aeb19"]);
+    .range(["#af8dc3", "#7fbf7b"]);
 
   // create an svg element in the chart div
   var svg = d3.select(".chart")
@@ -626,7 +626,7 @@ function setScatterChart(csvMetroCommutersAccidents) {
     //.attr("class", "metroCircle")
     .attr("r", function (d) { return radiusScale(d.population) })
     .attr("transform", "translate(" + (barChartMargin) + "," + barChartMargin + ")")
-    .style("fill", "#a65e44")
+    .style("fill", "#003366")
     // .style("fill", function (d) {
     //   return colorScale4Scatter(d.deaths2workers);
     //  })
@@ -792,32 +792,32 @@ function setLabel(props) {
       .html(props.metro);
 }; // end setLabel();
 
-function moveLabel() {
-  // use coordinates of mousemove event to set label coordinates
+// function moveLabel() {
+//   // use coordinates of mousemove event to set label coordinates
 
-  // get width of label
-  var labelWidth = d3.select(".infolabel")
-      .node()
-      .getBoundingClientRect()
-      .width;
+//   // get width of label
+//   var labelWidth = d3.select(".infolabel")
+//       .node()
+//       .getBoundingClientRect()
+//       .width;
 
-  // use coordinates of mousemove event to set label coordinates
+//   // use coordinates of mousemove event to set label coordinates
 
-  var x1 = event.clientX + 10,
-      y1 = event.clientY - 75,
-      x2 = event.clientX - labelWidth - 10,
-      y2 = event.clientY + 25;
+//   var x1 = event.clientX + 10,
+//       y1 = event.clientY - 75,
+//       x2 = event.clientX - labelWidth - 10,
+//       y2 = event.clientY + 25;
 
-  // horizontal label coordinate, testing for overflow
-  var x = event.clientX > window.innerWidth - labelWidth - 20 ? x2 : x1;
+//   // horizontal label coordinate, testing for overflow
+//   var x = event.clientX > window.innerWidth - labelWidth - 20 ? x2 : x1;
 
-  // vertical label coordinate, testing for overflow
-  var y = event.clientY < 75 ? y2 : y1;
+//   // vertical label coordinate, testing for overflow
+//   var y = event.clientY < 75 ? y2 : y1;
 
-  d3.select(".infolabel")
-      .style("left", x + "px")
-      .style("top", y + "px");
-}; // end moveLabel()
+//   d3.select(".infolabel")
+//       .style("left", x + "px")
+//       .style("top", y + "px");
+// }; // end moveLabel()
 
 
     // function to strip spaces from metro names    
@@ -827,3 +827,5 @@ function moveLabel() {
   } // end metroNameNoSpace()
 
 })(); // end of wrapper function
+
+
