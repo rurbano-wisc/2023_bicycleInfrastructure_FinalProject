@@ -113,6 +113,7 @@ h1, h4 {
         height: 1200;
         background-color: lightgray;
         
+        
     
     }
 
@@ -205,4 +206,8 @@ h1, h4 {
     .barchartframe {
         position: relative;
         left: -20px; /* adjust the value to move the element left or right */
+    }
+
+    h5 {
+        text-align: center;
     }

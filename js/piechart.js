@@ -19,7 +19,7 @@
     .attr("height", height);
   
   // variables for the pie chart dimensions  
-  var pieTranslate = "translate(150, 180)";
+  var pieTranslate = "translate(180, 180)";
   var pieInnerRadius = 0;
   var pieOuterRadius = 100;
 
@@ -40,8 +40,8 @@
 
   const scatterChartSvg = d3.select(".scatterChart")
   .append("svg")
-  .attr("class", "scatterChartFrame")
-  .attr("transform", `translate(${barChartMargin},${barChartMargin})`)
+  .attr("class", "scatterChartFrame d-block m-auto")
+  .attr("transform", `translate(${0},${barChartMargin})`)
   .attr("width", barChartWidth + barChartMargin * 2 )
   .attr("height", barChartHeight + (barChartMargin * 2) + 30); //with room for a title
   //.attr("background-color", "purple");
@@ -220,7 +220,7 @@
     var currentMetroTitle = document.getElementById("currentMetro");
     currentMetroTitle.remove()
     var replaceTitle = document.querySelector(".chart");
-    replaceTitle.insertAdjacentHTML("afterbegin", '<h4 id="currentMetro">Fatalities in ' + metroName + "</h4>")
+    replaceTitle.insertAdjacentHTML("afterbegin", '<h4 id="currentMetro">Fatalities in ' + metroName + "</h4>" )
     //console.log("currentMEtro:", currentMetroTitle);
 
   } // end changeAttribute()
