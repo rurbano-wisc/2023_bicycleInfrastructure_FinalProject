@@ -53,6 +53,7 @@ h1, h4 {
 .col-4{
     /* padding: 25px; */
     width: 390px;
+    border-color: transparent;
 }
 
 /* tbd if below is necessary */
