@@ -40,65 +40,12 @@
         darkOutdoors.addTo(map);
         // call the function to process the metro area boundaries polygon layer
         getMetroAreaBoundaryData();
-        // isInBounds();
+    
         controlLayers.addTo(map);
         //console.log(cityMetrosNev);
         // add a base layer control to the map - has to be individually with the .addBaseLayer() method, not as a group object
         controlLayers.addBaseLayer(darkOutdoors, "Dark Outdoors base map");
         controlLayers.addBaseLayer(lightOutdoors, "Light Outdoors base map");
-            map.on('load', function () {
-                            
-            map.addSource('cyclist tracts', {
-                type: 'vector',
-                url: 'mapbox://rurbano.cs62vfrj'
-            });
-        
-            map.addLayer({
-                'id': 'cyclist tracts',
-                'type': 'fill',
-                'source': 'cyclist tracts',
-                'source-layer': 'TractsCyclists-9f5p74',
-                'layout': {
-                    'visibility': 'none'
-                },
-                'paint': {
-                    'fill-color': 'orange',
-                    'fill-opacity': 0.5
-                    }
-                });
-            });
-            
-            var toggleableLayerIds = [ 'tracts' ];
-            
-            for (var i = 0; i < toggleableLayerIds.length; i++) {
-                var id = toggleableLayerIds[i];
-            
-                var link = document.createElement('a');
-                link.href = '#';
-                link.className = 'active';
-                link.textContent = id;
-            
-                link.onclick = function (e) {
-                    var clickedLayer = this.textContent;
-                    e.preventDefault();
-                    e.stopPropagation();
-            
-                    var visibility = map.getLayer(clickedLayer.visibility);
-            
-                    if (visibility === 'visible') {
-                        map.setLayoutProperty(clickedLayer, 'visibility', visibility === 'visible' ? 'none' : 'visible');
-                        this.className = '';
-                    } else {
-                        this.className = 'active';
-                        map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-                    }
-                };
-            
-                var layers = document.getElementById('menu');
-                layers.appendChild(link);
-            }            
-        
-
             map.on('zoomend', function () {
             if (map.getZoom() < 8) {
                 map.removeLayer(cityMetrosNev);//1st geoJSON layer

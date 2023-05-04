@@ -318,18 +318,6 @@
       var metroList = Array.from(metroAccidents, ([key]) => (key));
       //console.log("MetroList: ", metroList);
 
-      //var metroSubset = metroAccidents.get(expressed);
-      //var metroSubsetSum = d3.rollup(metroSubset, v => d3.sum(v, d => d.FATALS), d => d.HARM_EV)
-      //var metroSubsetSumArray = Array.from(metroSubsetSum, ([name, value]) => ({ name, value }));
-      //console.log("metroSubsetSumArray: ", metroSubsetSumArray);
-
-      // for the bar chart
-      // var allMetroAccidentsSumByYear = d3.flatRollup(csvMetroYearSummaryData, v => d3.sum(v, d => d.TOTAL), d => d.YEAR, d => d.HARM_EV);
-      // console.log("allMetroAccidentsSumByYear: ", allMetroAccidentsSumByYear);
-      // var allMetroAccidentsSumByYearArray = Array.from(allMetroAccidentsSumByYear, ([name, value]) => ({ name, value }));
-      // console.log("allMetroAccidentsSumByArray: ", allMetroAccidentsSumByYearArray);
-
-
       // call dropdown function
       createDropdown(metroAccidents, metroList, csvMetroYearSumData);
 
@@ -789,40 +777,12 @@ function setLabel(props) {
 
   var metroName = infolabel.append("div")
       .attr("class", "labelname")
-      .html(props.metro);
+      // .html(props.metro);
 }; // end setLabel();
 
-// function moveLabel() {
-//   // use coordinates of mousemove event to set label coordinates
-
-//   // get width of label
-//   var labelWidth = d3.select(".infolabel")
-//       .node()
-//       .getBoundingClientRect()
-//       .width;
-
-//   // use coordinates of mousemove event to set label coordinates
-
-//   var x1 = event.clientX + 10,
-//       y1 = event.clientY - 75,
-//       x2 = event.clientX - labelWidth - 10,
-//       y2 = event.clientY + 25;
-
-//   // horizontal label coordinate, testing for overflow
-//   var x = event.clientX > window.innerWidth - labelWidth - 20 ? x2 : x1;
-
-//   // vertical label coordinate, testing for overflow
-//   var y = event.clientY < 75 ? y2 : y1;
-
-//   d3.select(".infolabel")
-//       .style("left", x + "px")
-//       .style("top", y + "px");
-// }; // end moveLabel()
-
-
     // function to strip spaces from metro names    
-    function metroNameNoSpace(metroNameWithSpace) {
-      var metroName = metroNameWithSpace.replace(/\s+/g, '');
+function metroNameNoSpace(metroNameWithSpace) {
+    var metroName = metroNameWithSpace.replace(/\s+/g, '');
       return metroName;
   } // end metroNameNoSpace()
 
