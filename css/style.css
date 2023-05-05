@@ -17,76 +17,80 @@
 }
 
 body {
-    color: #454545; /* change the hex code to your desired font color */
+    color: #454545;
+    /* change the hex code to your desired font color */
     font-family: 'Roboto', sans-serif;
-  }
+}
 
-  
+
 #map {
-    height: 650px; 
+    height: 650px;
     width: 850px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     right: -50px;
-    border: 1px solid black;    
+    border: 1px solid black;
 }
-#map-container{
+
+#map-container {
     /* padding-bottom:25px; */
     /* padding: 25px; */
     background-color: #F0E8F8;
 
 }
 
-h1, h4 {
+h1,
+h4 {
     text-align: center;
     background-color: #F0E8F8;
-    /* margin-bottom: 1rem !important; */  
+    /* margin-bottom: 1rem !important; */
 }
 
 
-.col{
+.col {
     padding-top: 25px;
     padding: 25px;
 }
-.col-4{
+
+.col-4 {
     /* padding: 25px; */
     width: 390px;
     border-color: transparent;
 }
 
 /* tbd if below is necessary */
-/* Remove the navbar's default margin-bottom and rounded borders */ 
+/* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {
-        height: 450px;
-        padding-top: 25px;
-        /* padding: 25px; */
-    }
-    
-    /* Set gray background color and 100% height */
-    /* .sidenav {
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+    height: 450px;
+    padding-top: 25px;
+    /* padding: 25px; */
+}
+
+/* Set gray background color and 100% height */
+/* .sidenav {
     padding-top: 20px;
     background-color: #f1f1f1;
     height: 100%;
     } */
-    
-    /* Set black background color, white text and some padding */
-    footer {
+
+/* Set black background color, white text and some padding */
+footer {
     background-color: #555;
     color: white;
     padding: 15px;
     margin-top: 25px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    /* @media screen and (max-width: 767px) {
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+/* @media screen and (max-width: 767px) {
     .sidenav {
         height: auto;
         padding: 15px;
@@ -95,33 +99,25 @@ h1, h4 {
     } */
 
 
-    .chartTitle {
-        font-weight: bold;
+.chartTitle {
+    font-weight: bold;
 
-    }
-/* 
-    barChartXaxisLabel.tick text {
-        writing-mode: vertical-lr;
-    } */
+}
 
-   
-    .dropdown {
-        margin-top: 10px;
-    }
+.dropdown {
+    margin-top: 10px;
+}
 
-    .scatterChartFrame {
-        width: 800;
-        height: 1200;
-        background-color: lightgray;
-        
-        
-    
-    }
+.scatterChartFrame {
+    width: 800;
+    height: 1200;
+    background-color: lightgray;
+}
 
-    .scatterLabels {
-        fill: white;
-        font-size: 0.6em;
-    }
+.scatterLabels {
+    fill: white;
+    font-size: 0.6em;
+}
 
 .scatterChartXaxisLabel {
     font-size: 0.8em;
@@ -153,13 +149,12 @@ h1, h4 {
     padding: 0;
     display: inline-block;
     line-height: 1em;
-
 }
-
 
 .carousel-inner img {
     height: 400px;
-  }
+}
+
 /* formatting mapbox layer menu */
 /* #menu {
     background: #fff;
@@ -203,12 +198,14 @@ h1, h4 {
     #menu a.active:hover {
     background: #3074a4;
     } */
-/* position barchart */
-    .barchartframe {
-        position: relative;
-        left: -20px; /* adjust the value to move the element left or right */
-    }
 
-    h5 {
-        text-align: center;
-    }
+/* position barchart */
+.barchartframe {
+    position: relative;
+    left: -20px;
+    /* adjust the value to move the element left or right */
+}
+
+/* h5 {
+    text-align: center;
+} */
