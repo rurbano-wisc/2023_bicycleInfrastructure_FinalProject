@@ -631,7 +631,7 @@
 
     d3.select(".scatterChartFrame")
       .append("text")
-      .text("Deaths per 100,000 people")
+      .text("Fatalities per 100,000 people")
       .attr("class", "scatterChartYaxisLabel")
       .attr("x", 12)
       .attr("y", 60)
@@ -739,7 +739,7 @@
       .attr("class", "infolabel")
       .attr("id", metroNameWithoutSpace + "_label")
       //.html(labelAttribute)
-      .html("<h5>" + labelAttribute + "</h5><p>Deaths per 100,000 people: " + props.DeathsPer100k + "</p></p>% of walk/bike commuters: " + props.PctCycWalkWorkers)
+      .html("<h5>" + labelAttribute + "</h5><p>Population (2020): " + props.population.toLocaleString("en-US") + "</p><p>Fatalities per 100,000 people: " + Math.round(props.DeathsPer100k * 10) / 10 + "</p></p>% of walk/bike commuters: " + Math.round(props.PctCycWalkWorkers * 10)/10)
       .style("opacity", 1);
 
     var metroName = infolabel.append("div")
