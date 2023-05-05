@@ -297,6 +297,12 @@
       csvMetroCommutersAccidents = data[3];
       //console.log("csvMetroCommutersAccidents ", csvMetroCommutersAccidents);
 
+      // sort the csvMetroCommutersAccidents array in descending order by population - solves the problem of overlapping circles in the bar chart
+      csvMetroCommutersAccidents.sort(function (x, y){
+        return d3.descending(x.population, y.population)
+      })
+      console.log("csvMetroCommutersAccidents ", csvMetroCommutersAccidents);
+
       // groups all the accident records by their metro area
       var metroAccidents = d3.group(csvData, d => d.metro);
       //console.log(metroAccidents);
@@ -732,7 +738,8 @@
       .append("div")
       .attr("class", "infolabel")
       .attr("id", metroNameWithoutSpace + "_label")
-      .html(labelAttribute)
+      //.html(labelAttribute)
+      .html("<h5>" + labelAttribute + "</h5><p>Deaths per 100,000 people: " + props.DeathsPer100k + "</p></p>% of walk/bike commuters: " + props.PctCycWalkWorkers)
       .style("opacity", 1);
 
     var metroName = infolabel.append("div")
