@@ -301,7 +301,7 @@
       csvMetroCommutersAccidents.sort(function (x, y){
         return d3.descending(x.population, y.population)
       })
-      console.log("csvMetroCommutersAccidents ", csvMetroCommutersAccidents);
+      //console.log("csvMetroCommutersAccidents ", csvMetroCommutersAccidents);
 
       // groups all the accident records by their metro area
       var metroAccidents = d3.group(csvData, d => d.metro);

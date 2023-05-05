@@ -1,0 +1,841 @@
+﻿metro,YEAR,Pedestrian,Bicyclist
+(blank),2001,88,15
+(blank),2002,147,36
+(blank),2003,160,23
+(blank),2004,163,25
+(blank),2005,168,22
+(blank),2006,157,35
+(blank),2007,140,31
+(blank),2008,144,32
+(blank),2009,140,30
+(blank),2010,124,27
+(blank),2011,141,36
+(blank),2012,143,30
+(blank),2013,157,48
+(blank),2014,157,34
+(blank),2015,179,42
+(blank),2016,185,46
+(blank),2017,208,39
+(blank),2018,208,41
+(blank),2019,233,44
+(blank),2020,222,38
+Anaheim-Santa Ana-Irvine MD,2001,30,8
+Anaheim-Santa Ana-Irvine MD,2002,34,7
+Anaheim-Santa Ana-Irvine MD,2003,46,8
+Anaheim-Santa Ana-Irvine MD,2004,42,6
+Anaheim-Santa Ana-Irvine MD,2005,40,8
+Anaheim-Santa Ana-Irvine MD,2006,37,18
+Anaheim-Santa Ana-Irvine MD,2007,38,14
+Anaheim-Santa Ana-Irvine MD,2008,28,8
+Anaheim-Santa Ana-Irvine MD,2009,34,11
+Anaheim-Santa Ana-Irvine MD,2010,26,3
+Anaheim-Santa Ana-Irvine MD,2011,32,12
+Anaheim-Santa Ana-Irvine MD,2012,40,12
+Anaheim-Santa Ana-Irvine MD,2013,52,7
+Anaheim-Santa Ana-Irvine MD,2014,39,15
+Anaheim-Santa Ana-Irvine MD,2015,46,13
+Anaheim-Santa Ana-Irvine MD,2016,60,8
+Anaheim-Santa Ana-Irvine MD,2017,48,12
+Anaheim-Santa Ana-Irvine MD,2018,56,12
+Anaheim-Santa Ana-Irvine MD,2019,46,11
+Anaheim-Santa Ana-Irvine MD,2020,61,13
+Bakersfield MSA,2001,6,1
+Bakersfield MSA,2002,9,5
+Bakersfield MSA,2003,10,5
+Bakersfield MSA,2004,11,0
+Bakersfield MSA,2005,12,3
+Bakersfield MSA,2006,19,5
+Bakersfield MSA,2007,8,2
+Bakersfield MSA,2008,13,3
+Bakersfield MSA,2009,10,2
+Bakersfield MSA,2010,12,0
+Bakersfield MSA,2011,12,1
+Bakersfield MSA,2012,16,2
+Bakersfield MSA,2013,18,0
+Bakersfield MSA,2014,14,3
+Bakersfield MSA,2015,19,1
+Bakersfield MSA,2016,21,3
+Bakersfield MSA,2017,27,4
+Bakersfield MSA,2018,9,2
+Bakersfield MSA,2019,19,4
+Bakersfield MSA,2020,20,2
+Carson City Metropolitan,2001,0,0
+Carson City Metropolitan,2002,1,0
+Carson City Metropolitan,2003,2,0
+Carson City Metropolitan,2004,0,0
+Carson City Metropolitan,2005,1,0
+Carson City Metropolitan,2006,2,0
+Carson City Metropolitan,2007,0,0
+Carson City Metropolitan,2008,0,0
+Carson City Metropolitan,2009,2,0
+Carson City Metropolitan,2010,0,0
+Carson City Metropolitan,2011,0,0
+Carson City Metropolitan,2012,0,0
+Carson City Metropolitan,2013,2,0
+Carson City Metropolitan,2014,1,0
+Carson City Metropolitan,2015,1,0
+Carson City Metropolitan,2016,4,0
+Carson City Metropolitan,2017,1,0
+Carson City Metropolitan,2018,1,0
+Carson City Metropolitan,2019,0,0
+Carson City Metropolitan,2020,1,1
+CenCal,2001,2,2
+CenCal,2002,3,0
+CenCal,2003,7,0
+CenCal,2004,4,0
+CenCal,2005,3,0
+CenCal,2006,6,1
+CenCal,2007,6,0
+CenCal,2008,2,0
+CenCal,2009,4,1
+CenCal,2010,4,1
+CenCal,2011,8,3
+CenCal,2012,3,2
+CenCal,2013,5,1
+CenCal,2014,3,1
+CenCal,2015,5,0
+CenCal,2016,11,2
+CenCal,2017,11,0
+CenCal,2018,9,2
+CenCal,2019,5,0
+CenCal,2020,13,3
+Chico MSA,2001,0,0
+Chico MSA,2002,2,3
+Chico MSA,2003,2,1
+Chico MSA,2004,2,0
+Chico MSA,2005,3,1
+Chico MSA,2006,3,0
+Chico MSA,2007,4,1
+Chico MSA,2008,1,0
+Chico MSA,2009,1,0
+Chico MSA,2010,6,0
+Chico MSA,2011,2,0
+Chico MSA,2012,2,3
+Chico MSA,2013,3,3
+Chico MSA,2014,0,1
+Chico MSA,2015,8,0
+Chico MSA,2016,9,1
+Chico MSA,2017,4,2
+Chico MSA,2018,4,1
+Chico MSA,2019,5,0
+Chico MSA,2020,7,0
+Eastern Sierras,2001,1,0
+Eastern Sierras,2002,0,0
+Eastern Sierras,2003,0,0
+Eastern Sierras,2004,2,0
+Eastern Sierras,2005,0,0
+Eastern Sierras,2006,0,0
+Eastern Sierras,2007,0,0
+Eastern Sierras,2008,0,0
+Eastern Sierras,2009,2,0
+Eastern Sierras,2010,0,0
+Eastern Sierras,2011,0,0
+Eastern Sierras,2012,1,0
+Eastern Sierras,2013,1,0
+Eastern Sierras,2014,0,0
+Eastern Sierras,2015,2,0
+Eastern Sierras,2016,1,0
+Eastern Sierras,2017,1,0
+Eastern Sierras,2018,1,0
+Eastern Sierras,2019,3,0
+Eastern Sierras,2020,0,0
+El Centro MSA,2001,0,0
+El Centro MSA,2002,2,0
+El Centro MSA,2003,1,0
+El Centro MSA,2004,2,0
+El Centro MSA,2005,3,0
+El Centro MSA,2006,3,0
+El Centro MSA,2007,1,0
+El Centro MSA,2008,2,1
+El Centro MSA,2009,2,1
+El Centro MSA,2010,0,0
+El Centro MSA,2011,0,0
+El Centro MSA,2012,2,1
+El Centro MSA,2013,1,0
+El Centro MSA,2014,2,0
+El Centro MSA,2015,3,0
+El Centro MSA,2016,2,1
+El Centro MSA,2017,5,0
+El Centro MSA,2018,1,1
+El Centro MSA,2019,3,1
+El Centro MSA,2020,1,0
+Elko Micropolitan,2001,0,0
+Elko Micropolitan,2002,0,0
+Elko Micropolitan,2003,0,0
+Elko Micropolitan,2004,0,0
+Elko Micropolitan,2005,0,0
+Elko Micropolitan,2006,0,0
+Elko Micropolitan,2007,0,0
+Elko Micropolitan,2008,1,0
+Elko Micropolitan,2009,0,0
+Elko Micropolitan,2010,0,0
+Elko Micropolitan,2011,1,0
+Elko Micropolitan,2012,0,0
+Elko Micropolitan,2013,0,0
+Elko Micropolitan,2014,0,0
+Elko Micropolitan,2015,1,0
+Elko Micropolitan,2016,1,0
+Elko Micropolitan,2017,0,0
+Elko Micropolitan,2018,0,0
+Elko Micropolitan,2019,0,0
+Elko Micropolitan,2020,0,0
+Fallon Micropolitan,2001,0,0
+Fallon Micropolitan,2002,0,0
+Fallon Micropolitan,2003,0,0
+Fallon Micropolitan,2004,0,0
+Fallon Micropolitan,2005,0,0
+Fallon Micropolitan,2006,0,0
+Fallon Micropolitan,2007,0,0
+Fallon Micropolitan,2008,0,1
+Fallon Micropolitan,2009,0,0
+Fallon Micropolitan,2010,0,0
+Fallon Micropolitan,2011,0,0
+Fallon Micropolitan,2012,0,0
+Fallon Micropolitan,2013,0,0
+Fallon Micropolitan,2014,0,0
+Fallon Micropolitan,2015,0,0
+Fallon Micropolitan,2016,0,0
+Fallon Micropolitan,2017,0,0
+Fallon Micropolitan,2018,0,0
+Fallon Micropolitan,2019,0,0
+Fallon Micropolitan,2020,1,0
+Fernley Micropolitan,2001,0,0
+Fernley Micropolitan,2002,0,0
+Fernley Micropolitan,2003,0,0
+Fernley Micropolitan,2004,0,0
+Fernley Micropolitan,2005,0,0
+Fernley Micropolitan,2006,0,0
+Fernley Micropolitan,2007,0,0
+Fernley Micropolitan,2008,1,0
+Fernley Micropolitan,2009,1,0
+Fernley Micropolitan,2010,0,0
+Fernley Micropolitan,2011,1,0
+Fernley Micropolitan,2012,0,0
+Fernley Micropolitan,2013,0,1
+Fernley Micropolitan,2014,2,1
+Fernley Micropolitan,2015,0,0
+Fernley Micropolitan,2016,0,0
+Fernley Micropolitan,2017,0,0
+Fernley Micropolitan,2018,1,0
+Fernley Micropolitan,2019,0,0
+Fernley Micropolitan,2020,0,0
+Fresno MSA,2001,5,1
+Fresno MSA,2002,20,3
+Fresno MSA,2003,22,3
+Fresno MSA,2004,6,3
+Fresno MSA,2005,13,3
+Fresno MSA,2006,11,4
+Fresno MSA,2007,11,2
+Fresno MSA,2008,13,3
+Fresno MSA,2009,6,6
+Fresno MSA,2010,13,2
+Fresno MSA,2011,17,1
+Fresno MSA,2012,19,3
+Fresno MSA,2013,14,5
+Fresno MSA,2014,12,2
+Fresno MSA,2015,9,1
+Fresno MSA,2016,21,2
+Fresno MSA,2017,25,4
+Fresno MSA,2018,16,1
+Fresno MSA,2019,19,2
+Fresno MSA,2020,31,6
+Gardnerville Ranchos Micropolitan,2001,0,0
+Gardnerville Ranchos Micropolitan,2002,0,0
+Gardnerville Ranchos Micropolitan,2003,0,0
+Gardnerville Ranchos Micropolitan,2004,0,0
+Gardnerville Ranchos Micropolitan,2005,0,0
+Gardnerville Ranchos Micropolitan,2006,0,0
+Gardnerville Ranchos Micropolitan,2007,0,0
+Gardnerville Ranchos Micropolitan,2008,0,0
+Gardnerville Ranchos Micropolitan,2009,0,0
+Gardnerville Ranchos Micropolitan,2010,0,0
+Gardnerville Ranchos Micropolitan,2011,0,1
+Gardnerville Ranchos Micropolitan,2012,0,0
+Gardnerville Ranchos Micropolitan,2013,0,0
+Gardnerville Ranchos Micropolitan,2014,0,0
+Gardnerville Ranchos Micropolitan,2015,1,0
+Gardnerville Ranchos Micropolitan,2016,0,0
+Gardnerville Ranchos Micropolitan,2017,2,0
+Gardnerville Ranchos Micropolitan,2018,1,0
+Gardnerville Ranchos Micropolitan,2019,0,0
+Gardnerville Ranchos Micropolitan,2020,0,0
+Hanford-Corcoran MSA,2001,1,1
+Hanford-Corcoran MSA,2002,0,0
+Hanford-Corcoran MSA,2003,0,0
+Hanford-Corcoran MSA,2004,1,0
+Hanford-Corcoran MSA,2005,2,0
+Hanford-Corcoran MSA,2006,0,0
+Hanford-Corcoran MSA,2007,2,0
+Hanford-Corcoran MSA,2008,1,0
+Hanford-Corcoran MSA,2009,1,0
+Hanford-Corcoran MSA,2010,2,1
+Hanford-Corcoran MSA,2011,0,0
+Hanford-Corcoran MSA,2012,0,0
+Hanford-Corcoran MSA,2013,4,2
+Hanford-Corcoran MSA,2014,1,0
+Hanford-Corcoran MSA,2015,0,0
+Hanford-Corcoran MSA,2016,0,0
+Hanford-Corcoran MSA,2017,2,0
+Hanford-Corcoran MSA,2018,0,0
+Hanford-Corcoran MSA,2019,2,0
+Hanford-Corcoran MSA,2020,2,0
+Las Vegas-Henderson-Paradise Metropolitan,2001,30,3
+Las Vegas-Henderson-Paradise Metropolitan,2002,35,4
+Las Vegas-Henderson-Paradise Metropolitan,2003,29,7
+Las Vegas-Henderson-Paradise Metropolitan,2004,29,8
+Las Vegas-Henderson-Paradise Metropolitan,2005,47,10
+Las Vegas-Henderson-Paradise Metropolitan,2006,31,7
+Las Vegas-Henderson-Paradise Metropolitan,2007,39,6
+Las Vegas-Henderson-Paradise Metropolitan,2008,39,6
+Las Vegas-Henderson-Paradise Metropolitan,2009,24,4
+Las Vegas-Henderson-Paradise Metropolitan,2010,26,2
+Las Vegas-Henderson-Paradise Metropolitan,2011,28,1
+Las Vegas-Henderson-Paradise Metropolitan,2012,31,2
+Las Vegas-Henderson-Paradise Metropolitan,2013,40,4
+Las Vegas-Henderson-Paradise Metropolitan,2014,43,3
+Las Vegas-Henderson-Paradise Metropolitan,2015,45,8
+Las Vegas-Henderson-Paradise Metropolitan,2016,51,4
+Las Vegas-Henderson-Paradise Metropolitan,2017,61,7
+Las Vegas-Henderson-Paradise Metropolitan,2018,53,7
+Las Vegas-Henderson-Paradise Metropolitan,2019,38,6
+Las Vegas-Henderson-Paradise Metropolitan,2020,42,4
+Los Angeles-Long Beach-Glendale MD,2001,101,10
+Los Angeles-Long Beach-Glendale MD,2002,139,15
+Los Angeles-Long Beach-Glendale MD,2003,149,19
+Los Angeles-Long Beach-Glendale MD,2004,142,17
+Los Angeles-Long Beach-Glendale MD,2005,146,19
+Los Angeles-Long Beach-Glendale MD,2006,144,19
+Los Angeles-Long Beach-Glendale MD,2007,151,12
+Los Angeles-Long Beach-Glendale MD,2008,135,17
+Los Angeles-Long Beach-Glendale MD,2009,118,12
+Los Angeles-Long Beach-Glendale MD,2010,141,17
+Los Angeles-Long Beach-Glendale MD,2011,119,19
+Los Angeles-Long Beach-Glendale MD,2012,151,18
+Los Angeles-Long Beach-Glendale MD,2013,160,25
+Los Angeles-Long Beach-Glendale MD,2014,152,19
+Los Angeles-Long Beach-Glendale MD,2015,152,24
+Los Angeles-Long Beach-Glendale MD,2016,205,28
+Los Angeles-Long Beach-Glendale MD,2017,194,30
+Los Angeles-Long Beach-Glendale MD,2018,191,38
+Los Angeles-Long Beach-Glendale MD,2019,215,31
+Los Angeles-Long Beach-Glendale MD,2020,187,19
+Madera MSA,2001,3,0
+Madera MSA,2002,0,0
+Madera MSA,2003,3,0
+Madera MSA,2004,5,0
+Madera MSA,2005,2,0
+Madera MSA,2006,5,0
+Madera MSA,2007,2,0
+Madera MSA,2008,2,1
+Madera MSA,2009,2,0
+Madera MSA,2010,3,1
+Madera MSA,2011,0,1
+Madera MSA,2012,1,0
+Madera MSA,2013,1,0
+Madera MSA,2014,2,0
+Madera MSA,2015,3,1
+Madera MSA,2016,1,0
+Madera MSA,2017,0,0
+Madera MSA,2018,2,0
+Madera MSA,2019,2,0
+Madera MSA,2020,1,0
+Merced MSA,2001,0,1
+Merced MSA,2002,2,1
+Merced MSA,2003,4,0
+Merced MSA,2004,4,3
+Merced MSA,2005,4,2
+Merced MSA,2006,3,1
+Merced MSA,2007,3,1
+Merced MSA,2008,3,1
+Merced MSA,2009,4,2
+Merced MSA,2010,2,1
+Merced MSA,2011,5,0
+Merced MSA,2012,2,0
+Merced MSA,2013,4,0
+Merced MSA,2014,2,1
+Merced MSA,2015,6,1
+Merced MSA,2016,9,0
+Merced MSA,2017,3,0
+Merced MSA,2018,9,1
+Merced MSA,2019,2,1
+Merced MSA,2020,1,0
+Modesto MSA,2001,2,1
+Modesto MSA,2002,5,1
+Modesto MSA,2003,6,1
+Modesto MSA,2004,8,3
+Modesto MSA,2005,11,1
+Modesto MSA,2006,4,2
+Modesto MSA,2007,5,4
+Modesto MSA,2008,2,0
+Modesto MSA,2009,5,0
+Modesto MSA,2010,5,4
+Modesto MSA,2011,10,0
+Modesto MSA,2012,5,2
+Modesto MSA,2013,5,2
+Modesto MSA,2014,7,1
+Modesto MSA,2015,14,1
+Modesto MSA,2016,11,4
+Modesto MSA,2017,8,2
+Modesto MSA,2018,11,2
+Modesto MSA,2019,11,2
+Modesto MSA,2020,14,2
+Napa MSA,2001,0,0
+Napa MSA,2002,0,0
+Napa MSA,2003,1,0
+Napa MSA,2004,1,0
+Napa MSA,2005,1,1
+Napa MSA,2006,0,0
+Napa MSA,2007,1,0
+Napa MSA,2008,1,0
+Napa MSA,2009,1,0
+Napa MSA,2010,0,0
+Napa MSA,2011,1,0
+Napa MSA,2012,0,0
+Napa MSA,2013,0,0
+Napa MSA,2014,0,0
+Napa MSA,2015,0,1
+Napa MSA,2016,0,0
+Napa MSA,2017,2,0
+Napa MSA,2018,2,0
+Napa MSA,2019,3,0
+Napa MSA,2020,3,0
+Oakland-Hayward-Berkeley MD,2001,16,1
+Oakland-Hayward-Berkeley MD,2002,28,5
+Oakland-Hayward-Berkeley MD,2003,21,4
+Oakland-Hayward-Berkeley MD,2004,19,5
+Oakland-Hayward-Berkeley MD,2005,22,1
+Oakland-Hayward-Berkeley MD,2006,20,7
+Oakland-Hayward-Berkeley MD,2007,19,2
+Oakland-Hayward-Berkeley MD,2008,30,4
+Oakland-Hayward-Berkeley MD,2009,10,3
+Oakland-Hayward-Berkeley MD,2010,20,3
+Oakland-Hayward-Berkeley MD,2011,22,3
+Oakland-Hayward-Berkeley MD,2012,23,10
+Oakland-Hayward-Berkeley MD,2013,26,8
+Oakland-Hayward-Berkeley MD,2014,22,5
+Oakland-Hayward-Berkeley MD,2015,32,5
+Oakland-Hayward-Berkeley MD,2016,31,4
+Oakland-Hayward-Berkeley MD,2017,29,3
+Oakland-Hayward-Berkeley MD,2018,22,5
+Oakland-Hayward-Berkeley MD,2019,39,2
+Oakland-Hayward-Berkeley MD,2020,36,6
+Oxnard-Thousand Oaks-Ventura MSA,2001,3,3
+Oxnard-Thousand Oaks-Ventura MSA,2002,11,2
+Oxnard-Thousand Oaks-Ventura MSA,2003,4,2
+Oxnard-Thousand Oaks-Ventura MSA,2004,7,0
+Oxnard-Thousand Oaks-Ventura MSA,2005,9,4
+Oxnard-Thousand Oaks-Ventura MSA,2006,8,10
+Oxnard-Thousand Oaks-Ventura MSA,2007,7,3
+Oxnard-Thousand Oaks-Ventura MSA,2008,4,2
+Oxnard-Thousand Oaks-Ventura MSA,2009,10,2
+Oxnard-Thousand Oaks-Ventura MSA,2010,4,1
+Oxnard-Thousand Oaks-Ventura MSA,2011,5,2
+Oxnard-Thousand Oaks-Ventura MSA,2012,8,3
+Oxnard-Thousand Oaks-Ventura MSA,2013,9,5
+Oxnard-Thousand Oaks-Ventura MSA,2014,7,2
+Oxnard-Thousand Oaks-Ventura MSA,2015,9,0
+Oxnard-Thousand Oaks-Ventura MSA,2016,5,1
+Oxnard-Thousand Oaks-Ventura MSA,2017,4,0
+Oxnard-Thousand Oaks-Ventura MSA,2018,11,0
+Oxnard-Thousand Oaks-Ventura MSA,2019,10,3
+Oxnard-Thousand Oaks-Ventura MSA,2020,10,2
+Pahrump Micropolitan,2001,1,0
+Pahrump Micropolitan,2002,0,0
+Pahrump Micropolitan,2003,1,0
+Pahrump Micropolitan,2004,2,0
+Pahrump Micropolitan,2005,0,0
+Pahrump Micropolitan,2006,2,0
+Pahrump Micropolitan,2007,1,1
+Pahrump Micropolitan,2008,2,0
+Pahrump Micropolitan,2009,0,0
+Pahrump Micropolitan,2010,2,0
+Pahrump Micropolitan,2011,0,0
+Pahrump Micropolitan,2012,2,1
+Pahrump Micropolitan,2013,1,0
+Pahrump Micropolitan,2014,2,0
+Pahrump Micropolitan,2015,0,1
+Pahrump Micropolitan,2016,0,0
+Pahrump Micropolitan,2017,1,0
+Pahrump Micropolitan,2018,0,0
+Pahrump Micropolitan,2019,0,0
+Pahrump Micropolitan,2020,0,1
+Redding MSA,2001,1,1
+Redding MSA,2002,3,0
+Redding MSA,2003,2,0
+Redding MSA,2004,5,0
+Redding MSA,2005,2,0
+Redding MSA,2006,2,0
+Redding MSA,2007,1,1
+Redding MSA,2008,4,0
+Redding MSA,2009,2,0
+Redding MSA,2010,2,1
+Redding MSA,2011,3,0
+Redding MSA,2012,3,0
+Redding MSA,2013,1,0
+Redding MSA,2014,2,0
+Redding MSA,2015,4,3
+Redding MSA,2016,4,1
+Redding MSA,2017,3,1
+Redding MSA,2018,3,0
+Redding MSA,2019,2,0
+Redding MSA,2020,5,0
+Reno Metropolitan,2001,6,0
+Reno Metropolitan,2002,6,0
+Reno Metropolitan,2003,9,2
+Reno Metropolitan,2004,6,2
+Reno Metropolitan,2005,5,0
+Reno Metropolitan,2006,8,2
+Reno Metropolitan,2007,8,2
+Reno Metropolitan,2008,5,0
+Reno Metropolitan,2009,3,1
+Reno Metropolitan,2010,4,2
+Reno Metropolitan,2011,9,1
+Reno Metropolitan,2012,8,0
+Reno Metropolitan,2013,6,0
+Reno Metropolitan,2014,11,2
+Reno Metropolitan,2015,6,1
+Reno Metropolitan,2016,13,1
+Reno Metropolitan,2017,10,2
+Reno Metropolitan,2018,10,1
+Reno Metropolitan,2019,13,1
+Reno Metropolitan,2020,11,0
+Riverside-San Bernardino-Ontario MSA,2001,24,3
+Riverside-San Bernardino-Ontario MSA,2002,72,10
+Riverside-San Bernardino-Ontario MSA,2003,55,16
+Riverside-San Bernardino-Ontario MSA,2004,66,18
+Riverside-San Bernardino-Ontario MSA,2005,65,21
+Riverside-San Bernardino-Ontario MSA,2006,70,16
+Riverside-San Bernardino-Ontario MSA,2007,60,9
+Riverside-San Bernardino-Ontario MSA,2008,52,12
+Riverside-San Bernardino-Ontario MSA,2009,45,7
+Riverside-San Bernardino-Ontario MSA,2010,38,7
+Riverside-San Bernardino-Ontario MSA,2011,54,9
+Riverside-San Bernardino-Ontario MSA,2012,58,12
+Riverside-San Bernardino-Ontario MSA,2013,63,13
+Riverside-San Bernardino-Ontario MSA,2014,70,16
+Riverside-San Bernardino-Ontario MSA,2015,73,6
+Riverside-San Bernardino-Ontario MSA,2016,80,11
+Riverside-San Bernardino-Ontario MSA,2017,99,11
+Riverside-San Bernardino-Ontario MSA,2018,101,12
+Riverside-San Bernardino-Ontario MSA,2019,97,8
+Riverside-San Bernardino-Ontario MSA,2020,103,13
+Rural Nevada,2001,0,0
+Rural Nevada,2002,0,0
+Rural Nevada,2003,0,0
+Rural Nevada,2004,0,0
+Rural Nevada,2005,0,0
+Rural Nevada,2006,0,0
+Rural Nevada,2007,0,0
+Rural Nevada,2008,0,0
+Rural Nevada,2009,0,0
+Rural Nevada,2010,0,0
+Rural Nevada,2011,1,0
+Rural Nevada,2012,1,0
+Rural Nevada,2013,0,0
+Rural Nevada,2014,1,0
+Rural Nevada,2015,0,0
+Rural Nevada,2016,1,0
+Rural Nevada,2017,0,0
+Rural Nevada,2018,0,0
+Rural Nevada,2019,0,0
+Rural Nevada,2020,0,0
+Sacramento-Roseville-Arden-Arcade MSA,2001,15,2
+Sacramento-Roseville-Arden-Arcade MSA,2002,21,7
+Sacramento-Roseville-Arden-Arcade MSA,2003,24,8
+Sacramento-Roseville-Arden-Arcade MSA,2004,20,6
+Sacramento-Roseville-Arden-Arcade MSA,2005,31,7
+Sacramento-Roseville-Arden-Arcade MSA,2006,20,3
+Sacramento-Roseville-Arden-Arcade MSA,2007,22,5
+Sacramento-Roseville-Arden-Arcade MSA,2008,18,5
+Sacramento-Roseville-Arden-Arcade MSA,2009,16,4
+Sacramento-Roseville-Arden-Arcade MSA,2010,24,10
+Sacramento-Roseville-Arden-Arcade MSA,2011,27,5
+Sacramento-Roseville-Arden-Arcade MSA,2012,16,7
+Sacramento-Roseville-Arden-Arcade MSA,2013,32,6
+Sacramento-Roseville-Arden-Arcade MSA,2014,21,5
+Sacramento-Roseville-Arden-Arcade MSA,2015,24,6
+Sacramento-Roseville-Arden-Arcade MSA,2016,35,12
+Sacramento-Roseville-Arden-Arcade MSA,2017,27,13
+Sacramento-Roseville-Arden-Arcade MSA,2018,44,12
+Sacramento-Roseville-Arden-Arcade MSA,2019,44,5
+Sacramento-Roseville-Arden-Arcade MSA,2020,39,2
+Salinas MSA,2001,1,0
+Salinas MSA,2002,3,0
+Salinas MSA,2003,7,1
+Salinas MSA,2004,5,0
+Salinas MSA,2005,4,1
+Salinas MSA,2006,7,1
+Salinas MSA,2007,4,0
+Salinas MSA,2008,3,0
+Salinas MSA,2009,3,0
+Salinas MSA,2010,3,0
+Salinas MSA,2011,3,2
+Salinas MSA,2012,1,0
+Salinas MSA,2013,6,1
+Salinas MSA,2014,6,1
+Salinas MSA,2015,6,2
+Salinas MSA,2016,7,0
+Salinas MSA,2017,11,0
+Salinas MSA,2018,6,0
+Salinas MSA,2019,4,0
+Salinas MSA,2020,7,0
+San Diego-Carlsbad MSA,2001,36,4
+San Diego-Carlsbad MSA,2002,61,10
+San Diego-Carlsbad MSA,2003,50,4
+San Diego-Carlsbad MSA,2004,48,8
+San Diego-Carlsbad MSA,2005,50,7
+San Diego-Carlsbad MSA,2006,49,5
+San Diego-Carlsbad MSA,2007,42,6
+San Diego-Carlsbad MSA,2008,47,4
+San Diego-Carlsbad MSA,2009,43,8
+San Diego-Carlsbad MSA,2010,44,6
+San Diego-Carlsbad MSA,2011,37,9
+San Diego-Carlsbad MSA,2012,48,7
+San Diego-Carlsbad MSA,2013,48,5
+San Diego-Carlsbad MSA,2014,62,10
+San Diego-Carlsbad MSA,2015,69,5
+San Diego-Carlsbad MSA,2016,60,4
+San Diego-Carlsbad MSA,2017,64,2
+San Diego-Carlsbad MSA,2018,75,7
+San Diego-Carlsbad MSA,2019,65,7
+San Diego-Carlsbad MSA,2020,67,5
+San Francisco-Redwood City-South San Francisco MD,2001,6,1
+San Francisco-Redwood City-South San Francisco MD,2002,19,2
+San Francisco-Redwood City-South San Francisco MD,2003,24,2
+San Francisco-Redwood City-South San Francisco MD,2004,20,1
+San Francisco-Redwood City-South San Francisco MD,2005,20,2
+San Francisco-Redwood City-South San Francisco MD,2006,19,1
+San Francisco-Redwood City-South San Francisco MD,2007,24,1
+San Francisco-Redwood City-South San Francisco MD,2008,14,2
+San Francisco-Redwood City-South San Francisco MD,2009,24,3
+San Francisco-Redwood City-South San Francisco MD,2010,14,3
+San Francisco-Redwood City-South San Francisco MD,2011,21,2
+San Francisco-Redwood City-South San Francisco MD,2012,15,2
+San Francisco-Redwood City-South San Francisco MD,2013,23,4
+San Francisco-Redwood City-South San Francisco MD,2014,17,3
+San Francisco-Redwood City-South San Francisco MD,2015,27,3
+San Francisco-Redwood City-South San Francisco MD,2016,19,5
+San Francisco-Redwood City-South San Francisco MD,2017,21,3
+San Francisco-Redwood City-South San Francisco MD,2018,19,3
+San Francisco-Redwood City-South San Francisco MD,2019,22,1
+San Francisco-Redwood City-South San Francisco MD,2020,16,1
+San Jose MSA,2001,13,6
+San Jose MSA,2002,31,4
+San Jose MSA,2003,16,1
+San Jose MSA,2004,19,4
+San Jose MSA,2005,29,4
+San Jose MSA,2006,22,1
+San Jose MSA,2007,18,3
+San Jose MSA,2008,19,5
+San Jose MSA,2009,18,3
+San Jose MSA,2010,16,3
+San Jose MSA,2011,26,3
+San Jose MSA,2012,18,3
+San Jose MSA,2013,25,5
+San Jose MSA,2014,27,4
+San Jose MSA,2015,31,11
+San Jose MSA,2016,24,5
+San Jose MSA,2017,25,5
+San Jose MSA,2018,29,7
+San Jose MSA,2019,40,6
+San Jose MSA,2020,28,6
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2001,1,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2002,1,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2003,0,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2004,4,1
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2005,1,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2006,3,1
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2007,1,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2008,0,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2009,2,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2010,3,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2011,1,1
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2012,1,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2013,0,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2014,1,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2015,1,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2016,1,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2017,0,1
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2018,4,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2019,6,0
+San Luis Obispo-Paso Robles-Arroyo Grande MSA,2020,3,1
+San Rafael MD,2001,1,0
+San Rafael MD,2002,2,0
+San Rafael MD,2003,0,1
+San Rafael MD,2004,0,0
+San Rafael MD,2005,3,0
+San Rafael MD,2006,1,0
+San Rafael MD,2007,2,0
+San Rafael MD,2008,1,0
+San Rafael MD,2009,1,0
+San Rafael MD,2010,0,0
+San Rafael MD,2011,1,0
+San Rafael MD,2012,2,1
+San Rafael MD,2013,3,0
+San Rafael MD,2014,1,0
+San Rafael MD,2015,0,0
+San Rafael MD,2016,3,1
+San Rafael MD,2017,1,0
+San Rafael MD,2018,4,0
+San Rafael MD,2019,2,1
+San Rafael MD,2020,1,0
+Santa Cruz-Watsonville MSA,2001,3,0
+Santa Cruz-Watsonville MSA,2002,4,0
+Santa Cruz-Watsonville MSA,2003,6,0
+Santa Cruz-Watsonville MSA,2004,3,0
+Santa Cruz-Watsonville MSA,2005,2,0
+Santa Cruz-Watsonville MSA,2006,5,0
+Santa Cruz-Watsonville MSA,2007,2,0
+Santa Cruz-Watsonville MSA,2008,3,1
+Santa Cruz-Watsonville MSA,2009,4,2
+Santa Cruz-Watsonville MSA,2010,4,0
+Santa Cruz-Watsonville MSA,2011,1,0
+Santa Cruz-Watsonville MSA,2012,1,0
+Santa Cruz-Watsonville MSA,2013,1,1
+Santa Cruz-Watsonville MSA,2014,2,1
+Santa Cruz-Watsonville MSA,2015,4,0
+Santa Cruz-Watsonville MSA,2016,8,0
+Santa Cruz-Watsonville MSA,2017,3,1
+Santa Cruz-Watsonville MSA,2018,9,0
+Santa Cruz-Watsonville MSA,2019,3,1
+Santa Cruz-Watsonville MSA,2020,8,0
+Santa Maria-Santa Barbara MSA,2001,2,2
+Santa Maria-Santa Barbara MSA,2002,2,0
+Santa Maria-Santa Barbara MSA,2003,5,0
+Santa Maria-Santa Barbara MSA,2004,3,0
+Santa Maria-Santa Barbara MSA,2005,12,2
+Santa Maria-Santa Barbara MSA,2006,1,3
+Santa Maria-Santa Barbara MSA,2007,7,2
+Santa Maria-Santa Barbara MSA,2008,2,1
+Santa Maria-Santa Barbara MSA,2009,2,0
+Santa Maria-Santa Barbara MSA,2010,6,0
+Santa Maria-Santa Barbara MSA,2011,6,0
+Santa Maria-Santa Barbara MSA,2012,5,3
+Santa Maria-Santa Barbara MSA,2013,7,1
+Santa Maria-Santa Barbara MSA,2014,1,0
+Santa Maria-Santa Barbara MSA,2015,5,0
+Santa Maria-Santa Barbara MSA,2016,1,2
+Santa Maria-Santa Barbara MSA,2017,1,1
+Santa Maria-Santa Barbara MSA,2018,7,1
+Santa Maria-Santa Barbara MSA,2019,5,0
+Santa Maria-Santa Barbara MSA,2020,2,2
+Santa Rosa MSA,2001,3,1
+Santa Rosa MSA,2002,3,2
+Santa Rosa MSA,2003,3,1
+Santa Rosa MSA,2004,2,1
+Santa Rosa MSA,2005,4,1
+Santa Rosa MSA,2006,5,1
+Santa Rosa MSA,2007,2,1
+Santa Rosa MSA,2008,3,2
+Santa Rosa MSA,2009,5,0
+Santa Rosa MSA,2010,5,0
+Santa Rosa MSA,2011,8,1
+Santa Rosa MSA,2012,4,1
+Santa Rosa MSA,2013,5,1
+Santa Rosa MSA,2014,4,0
+Santa Rosa MSA,2015,5,0
+Santa Rosa MSA,2016,7,0
+Santa Rosa MSA,2017,4,0
+Santa Rosa MSA,2018,4,1
+Santa Rosa MSA,2019,4,0
+Santa Rosa MSA,2020,3,0
+Stockton-Lodi MSA,2001,4,0
+Stockton-Lodi MSA,2002,8,2
+Stockton-Lodi MSA,2003,6,1
+Stockton-Lodi MSA,2004,9,3
+Stockton-Lodi MSA,2005,14,1
+Stockton-Lodi MSA,2006,8,0
+Stockton-Lodi MSA,2007,7,2
+Stockton-Lodi MSA,2008,12,1
+Stockton-Lodi MSA,2009,3,1
+Stockton-Lodi MSA,2010,12,4
+Stockton-Lodi MSA,2011,7,2
+Stockton-Lodi MSA,2012,3,2
+Stockton-Lodi MSA,2013,10,3
+Stockton-Lodi MSA,2014,6,0
+Stockton-Lodi MSA,2015,13,2
+Stockton-Lodi MSA,2016,10,4
+Stockton-Lodi MSA,2017,18,5
+Stockton-Lodi MSA,2018,18,9
+Stockton-Lodi MSA,2019,22,7
+Stockton-Lodi MSA,2020,12,6
+Vallejo-Fairfield MSA,2001,3,0
+Vallejo-Fairfield MSA,2002,3,0
+Vallejo-Fairfield MSA,2003,3,0
+Vallejo-Fairfield MSA,2004,3,1
+Vallejo-Fairfield MSA,2005,3,0
+Vallejo-Fairfield MSA,2006,3,0
+Vallejo-Fairfield MSA,2007,4,0
+Vallejo-Fairfield MSA,2008,4,0
+Vallejo-Fairfield MSA,2009,6,0
+Vallejo-Fairfield MSA,2010,5,1
+Vallejo-Fairfield MSA,2011,1,0
+Vallejo-Fairfield MSA,2012,5,0
+Vallejo-Fairfield MSA,2013,4,1
+Vallejo-Fairfield MSA,2014,6,1
+Vallejo-Fairfield MSA,2015,11,3
+Vallejo-Fairfield MSA,2016,7,1
+Vallejo-Fairfield MSA,2017,3,1
+Vallejo-Fairfield MSA,2018,14,0
+Vallejo-Fairfield MSA,2019,8,2
+Vallejo-Fairfield MSA,2020,8,1
+Visalia-Porterville MSA,2001,3,0
+Visalia-Porterville MSA,2002,6,0
+Visalia-Porterville MSA,2003,5,1
+Visalia-Porterville MSA,2004,6,1
+Visalia-Porterville MSA,2005,4,1
+Visalia-Porterville MSA,2006,7,1
+Visalia-Porterville MSA,2007,6,3
+Visalia-Porterville MSA,2008,6,0
+Visalia-Porterville MSA,2009,5,2
+Visalia-Porterville MSA,2010,5,1
+Visalia-Porterville MSA,2011,4,1
+Visalia-Porterville MSA,2012,9,0
+Visalia-Porterville MSA,2013,6,0
+Visalia-Porterville MSA,2014,7,2
+Visalia-Porterville MSA,2015,9,2
+Visalia-Porterville MSA,2016,6,6
+Visalia-Porterville MSA,2017,16,3
+Visalia-Porterville MSA,2018,5,2
+Visalia-Porterville MSA,2019,10,2
+Visalia-Porterville MSA,2020,6,2
+Winnemucca Micropolitan,2001,0,0
+Winnemucca Micropolitan,2002,0,0
+Winnemucca Micropolitan,2003,0,0
+Winnemucca Micropolitan,2004,0,0
+Winnemucca Micropolitan,2005,0,0
+Winnemucca Micropolitan,2006,0,0
+Winnemucca Micropolitan,2007,0,0
+Winnemucca Micropolitan,2008,0,0
+Winnemucca Micropolitan,2009,0,0
+Winnemucca Micropolitan,2010,0,0
+Winnemucca Micropolitan,2011,0,0
+Winnemucca Micropolitan,2012,0,0
+Winnemucca Micropolitan,2013,0,0
+Winnemucca Micropolitan,2014,1,0
+Winnemucca Micropolitan,2015,0,0
+Winnemucca Micropolitan,2016,0,0
+Winnemucca Micropolitan,2017,0,0
+Winnemucca Micropolitan,2018,0,0
+Winnemucca Micropolitan,2019,0,0
+Winnemucca Micropolitan,2020,0,0
+Yuba City MSA,2001,0,1
+Yuba City MSA,2002,1,0
+Yuba City MSA,2003,2,1
+Yuba City MSA,2004,0,0
+Yuba City MSA,2005,1,1
+Yuba City MSA,2006,0,3
+Yuba City MSA,2007,2,0
+Yuba City MSA,2008,1,0
+Yuba City MSA,2009,1,1
+Yuba City MSA,2010,2,1
+Yuba City MSA,2011,2,0
+Yuba City MSA,2012,4,2
+Yuba City MSA,2013,3,1
+Yuba City MSA,2014,3,0
+Yuba City MSA,2015,1,0
+Yuba City MSA,2016,1,0
+Yuba City MSA,2017,4,1
+Yuba City MSA,2018,3,2
+Yuba City MSA,2019,2,0
+Yuba City MSA,2020,3,0
